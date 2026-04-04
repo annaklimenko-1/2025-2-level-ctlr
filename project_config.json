@@ -1,0 +1,51 @@
+{
+    "labs": [],
+    "addons": [
+        {
+            "name": "core_utils",
+            "coverage": 93
+        },
+        {
+            "name": "admin_utils"
+        },
+        {
+            "name": "seminars"
+        }
+    ],
+    "repository": {
+        "admins": [
+            "demid5111",
+            "dmitry-uraev",
+            "sofianurtdinova",
+            "AnPruch",
+            "QuietHellsPage",
+            "Evgraff2005",
+            "EIzharikov"
+        ],
+        "pr_name_regex": "(?:\\[PROJECT\\]\\s*)?(Scraper|Pipeline|Final Project), [\\w\\s\\d]+ \\w+ - 2\\dFPL\\d",
+        "pr_name_example": "Scraper, Andrei Kashchikhin - 21FPL2 \nPipeline, Andrei Kashchikhin - 21FPL2 \n[PROJECT] Final Project, Team 7 Mandelstamm - 22FPL2"
+    },
+    "newline_config": [
+        "venv",
+        "\\.venv",
+        "\\.git",
+        "\\.idea",
+        "\\.coverage",
+        "\\.mypy_cache",
+        "\\.pytest_cache",
+        "__pycache__",
+        "build",
+        "tmp",
+        "intersphinx",
+        "test_tmp",
+        "dist",
+        "1_raw\\.txt$",
+        "__init__\\.cpython-310\\.pyc$",
+        "test_params\\.cpython-310\\.pyc$",
+        "\\.jpg$",
+        "\\.png$",
+        "\\.pkl$",
+        "\\.udpipe$",
+        "\\.zip$"
+    ]
+}

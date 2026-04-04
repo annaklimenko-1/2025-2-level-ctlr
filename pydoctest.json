@@ -1,0 +1,20 @@
+{
+    "parser": "google",
+    "exclude_paths": [
+        "admin_utils/**/*.py",
+        "admin_utils\\**\\*.py",
+        "seminars/**/*.py",
+        "seminars\\**\\*.py",
+        "reference*/**/*_stub.py",
+        "reference*\\**\\*_stub.py",
+        "lab_*/**/*_stub.py",
+        "lab_*\\**\\*_stub.py",
+        "venv/**/*.py",
+        "venv\\**\\*.py",
+        "**/.*/**/*.py"
+    ],
+    "fail_on_missing_docstring": true,
+    "fail_on_missing_summary": true,
+    "fail_on_raises_section": false,
+    "verbosity": 1
+}
