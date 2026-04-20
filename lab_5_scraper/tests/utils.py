@@ -14,9 +14,13 @@ from core_utils.tests.utils import copy_student_data
 from lab_5_scraper.scraper import Config, Crawler, HTMLParser
 
 
-def scraper_setup() -> None:
+def scraper_setup(articles_number: int = 1) -> None:
     """
     Set up TEST_PATH for scraper tests.
+
+    Args:
+        articles_number (int, optional): number of articles
+            to collect for tests. Defaults to 1.
     """
     if any(ASSETS_PATH.iterdir()):
         copy_student_data()
@@ -28,7 +32,10 @@ def scraper_setup() -> None:
 
         crawler = Crawler(config)
         crawler.find_articles()
-        parser = HTMLParser(random.choice(crawler.urls), 1, config)
-        return_value = parser.parse()
-        to_raw(return_value)
-        to_meta(return_value)
+        for article_id in range(1, articles_number + 1):
+            random_url = random.choice(crawler.urls)
+            parser = HTMLParser(random_url, article_id, config)
+            return_value = parser.parse()
+            to_raw(return_value)
+            to_meta(return_value)
+            crawler.urls.remove(random_url)

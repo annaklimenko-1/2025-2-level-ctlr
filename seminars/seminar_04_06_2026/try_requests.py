@@ -12,7 +12,7 @@ except ImportError:
 
 if __name__ == "__main__":
     # Step 1. GET request
-    url = "https://www.nn.ru/"
+    url = "https://bold-vest.ru/articles/rubric/obrazovanie"
     response = requests.get(url)
     print(f"Status code: {response.status_code}")
     print(f"First 500 chars:\n{response.text[:500]}...")
