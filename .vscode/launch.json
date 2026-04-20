@@ -16,11 +16,22 @@
             }
         },
         {
-            "name": "[SEMINAR 1] Try requests",
+            "name": "[SEMINAR 1] Try Requests",
             "type": "debugpy",
             "request": "launch",
             "program": "${workspaceFolder}/seminars/seminar_04_06_2026/try_requests.py",
             "cwd": "${workspaceFolder}/seminars/seminar_04_06_2026",
+            "console": "integratedTerminal",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            }
+        },
+        {
+            "name": "[SEMINAR 2] Try Beautiful Soup",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/seminars/seminar_04_20_2026/try_bs.py",
+            "cwd": "${workspaceFolder}/seminars/seminar_04_20_2026",
             "console": "integratedTerminal",
             "env": {
                 "PYTHONPATH": "${workspaceFolder}"

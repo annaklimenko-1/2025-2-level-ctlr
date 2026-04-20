@@ -76,6 +76,8 @@ class CrawlerTest(unittest.TestCase):
             status_code = make_request(url, self.config).status_code
             self.assertTrue(status_code == 200, error_msg.format(url))
 
+    @pytest.mark.mark4
+    @pytest.mark.mark6
     @pytest.mark.mark8
     @pytest.mark.mark10
     @pytest.mark.stage_2_2_crawler_check
@@ -92,6 +94,26 @@ class CrawlerTest(unittest.TestCase):
             f"{len(crawler.urls)} != {self.config.get_num_articles()}"
         )
         self.assertTrue(len(crawler.urls) >= self.config.get_num_articles(), error_msg)
+
+    @pytest.mark.mark4
+    @pytest.mark.mark6
+    @pytest.mark.mark8
+    @pytest.mark.mark10
+    @pytest.mark.stage_2_2_crawler_check
+    @pytest.mark.lab_5_scraper
+    def test_crawler_stores_unique_urls(self) -> None:
+        """
+        Ensure find_articles() fills 'urls' with unique urls.
+        """
+        crawler = Crawler(self.config)
+        crawler.find_articles()
+        error_msg = (
+            'Method find_articles() must fill field "urls" '
+            "with unique urls. Found "
+            f"{len(crawler.urls) - len(set(crawler.urls))} "
+            "duplicated urls."
+        )
+        self.assertEqual(len(crawler.urls), len(set(crawler.urls)), error_msg)
 
     @pytest.mark.mark4
     @pytest.mark.mark6

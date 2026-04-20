@@ -270,7 +270,7 @@ configuration. When config is invalid:
       string;
    -  ``IncorrectTimeoutError``: timeout value must be a positive
       integer less than 60;
-   -  ``IncorrectVerifyError``: verify certificate value must either be
+   -  ``IncorrectVerifyError``: verify certificate and headless mode values must either be
       ``True`` or ``False``.
 
 2. Script immediately finishes execution.

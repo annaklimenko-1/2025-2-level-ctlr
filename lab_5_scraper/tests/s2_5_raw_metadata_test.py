@@ -25,7 +25,7 @@ class RawBasicDataValidator(unittest.TestCase):
         """
         Define start instructions for RawBasicDataValidator class.
         """
-        scraper_setup()
+        scraper_setup(articles_number=2)
 
         # open and prepare texts
         self.texts = []
@@ -77,6 +77,18 @@ class RawBasicDataValidator(unittest.TestCase):
 
             TEST_PATH.iterdir()
 
+    @pytest.mark.mark4
+    @pytest.mark.mark6
+    @pytest.mark.mark8
+    @pytest.mark.mark10
+    @pytest.mark.stage_2_5_dataset_validation
+    @pytest.mark.lab_5_scraper
+    def test_folder_is_filled_with_no_duplicates(self) -> None:
+        """
+        Ensure the collected article texts are unique.
+        """
+        self.assertEqual(len(self.texts), len(set(self.texts)))
+
     def tearDown(self) -> None:
         """
         Define final instructions for RawBasicDataValidator class.
@@ -118,15 +130,15 @@ class RawMediumDataValidator(unittest.TestCase):
         """
         Define start instructions for RawMediumDataValidator class.
         """
-        scraper_setup()
+        scraper_setup(articles_number=2)
 
         # open and prepare metadata
         self.metadata = []
         for file_name in TEST_PATH.iterdir():
             if file_name.name.endswith("_meta.json"):
                 with file_name.open(encoding="utf-8") as file:
-                    config = json.load(file)
-                    self.metadata.append((config["id"], config))
+                    article_meta = json.load(file)
+                    self.metadata.append((article_meta["id"], article_meta))
         self.metadata = tuple(self.metadata)
         self.config = Config(CRAWLER_CONFIG_PATH)
 
@@ -188,6 +200,26 @@ class RawMediumDataValidator(unittest.TestCase):
                 )
                 self.assertEqual(metadata[1]["author"], ["NOT FOUND"], msg=message)
 
+    @pytest.mark.mark6
+    @pytest.mark.mark8
+    @pytest.mark.mark10
+    @pytest.mark.stage_2_5_dataset_validation
+    @pytest.mark.lab_5_scraper
+    def test_folder_is_filled_with_no_duplicated_meta(self) -> None:
+        """
+        Ensure the collected meta files are unique.
+        """
+        for i, (meta_id, meta) in enumerate(self.metadata[:-1:]):
+            for compare_id, compare_meta in self.metadata[i + 1 : :]:
+                self.assertNotEqual(
+                    meta_id, compare_id, "Meta IDs of different articles are the same."
+                )
+                self.assertNotEqual(
+                    meta["url"],
+                    compare_meta["url"],
+                    "Meta urls of different articles are the same.",
+                )
+
     def tearDown(self) -> None:
         """
         Define final instructions for RawMediumDataValidator class.
@@ -214,8 +246,8 @@ class RawAdvancedDataValidator(unittest.TestCase):
         for file_name in TEST_PATH.iterdir():
             if file_name.name.endswith("_meta.json"):
                 with file_name.open(encoding="utf-8") as file:
-                    config = json.load(file)
-                    self.metadata.append((config["id"], config))
+                    article_meta = json.load(file)
+                    self.metadata.append((article_meta["id"], article_meta))
         self.metadata = tuple(self.metadata)
         self.config = Config(CRAWLER_CONFIG_PATH)
 

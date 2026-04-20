@@ -70,6 +70,14 @@ Lectures history
 |            | technical track.    |                                                              |
 |            | 3rd party libraries.|                                                              |
 +------------+---------------------+--------------------------------------------------------------+
+| 13.04.2024 | Lecture:            | Lab no. 5 description                                        |
+|            | Headers. HTML       |                                                              |
+|            | structure.          |                                                              |
++------------+---------------------+--------------------------------------------------------------+
+| 13.04.2024 | Seminar: Local      | N/A                                                          |
+|            | setup. Choose       |                                                              |
+|            | website.            |                                                              |
++------------+---------------------+--------------------------------------------------------------+
 
 
 You can find a more complete summary from lectures in :ref:`ctlr-lectures-label`.
@@ -122,42 +130,6 @@ Software solution is built on top of three components:
 3. `article.py <https://github.com/fipl-hse/2025-2-level-ctlr/blob/main/core_utils/article/article.py>`__
    - a module for article abstraction to encapsulate low-level manipulations with the article.
 
-Handing over your work
-----------------------
-
-1. Lab work is accepted for oral presentation.
-2. A student has explained the work of the program and showed it in
-   action.
-3. A student has completed the mini-task from a mentor that requires some
-   slight code modifications.
-4. A student receives a mark:
-
-   1. That corresponds to the expected one, if all the steps above are
-      completed and mentor is satisfied with the answer.
-   2. One point bigger than the expected one, if all the steps above are
-      completed and mentor is very satisfied with the answer.
-   3. One point smaller than the expected one, if a lab is handed over
-      one week later than the deadline and criteria from 4.1 are
-      satisfied.
-   4. Two points smaller than the expected one, if a lab is handed over
-      more than one week later than the deadline and criteria from 4.1
-      are satisfied.
-
-.. note:: A student might improve their mark for the lab, if they
-          complete tasks of the next level after handing over the lab.
-
-**A lab work is accepted for oral presentation if all the criteria below
-are satisfied:**
-
-1. There is a Pull Request (PR) with a correctly formatted name:
-   ``Scraper, <NAME> <SURNAME> - <UNIVERSITY GROUP NAME>``.
-
-   1. Example: ``Scraper, Irina Novikova - 20FPL2``.
-
-2. Has a filled file ``settings.json`` with an expected mark.
-   Acceptable values: 4, 6, 8, 10.
-3. Has green status.
-4. Has a label ``done``, set by mentor.
 
 Resources
 ---------
@@ -169,9 +141,4 @@ Resources
 4. `Scraping tutorials (Russian) <https://youtu.be/7hn1_t2ZtJQ>`__
 5. `Scraping tutorials (English)
    <https://www.youtube.com/playlist?list=PL1jK3K11NINiOn4DdIDVdyQpcU3kaNxl0>`__
-6. `Starting guide <https://fipl-hse.github.io/docs/useful_docs/ctlr_docs/starting_guide_en.html>`__
-7. `How to run tests <https://fipl-hse.github.io/docs/useful_docs/ctlr_docs/tests.html>`__
-8. `How to run .py files in terminal
-   <https://fipl-hse.github.io/docs/useful_docs/ctlr_docs/run_in_terminal.html>`__
-9. `How to update fork <https://fipl-hse.github.io/docs/useful_docs/ctlr_docs/fork_update.html>`__
-10. `FAQ for CTLR <https://fipl-hse.github.io/docs/useful_docs/ctlr_docs/faq.html>`__
+6. `Useful documentation <https://fipl-hse.github.io/docs/useful_docs/ctlr_docs/index.html>`__
