@@ -40,17 +40,15 @@ def main(lab_name: str) -> None:  # pylint: disable=too-many-branches
 
     if lab_name == "lab_6_pipeline":
         cleaned_files = list(PROJECT_ROOT.glob("*_cleaned.txt"))
-        if len(cleaned_files) != 0:
+        if cleaned_files:
             for cleaned_file in cleaned_files:
                 shutil.move(cleaned_file, ASSETS_PATH)
         else:
             logger.info("no files to move")
 
         if target_score > 4:
-            for meta_file in PROJECT_ROOT.glob("*_meta.json"):
-                shutil.move(meta_file, ASSETS_PATH)
             pos_files = list(PROJECT_ROOT.glob("*_pos.conllu"))
-            if len(pos_files) != 0:
+            if pos_files:
                 for pos_file in pos_files:
                     shutil.move(pos_file, ASSETS_PATH)
             else:
@@ -58,7 +56,7 @@ def main(lab_name: str) -> None:  # pylint: disable=too-many-branches
 
         if target_score > 6:
             morphological_files = list(PROJECT_ROOT.glob("*_morphological.conllu"))
-            if len(morphological_files) != 0:
+            if morphological_files:
                 for morphological_file in morphological_files:
                     shutil.move(morphological_file, ASSETS_PATH)
             else:

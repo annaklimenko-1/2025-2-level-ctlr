@@ -22,7 +22,7 @@ def scraper_setup(articles_number: int = 1) -> None:
         articles_number (int, optional): number of articles
             to collect for tests. Defaults to 1.
     """
-    if any(ASSETS_PATH.iterdir()):
+    if ASSETS_PATH.exists() and any(ASSETS_PATH.iterdir()):
         copy_student_data()
     else:
         config = Config(CRAWLER_CONFIG_PATH)

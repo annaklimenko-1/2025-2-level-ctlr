@@ -156,7 +156,7 @@ jobs:
       - uses: actions/checkout@v6
       - name: Setup FIPL environment
         uses: fipl-hse/setup-env-action@v0.13.2
-      - name: Run crawler config checks
+      - name: Run crawler checks
         run: |
           source venv/bin/activate
           export PYTHONPATH=$(pwd)
@@ -172,7 +172,7 @@ jobs:
       - uses: actions/checkout@v6
       - name: Setup FIPL environment
         uses: fipl-hse/setup-env-action@v0.13.2
-      - name: Run crawler config checks
+      - name: Run HTML parser checks
         run: |
           source venv/bin/activate
           export PYTHONPATH=$(pwd)
@@ -269,7 +269,7 @@ jobs:
         uses: actions/download-artifact@v7
         with:
           name: raw-dataset
-      - name: Run crawler config checks
+      - name: Run dataset sanity checks
         run: |
           source venv/bin/activate
           export PYTHONPATH=$(pwd)
@@ -416,7 +416,7 @@ jobs:
         uses: actions/download-artifact@v7
         with:
           name: processed-dataset
-      - name: Congratulations
+      - name: Run POS frequency pipeline tests
         run: |
           source venv/bin/activate
           export PYTHONPATH=$(pwd)
@@ -451,7 +451,7 @@ jobs:
         uses: actions/download-artifact@v7
         with:
           name: processed-dataset
-      - name: Congratulations
+      - name: Run pattern search pipeline tests
         run: |
           source venv/bin/activate
           export PYTHONPATH=$(pwd)

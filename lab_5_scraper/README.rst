@@ -576,7 +576,7 @@ implemented during the previous steps. To name a few challenges:
 3. **There may be no way to specify seed URLs - due to website size or
    budget constraints**. Imagine you need to collect 100k articles of the
    Wikipedia. Do you think you would be able to copy-paste enough seeds?
-   How about the task of collection 1M articles?
+   How about the task of collecting 1M articles?
 4. **Software and hardware limitations and accidents**. Imagine you have
    your crawler running for 24 hours, and it crashes. If you have not
    mitigated this risk, you lose everything and have to restart your
@@ -605,11 +605,24 @@ Stage 9.1. Introduce ``CrawlerRecursive`` abstraction
 
 :py:class:`lab_5_scraper.scraper.CrawlerRecursive` must inherit
 from :py:class:`lab_5_scraper.scraper.Crawler`.
-The initialization interface is the same as for :py:class:`lab_5_scraper.scraper.Crawler`.
+
 During initialization, make sure to create a ``self.start_url`` field:
 it is a single URL that will be used as a seed.
-Fill ``self.start_url`` with one of the seed URLs
+Fill ``self.start_url`` with **one of the seed URLs**
 presented in the configuration instance.
+
+Also set such attributes as ``self.num_articles``
+and ``self.url_pattern``. The first one should store the total number of articles
+to scrape. The second attribute might include the pattern
+that article URLs at your website follow. Further, this pattern is used
+to extract candidate article links from each page:
+each match becomes a new entry point for the next recursive call.
+**The pattern content depends directly on your website structure**.
+For example, it may look like this:
+
+.. code:: py
+
+   self.url_pattern = r"/text/\w+/\d{4}/\d{2}/\d{2}/\d+/"
 
 Stage 9.2. Re-implement ``find_articles`` method
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

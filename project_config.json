@@ -2,7 +2,7 @@
     "labs": [
         {
             "name": "lab_5_scraper",
-            "coverage": 98,
+            "coverage": 100,
             "stubs": [
                 "scraper.py"
             ],

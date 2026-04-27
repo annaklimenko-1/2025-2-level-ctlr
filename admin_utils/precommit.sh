@@ -1,41 +1,68 @@
 set -ex
 
-# source venv/bin/activate
-
 echo $1
-if [[ "$1" == "smoke" ]]; then
+
+if [[ "$1" == "public" ]]; then
   DIRS_TO_CHECK=(
-    "config"
-    "seminars"
     "admin_utils"
     "core_utils"
+    "seminars"
+    "lab_5_scraper"
   )
 else
   DIRS_TO_CHECK=(
-    "config"
-    "seminars"
     "admin_utils"
     "core_utils"
+    "seminars"
     "lab_5_scraper"
     "lab_6_pipeline"
   )
 fi
 
+if [ -d "venv" ]; then
+    echo "Taking Python from venv"
+    source venv/bin/activate
+    which python
+else
+    echo "Taking Python from global environment"
+    which python
+fi
+
 export PYTHONPATH=$(pwd)
+
+autoflake -vv .
+
+if [[ "$1" != "public" ]]; then
+  fiplconfig.generate_labs_stubs
+fi
 
 python -m black "${DIRS_TO_CHECK[@]}"
 
+isort .
+
 python -m pylint "${DIRS_TO_CHECK[@]}"
 
+rm -rf .mypy_cache
 mypy "${DIRS_TO_CHECK[@]}"
-
-python config/static_checks/check_docstrings.py
 
 python -m flake8 "${DIRS_TO_CHECK[@]}"
 
-python config/static_checks/check_init.py
+python -m flake8 "${DIRS_TO_CHECK[@]}"
 
-if [[ "$1" != "smoke" ]]; then
+if [[ "$1" != "public" ]]; then
+  # python admin_utils/uml/uml_diagrams_builder.py
+
+  pydoctest --config pydoctest.json
+
+  fiplconfig.check_doc8
+
+  fiplconfig.check_requirements
+
+  if [[ "$1" != "public" ]]; then
+    rm -rf dist
+    sphinx-build -b html -W --keep-going -n . dist -c admin_utils
+  fi
+
   python -m pytest -m "mark10 and lab_5_scraper"
+  python -m pytest -m "mark10 and lab_6_pipeline"
 fi
-
