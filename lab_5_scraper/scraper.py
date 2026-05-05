@@ -388,6 +388,10 @@ class HTMLParser:
             article_id (int): Article id
             config (Config): Configuration
         """
+        self.full_url = full_url
+        self.article_id = article_id
+        self.config = config
+        self.article = Article(full_url, article_id)
 
     def _fill_article_with_text(self, article_soup: BeautifulSoup) -> None:
         """
@@ -396,6 +400,22 @@ class HTMLParser:
         Args:
             article_soup (bs4.BeautifulSoup): BeautifulSoup instance
         """
+        paragraphs = article_soup.find_all('p')
+        text_parts = []
+        for p in paragraphs:
+            text_parts.append(p.get_text(strip=True))
+
+        if not text_parts:
+            content_div = article_soup.find('div', class_='content')
+            if content_div:
+                text_parts.append(content_div.get_text(strip=True))
+
+        if not text_parts:
+            body = article_soup.find('body')
+            if body:
+                text_parts.append(body.get_text(strip=True))
+        
+        self.article.text = ' '.join(text_parts)
 
     def _fill_article_with_meta_information(self, article_soup: BeautifulSoup) -> None:
         """
@@ -404,6 +424,19 @@ class HTMLParser:
         Args:
             article_soup (bs4.BeautifulSoup): BeautifulSoup instance
         """
+        title_tag = article_soup.find('title')
+        if title_tag:
+            self.article.title = title_tag.get_text(strip=True)
+        
+        author_tag = article_soup.find('meta', {'name': 'author'})
+        if author_tag and author_tag.get('content'):
+            self.article.author = [author_tag['content']]
+        else:
+            author_link = article_soup.find('a', href=re.compile(r'indexdate\.shtml|/a/|/b/|/w/'))
+            if author_link:
+                self.article.author = [author_link.get_text(strip=True)]
+            else:
+                self.article.author = ["NOT FOUND"]
 
     def unify_date_format(self, date_str: str) -> datetime.datetime:
         """
@@ -416,6 +449,7 @@ class HTMLParser:
             datetime.datetime: Datetime object
         """
 
+
     def parse(self) -> Article | bool:
         """
         Parse each article.
@@ -423,6 +457,16 @@ class HTMLParser:
         Returns:
             Article | bool: Article instance, False in case of request error
         """
+        response = make_request(self.full_url, self.config)
+
+        if response.status_code == 200:
+            article_bs = BeautifulSoup(response.text, 'html.parser')
+
+            self._fill_article_with_text(article_bs)
+
+            self._fill_article_with_meta_information(article_bs)
+
+        return self.article
 
 
 def prepare_environment(base_path: pathlib.Path | str) -> None:
