@@ -432,11 +432,11 @@ class HTMLParser:
 
         date_tag = article_soup.find("time")
         if date_tag:
-            date_value = date_tag.get("datetime")
-        if date_value and isinstance(date_value, str):
-            date_str = date_value
-        else:
-            date_str = date_tag.get_text(strip=True)
+            datetime_value = date_tag.get("datetime")
+            if datetime_value and isinstance(datetime_value, str):
+                date_str = datetime_value
+            else:
+                date_str = date_tag.get_text(strip=True)
         if not date_str:
             meta_date = article_soup.find("meta", {"name": "article:published_time"})
             if meta_date:
