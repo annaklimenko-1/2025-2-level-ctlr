@@ -296,26 +296,21 @@ class Crawler:
         """
         Find articles.
         """
+        seed_urls = self.config.get_seed_urls()
         required_count = self.config.get_num_articles()
-        queue = list(self.config.get_seed_urls())
-        visited = set()
 
-        while queue and len(self.urls) < required_count:
-            current_url = queue.pop(0)
+        for seed_url in seed_urls:
+            if len(self.urls) >= required_count:
+                break
 
-            if current_url in visited:
-                continue
-
-            visited.add(current_url)
-
-            match = re.match(r'(https?://[^/]+)', current_url)
+            match = re.match(r'(https?://[^/]+)', seed_url)
             if match:
                 self.base_url = match.group(1)
             else:
                 continue
 
             try:
-                response = make_request(current_url, self.config)
+                response = make_request(seed_url, self.config)
             except requests.RequestException:
                 continue
 
@@ -323,10 +318,13 @@ class Crawler:
                 continue
 
             soup = BeautifulSoup(response.text, 'html.parser')
-
+            
             for link in soup.find_all('a', href=True):
+                if len(self.urls) >= required_count:
+                    break
+                    
                 href = link.get('href', '')
-
+                
                 if href.startswith('/'):
                     full_url = self.base_url + href
                 elif href.startswith('http'):
@@ -335,11 +333,8 @@ class Crawler:
                     continue
 
                 if self.url_pattern.search(full_url):
-                    if full_url not in self.urls and len(self.urls) < required_count:
+                    if full_url not in self.urls:
                         self.urls.append(full_url)
-                elif '/a/' in full_url or '/b/' in full_url:
-                    if full_url not in visited and full_url not in queue:
-                        queue.append(full_url)
     def get_search_urls(self) -> list:
         """
         Get seed_urls param.
@@ -570,3 +565,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+    
