@@ -485,7 +485,7 @@ class HTMLParser:
 
     def unify_date_format(self, date_str: str) -> datetime.datetime:
         """
-        Unify date format.
+        Unify date formatt.
 
         Args:
             date_str (str): Date in text format
