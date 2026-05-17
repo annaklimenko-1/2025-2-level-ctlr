@@ -135,23 +135,36 @@ class Config:
                 raise IncorrectSeedURLError(f"Invalid seed URL format: {url}")
 
         total = config_dto.total_articles
-
+    
         if isinstance(total, bool):
             raise IncorrectNumberOfArticlesError("Total articles must be an integer, not a boolean")
-
+    
         if not isinstance(total, int):
             raise IncorrectNumberOfArticlesError("Total articles must be an integer")
-
+    
         if total < 0:
             raise IncorrectNumberOfArticlesError("Total articles cannot be negative")
-
+    
         if total < 1 or total > 150:
             raise NumberOfArticlesOutOfRangeError("Total articles must be between 1 and 150")
 
+        if not isinstance(config_dto.headers, dict):
+            raise IncorrectHeadersError("Headers must be a dictionary")
+
+        for key, value in config_dto.headers.items():
+            if not isinstance(key, str) or not isinstance(value, str):
+                raise IncorrectHeadersError("Headers must be a dictionary with string keys and string values")
+
+        if not isinstance(config_dto.encoding, str):
+            raise IncorrectEncodingError("Encoding must be a string")
+
         timeout = config_dto.timeout
+        if isinstance(timeout, bool):
+            raise IncorrectTimeoutError("Timeout must be an integer, not a boolean")
+    
         if not isinstance(timeout, int):
             raise IncorrectTimeoutError("Timeout must be an integer")
-
+    
         if timeout <= 0 or timeout > 60:
             raise IncorrectTimeoutError("Timeout must be between 1 and 60 seconds")
 
