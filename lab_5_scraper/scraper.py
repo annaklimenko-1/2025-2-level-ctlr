@@ -273,6 +273,7 @@ class Crawler:
         self.config = config
         self.urls: list[str] = []
         self.base_url: str = ""
+        self.url_pattern = re.compile(r'/[a-z]/[a-z_]+/text_\d+\.shtml')
 
     def _extract_url(self, article_bs: Tag) -> str:
         """
@@ -317,20 +318,23 @@ class Crawler:
                 continue
 
             soup = BeautifulSoup(response.text, 'html.parser')
-        
+            
             for link in soup.find_all('a', href=True):
                 if len(self.urls) >= required_count:
                     break
-                
+                    
                 href = link.get('href', '')
-                if 'text_' in href:
-                    if href.startswith('/'):
-                        full_url = self.base_url + href
-                        if full_url not in self.urls:
-                            self.urls.append(full_url)
-                    elif href.startswith('http'):
-                        if href not in self.urls:
-                            self.urls.append(href)
+                
+                if href.startswith('/'):
+                    full_url = self.base_url + href
+                elif href.startswith('http'):
+                    full_url = href
+                else:
+                    continue
+
+                if self.url_pattern.search(full_url):
+                    if full_url not in self.urls:
+                        self.urls.append(full_url)
     def get_search_urls(self) -> list:
         """
         Get seed_urls param.
