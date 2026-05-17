@@ -102,17 +102,17 @@ class Config:
         Returns:
             ConfigDTO: Config values
         """
-        with open(self.path_to_config, 'r', encoding='utf-8') as file:
+        with open(self.path_to_config, "r", encoding="utf-8") as file:
             config_data = json.load(file)
-    
+
         return ConfigDTO(
-            seed_urls=config_data.get('seed_urls', []),
-            total_articles_to_find_and_parse=config_data.get('total_articles_to_find_and_parse', 0),
-            headers=config_data.get('headers', {}),
-            encoding=config_data.get('encoding', 'utf-8'),
-            timeout=config_data.get('timeout', 30),
-            should_verify_certificate=config_data.get('should_verify_certificate', True),
-            headless_mode=config_data.get('headless_mode', False)
+            seed_urls=config_data.get("seed_urls", []),
+            total_articles_to_find_and_parse=config_data.get("total_articles_to_find_and_parse", 0),
+            headers=config_data.get("headers", {}),
+            encoding=config_data.get("encoding", "utf-8"),
+            timeout=config_data.get("timeout", 30),
+            should_verify_certificate=config_data.get("should_verify_certificate", True),
+            headless_mode=config_data.get("headless_mode", False),
         )
 
     def _validate_config_content(self) -> None:
@@ -127,7 +127,7 @@ class Config:
         if not config_dto.seed_urls:
             raise IncorrectSeedURLError("Seed URLs cannot be empty")
 
-        url_pattern = re.compile(r'^https?://(www\.)?')
+        url_pattern = re.compile(r"^https?://(www\.)?")
         for url in config_dto.seed_urls:
             if not isinstance(url, str):
                 raise IncorrectSeedURLError(f"Seed URL must be a string: {url}")
@@ -207,7 +207,6 @@ class Config:
             int: Number of seconds to wait for response
         """
         return self._timeout
-        
 
     def get_verify_certificate(self) -> bool:
         """
@@ -264,9 +263,16 @@ class Crawler:
         Args:
             config (Config): Configuration
         """
-        self.config = config
+        self._config = config
         self.urls: list[str] = []
         self.base_url: str = ""
+
+        seed_urls = self._config.get_seed_urls()
+        if seed_urls:
+            match = re.match(r"(https?://[^/]+)", seed_urls[0])
+            self.base_url = match.group(1) if match else ""
+
+        self.url_pattern = re.compile(r"\.shtml|text_")
 
     def _extract_url(self, article_bs: Tag) -> str:
         """
@@ -278,47 +284,58 @@ class Crawler:
         Returns:
             str: Url from HTML
         """
-        for link in article_bs.find_all('a', href=True):
-            href = link.get('href', '')
-            if '.shtml' in href or 'text_' in href:
-                if href.startswith('/') or href.startswith('http'):
-                    return href
-        return ""
+        href = article_bs.get("href", "")
+        if not isinstance(href, str):
+            return ""
+        if href.startswith("/"):
+            return self.base_url + href
+        return href
 
     def find_articles(self) -> None:
         """
         Find articles.
         """
-        seed_urls = self.config.get_seed_urls()
-        required_count = self.config.get_num_articles()
+        seed_urls = self._config.get_seed_urls()
+        required_count = self._config.get_num_articles()
 
         for seed_url in seed_urls:
             if len(self.urls) >= required_count:
                 break
 
-            match = re.match(r'(https?://[^/]+)', seed_url)
-            if match:
-                self.base_url = match.group(1)
-            else:
-                continue
-
             try:
-                response = make_request(seed_url, self.config)
+                response = make_request(seed_url, self._config)
             except requests.RequestException:
                 continue
 
-            if response.status_code != 200:
+            if not response.ok:
                 continue
 
-            soup = BeautifulSoup(response.text, 'html.parser')
-            url = self._extract_url(soup)
+            soup = BeautifulSoup(response.text, "html.parser")
 
-            if url and url not in self.urls:
-                if url.startswith('/'):
-                    full_url = self.base_url + url
-                    self.urls.append(full_url)
-                elif url.startswith('http'):
-                    self.urls.append(url)
+            for link in soup.find_all("a", href=True):
+                if len(self.urls) >= required_count:
+                    break
+
+                href = link.get("href", "")
+                if ".shtml" in href or "text_" in href:
+                    if href.startswith("/"):
+                        full_url = self.base_url + href
+                    elif href.startswith("http"):
+                        full_url = href
+                    else:
+                        continue
+
+                    if full_url not in self.urls:
+                        self.urls.append(full_url)
+
+    def get_search_urls(self) -> list:
+        """
+        Get seed_urls param.
+
+        Returns:
+            list: seed_urls param
+        """
+        return self._config.get_seed_urls()
 
 
 # 10
@@ -374,22 +391,22 @@ class HTMLParser:
         Args:
             article_soup (bs4.BeautifulSoup): BeautifulSoup instance
         """
-        paragraphs = article_soup.find_all('p')
+        paragraphs = article_soup.find_all("p")
         text_parts = []
         for p in paragraphs:
             text_parts.append(p.get_text(strip=True))
 
         if not text_parts:
-            content_div = article_soup.find('div', class_='content')
+            content_div = article_soup.find("div", class_="content")
             if content_div:
                 text_parts.append(content_div.get_text(strip=True))
 
         if not text_parts:
-            body = article_soup.find('body')
+            body = article_soup.find("body")
             if body:
                 text_parts.append(body.get_text(strip=True))
-        
-        self.article.text = ' '.join(text_parts)
+
+        self.article.text = " ".join(text_parts)
 
     def _fill_article_with_meta_information(self, article_soup: BeautifulSoup) -> None:
         """
@@ -398,30 +415,36 @@ class HTMLParser:
         Args:
             article_soup (bs4.BeautifulSoup): BeautifulSoup instance
         """
-        title_tag = article_soup.find('title')
+        title_tag = article_soup.find("title")
         if title_tag:
             self.article.title = title_tag.get_text(strip=True)
-        
-        author_tag = article_soup.find('meta', {'name': 'author'})
-        if author_tag and author_tag.get('content'):
-            self.article.author = [author_tag['content']]
+
+        author_tag = article_soup.find("meta", {"name": "author"})
+        if author_tag and author_tag.get("content"):
+            self.article.author = [author_tag["content"]]
         else:
-            author_link = article_soup.find('a', href=re.compile(r'indexdate\.shtml|/a/|/b/|/w/'))
+            author_link = article_soup.find("a", href=re.compile(r"indexdate\.shtml|/a/|/b/|/w/"))
             if author_link:
                 self.article.author = [author_link.get_text(strip=True)]
             else:
                 self.article.author = ["NOT FOUND"]
         date_str = None
 
-        date_tag = article_soup.find('time')
+        date_tag = article_soup.find("time")
         if date_tag:
-            date_str = date_tag.get('datetime') or date_tag.get_text(strip=True)
+            date_value = date_tag.get("datetime")
+        if date_value and isinstance(date_value, str):
+            date_str = date_value
+        else:
+            date_str = date_tag.get_text(strip=True)
         if not date_str:
-            meta_date = article_soup.find('meta', {'name': 'article:published_time'})
+            meta_date = article_soup.find("meta", {"name": "article:published_time"})
             if meta_date:
-                date_str = meta_date.get('content')
+                date_str = meta_date.get("content")
         if not date_str:
-            date_pattern = re.compile(r'\d{1,2}[/.-]\d{1,2}[/.-]\d{2,4}|\d{4}[/.-]\d{1,2}[/.-]\d{1,2}')
+            date_pattern = re.compile(
+                r"\d{1,2}[/.-]\d{1,2}[/.-]\d{2,4}|\d{4}[/.-]\d{1,2}[/.-]\d{1,2}"
+            )
             text = article_soup.get_text()
             match = date_pattern.search(text)
             if match:
@@ -431,20 +454,18 @@ class HTMLParser:
             self.article.date = self.unify_date_format(date_str)
 
         topics = []
-        keywords_tag = article_soup.find('meta', {'name': 'keywords'})
-        if keywords_tag and keywords_tag.get('content'):
-            topics = [k.strip() for k in keywords_tag['content'].split(',')]
+        keywords_tag = article_soup.find("meta", {"name": "keywords"})
+        if keywords_tag and keywords_tag.get("content"):
+            topics = [k.strip() for k in keywords_tag["content"].split(",")]
 
         if not topics:
-            genre_keywords = ['проза', 'поэзия', 'рассказ', 'роман', 'повесть', 'стихотворение']
+            genre_keywords = ["проза", "поэзия", "рассказ", "роман", "повесть", "стихотворение"]
             text_lower = article_soup.get_text().lower()
             for genre in genre_keywords:
                 if genre in text_lower:
                     topics.append(genre)
 
         self.article.topics = topics
-        
-        
 
     def unify_date_format(self, date_str: str) -> datetime.datetime:
         """
@@ -457,36 +478,42 @@ class HTMLParser:
             datetime.datetime: Datetime object
         """
         months_ru = {
-        'января': 'January', 'февраля': 'February', 'марта': 'March',
-        'апреля': 'April', 'мая': 'May', 'июня': 'June',
-        'июля': 'July', 'августа': 'August', 'сентября': 'September',
-        'октября': 'October', 'ноября': 'November', 'декабря': 'December'
+            "января": "January",
+            "февраля": "February",
+            "марта": "March",
+            "апреля": "April",
+            "мая": "May",
+            "июня": "June",
+            "июля": "July",
+            "августа": "August",
+            "сентября": "September",
+            "октября": "October",
+            "ноября": "November",
+            "декабря": "December",
         }
-    
+
         for ru, en in months_ru.items():
             if ru in date_str:
                 date_str = date_str.replace(ru, en)
                 break
-    
+
         formats = [
-            '%Y-%m-%dT%H:%M:%S',
-            '%Y-%m-%d %H:%M:%S',
-            '%d.%m.%Y',
-            '%d/%m/%Y',
-            '%Y-%m-%d',
-            '%d %B %Y, %H:%M',
-            '%d %B %Y',
+            "%Y-%m-%dT%H:%M:%S",
+            "%Y-%m-%d %H:%M:%S",
+            "%d.%m.%Y",
+            "%d/%m/%Y",
+            "%Y-%m-%d",
+            "%d %B %Y, %H:%M",
+            "%d %B %Y",
         ]
-    
+
         for fmt in formats:
             try:
                 return datetime.datetime.strptime(date_str, fmt)
             except (ValueError, TypeError):
                 continue
-    
+
         return datetime.datetime.now()
-
-
 
     def parse(self) -> Article | bool:
         """
@@ -498,7 +525,7 @@ class HTMLParser:
         response = make_request(self.full_url, self.config)
 
         if response.ok:
-            article_bs = BeautifulSoup(response.text, 'html.parser')
+            article_bs = BeautifulSoup(response.text, "html.parser")
 
             self._fill_article_with_text(article_bs)
 
@@ -531,12 +558,12 @@ def main() -> None:
     crawler.find_articles()
     article_urls = crawler.urls
 
-    for idx, url in enumerate(article_urls[:config.get_num_articles()], start=1):
+    for idx, url in enumerate(article_urls[: config.get_num_articles()], start=1):
         parser = HTMLParser(url, idx, config)
         article = parser.parse()
-        
+
         to_raw(article)
-        to_meta(article) 
+        to_meta(article)
 
 
 if __name__ == "__main__":
