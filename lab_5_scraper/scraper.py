@@ -335,6 +335,15 @@ class Crawler:
                     if full_url not in visited and full_url not in queue:
                         queue.append(full_url)
 
+    def get_search_urls(self) -> list:
+        """
+        Get seed_urls param.
+
+        Returns:
+            list: seed_urls param
+        """
+        return self.config.get_seed_urls()
+
 
 # 10
 
