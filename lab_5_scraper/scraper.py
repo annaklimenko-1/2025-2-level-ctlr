@@ -294,7 +294,7 @@ class Crawler:
 
     def find_articles(self) -> None:
         """
-        Find articlesss.
+        Find articles.
         """
         seed_urls = self.config.get_seed_urls()
         required_count = self.config.get_num_articles()
@@ -318,8 +318,11 @@ class Crawler:
                 continue
 
             soup = BeautifulSoup(response.text, 'html.parser')
-
+            
             for link in soup.find_all('a', href=True):
+                if len(self.urls) >= required_count:
+                    break
+                    
                 href = link.get('href', '')
                 
                 if href.startswith('/'):
@@ -329,12 +332,9 @@ class Crawler:
                 else:
                     continue
 
-                if '.shtml' in full_url and 'indexdate' not in full_url:
+                if self.url_pattern.search(full_url):
                     if full_url not in self.urls:
                         self.urls.append(full_url)
-                        if len(self.urls) >= required_count:
-                            break
-
     def get_search_urls(self) -> list:
         """
         Get seed_urls param.
