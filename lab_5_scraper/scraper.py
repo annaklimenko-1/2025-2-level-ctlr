@@ -269,6 +269,7 @@ class Crawler:
         """
         self.config = config
         self.urls: list[str] = []
+        self.base_url: str = ""
 
     def _extract_url(self, article_bs: Tag) -> str:
         """
@@ -293,6 +294,12 @@ class Crawler:
             if len(self.urls) >= required_count:
                 break
 
+            match = re.match(r'(https?://[^/]+)', seed_url)
+            if match:
+                self.base_url = match.group(1)
+            else:
+                continue
+
             try:
                 response = make_request(seed_url, self.config)
             except requests.RequestException:
@@ -302,28 +309,22 @@ class Crawler:
                 continue
 
             soup = BeautifulSoup(response.text, 'html.parser')
-            
-            # Ищем ВСЕ ссылки
+
             for link in soup.find_all('a', href=True):
                 if len(self.urls) >= required_count:
                     break
                     
                 href = link.get('href', '')
-                
-                # Пропускаем пустые и якоря
-                if not href or href.startswith('#'):
-                    continue
-                
-                # Формируем полный URL
-                if href.startswith('http'):
+
+                if href.startswith('/'):
+                    full_url = self.base_url + href
+                elif href.startswith('http'):
                     full_url = href
-                elif href.startswith('/'):
-                    full_url = "https://lit.lib.ru" + href
                 else:
                     continue
-                
-                # Отбираем только ссылки на статьи
-                if 'text_' in full_url and full_url.endswith('.shtml'):
+
+                # Рабочее условие (собирает все .shtml страницы)
+                if full_url.endswith('.shtml') and 'indexdate' not in full_url:
                     if full_url not in self.urls:
                         self.urls.append(full_url)
 
