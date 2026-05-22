@@ -1,5 +1,6 @@
 {
     "seed_urls": [
+        "https://lit.lib.ru/long.shtml",
         "https://lit.lib.ru/a/",
         "https://lit.lib.ru/b/",
         "https://lit.lib.ru/v/",
@@ -21,7 +22,12 @@
         "https://lit.lib.ru/u/",
         "https://lit.lib.ru/f/",
         "https://lit.lib.ru/h/",
-        "https://lit.lib.ru/c/"
+        "https://lit.lib.ru/c/",
+        "https://lit.lib.ru/ch/",
+        "https://lit.lib.ru/sh/",
+        "https://lit.lib.ru/shh/",
+        "https://lit.lib.ru/y/",
+        "https://lit.lib.ru/ya/"
     ],
     "headers": {"User-Agent": "Mozilla/5.0"},
     "total_articles_to_find_and_parse": 80,
