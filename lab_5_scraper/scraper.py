@@ -326,9 +326,9 @@ class Crawler:
                 else:
                     continue
 
-                if (full_url.startswith(self.base_url) and 
-                    'indexdate.shtml' not in full_url and 
-                    full_url.endswith('.shtml')):
+                if ('text_' in full_url and 
+                    'indexdate' not in full_url and 
+                    'long.shtml' not in full_url):
                 
                     if full_url not in self.urls:
                         self.urls.append(full_url)
