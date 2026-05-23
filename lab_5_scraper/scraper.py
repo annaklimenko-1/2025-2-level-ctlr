@@ -435,18 +435,13 @@ class HTMLParser:
 
         date_tag = article_soup.find('time')
         if date_tag:
-            date_str = date_tag.get('datetime') or date_tag.get_text(strip=True)
-        if not date_str:
-            meta_date = article_soup.find('meta', {'name': 'article:published_time'})
-            if meta_date:
-                date_str = meta_date.get('content')
-        if not date_str:
-            date_pattern = re.compile(r'\d{1,2}[/.-]\d{1,2}[/.-]\d{2,4}|\d{4}[/.-]\d{1,2}[/.-]\d{1,2}')
-            text = article_soup.get_text()
-            match = date_pattern.search(text)
-            if match:
-                date_str = match.group(0)
-
+            date_value = date_tag.get('datetime')
+            if date_value and isinstance(date_value, str):
+                date_str = date_value
+            else:
+                date_text = date_tag.get_text(strip=True)
+                if date_text:
+                    date_str = str(date_text)
         if date_str:
             self.article.date = self.unify_date_format(date_str)
 
@@ -555,8 +550,9 @@ def main() -> None:
         parser = HTMLParser(url, idx, config)
         article = parser.parse()
         
-        to_raw(article)
-        to_meta(article) 
+        if isinstance(result, Article):
+            to_raw(article)
+            to_meta(article) 
 
 
 if __name__ == "__main__":
