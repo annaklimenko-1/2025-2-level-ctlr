@@ -289,6 +289,7 @@ class Crawler:
         """
         seed_urls = self.config.get_seed_urls()
         required_count = self.config.get_num_articles()
+
         queue = list(seed_urls)
         visited = set()
 
@@ -326,9 +327,13 @@ class Crawler:
                 else:
                     continue
 
+                if 'long.shtml' in full_url:
+                    continue
+
                 if full_url.endswith('.shtml') and 'indexdate' not in full_url:
                     if full_url not in self.urls:
                         self.urls.append(full_url)
+
                 elif 'index_' in full_url and full_url.endswith('.shtml'):
                     if full_url not in visited and full_url not in queue:
                         queue.append(full_url)
@@ -341,31 +346,6 @@ class Crawler:
             list: seed_urls param
         """
         return self.config.get_seed_urls()
-# 10
-
-
-class CrawlerRecursive(Crawler):
-    """
-    Recursive implementation.
-
-    Get one URL of the title page and find requested number of articles recursively.
-    """
-
-    def __init__(self, config: Config) -> None:
-        """
-        Initialize an instance of the CrawlerRecursive class.
-
-        Args:
-            config (Config): Configuration
-        """
-
-    def find_articles(self) -> None:
-        """
-        Find number of article urls requested.
-        """
-
-
-# 4, 6, 8, 10
 
 
 class HTMLParser:
@@ -400,15 +380,10 @@ class HTMLParser:
             text_parts.append(p.get_text(strip=True))
 
         if not text_parts:
-            content_div = article_soup.find('div', class_='content')
-            if content_div:
-                text_parts.append(content_div.get_text(strip=True))
-
-        if not text_parts:
             body = article_soup.find('body')
             if body:
                 text_parts.append(body.get_text(strip=True))
-        
+
         self.article.text = ' '.join(text_parts)
 
     def _fill_article_with_meta_information(self, article_soup: BeautifulSoup) -> None:
@@ -421,113 +396,36 @@ class HTMLParser:
         title_tag = article_soup.find('title')
         if title_tag:
             self.article.title = title_tag.get_text(strip=True)
-        
+
         author_tag = article_soup.find('meta', {'name': 'author'})
         if author_tag and author_tag.get('content'):
             self.article.author = [author_tag['content']]
         else:
-            author_link = article_soup.find('a', href=re.compile(r'indexdate\.shtml|/a/|/b/|/w/'))
-            if author_link:
-                self.article.author = [author_link.get_text(strip=True)]
-            else:
-                self.article.author = ["NOT FOUND"]
-        date_str = None
+            self.article.author = ["NOT FOUND"]
 
-        date_tag = article_soup.find('time')
-        if date_tag:
-            date_value = date_tag.get('datetime')
-            if date_value and isinstance(date_value, str):
-                date_str = date_value
-            else:
-                date_text = date_tag.get_text(strip=True)
-                if date_text:
-                    date_str = str(date_text)
-        if date_str:
-            self.article.date = self.unify_date_format(date_str)
-
-        topics = []
-        keywords_tag = article_soup.find('meta', {'name': 'keywords'})
-        if keywords_tag and keywords_tag.get('content'):
-            topics = [k.strip() for k in keywords_tag['content'].split(',')]
-
-        if not topics:
-            genre_keywords = ['проза', 'поэзия', 'рассказ', 'роман', 'повесть', 'стихотворение']
-            text_lower = article_soup.get_text().lower()
-            for genre in genre_keywords:
-                if genre in text_lower:
-                    topics.append(genre)
-
-        self.article.topics = topics
-        
-        
-
-    def unify_date_format(self, date_str: str) -> datetime.datetime:
-        """
-        Unify date format.
-
-        Args:
-            date_str (str): Date in text format
-
-        Returns:
-            datetime.datetime: Datetime object
-        """
-        months_ru = {
-        'января': 'January', 'февраля': 'February', 'марта': 'March',
-        'апреля': 'April', 'мая': 'May', 'июня': 'June',
-        'июля': 'July', 'августа': 'August', 'сентября': 'September',
-        'октября': 'October', 'ноября': 'November', 'декабря': 'December'
-        }
-    
-        for ru, en in months_ru.items():
-            if ru in date_str:
-                date_str = date_str.replace(ru, en)
-                break
-    
-        formats = [
-            '%Y-%m-%dT%H:%M:%S',
-            '%Y-%m-%d %H:%M:%S',
-            '%d.%m.%Y',
-            '%d/%m/%Y',
-            '%Y-%m-%d',
-            '%d %B %Y, %H:%M',
-            '%d %B %Y',
-        ]
-    
-        for fmt in formats:
-            try:
-                return datetime.datetime.strptime(date_str, fmt)
-            except (ValueError, TypeError):
-                continue
-    
-        return datetime.datetime.now()
-
-
-
-    def parse(self) -> Article | bool:
+    def parse(self) -> Article:
         """
         Parse each article.
 
         Returns:
-            Article | bool: Article instance, False in case of request error
+            Article: Article instance
         """
         response = make_request(self.full_url, self.config)
 
         if response.ok:
             article_bs = BeautifulSoup(response.text, 'html.parser')
-
             self._fill_article_with_text(article_bs)
-
             self._fill_article_with_meta_information(article_bs)
 
         return self.article
 
 
-def prepare_environment(base_path: Path | str) -> None:
+def prepare_environment(base_path: Path) -> None:
     """
     Create ASSETS_PATH folder if no created and remove existing folder.
 
     Args:
-        base_path (pathlib.Path | str): Path where articles stores
+        base_path (Path): Path where articles stores
     """
     if base_path.exists():
         shutil.rmtree(base_path)
@@ -550,11 +448,9 @@ def main() -> None:
         parser = HTMLParser(url, idx, config)
         article = parser.parse()
         
-        if isinstance(article, Article):
-            to_raw(article)
-            to_meta(article) 
+        to_raw(article)
+        to_meta(article) 
 
 
 if __name__ == "__main__":
     main()
-    
