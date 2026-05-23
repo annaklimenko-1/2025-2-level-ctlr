@@ -1,5 +1,6 @@
 {
     "seed_urls": [
+        "https://lit.lib.ru/long.shtml",
         "https://lit.lib.ru/a/",
         "https://lit.lib.ru/b/",
         "https://lit.lib.ru/v/",
@@ -29,7 +30,7 @@
         "https://lit.lib.ru/ya/"
     ],
     "headers": {"User-Agent": "Mozilla/5.0"},
-    "total_articles_to_find_and_parse": 80,
+    "total_articles_to_find_and_parse": 30,
     "encoding": "utf-8",
     "timeout": 30,
     "should_verify_certificate": true,
