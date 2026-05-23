@@ -88,7 +88,7 @@ class Config:
         config_values = self._extract_config_content()
 
         self._seed_urls = config_values.seed_urls
-        self._num_articles = config_values.total_articles
+        self._num_articles = config_values.total_articles_to_find_and_parse
         self._headers = config_values.headers
         self._encoding = config_values.encoding
         self._timeout = config_values.timeout
@@ -134,7 +134,7 @@ class Config:
             if not url_pattern.match(url):
                 raise IncorrectSeedURLError(f"Invalid seed URL format: {url}")
 
-        total = config_dto.total_articles
+        total = config_dto.total_articles_to_find_and_parse
         if isinstance(total, bool):
             raise IncorrectNumberOfArticlesError("Total articles must be an integer, not a boolean")
 
@@ -251,7 +251,9 @@ def make_request(url: str, config: Config) -> requests.models.Response:
         timeout=config.get_timeout(),
         verify=config.get_verify_certificate(),
     )
-    response.encoding = config.get_encoding()
+
+    response.encoding = response.apparent_encoding
+
     return response
 
 
@@ -271,18 +273,6 @@ class Crawler:
         self.urls: list[str] = []
         self.base_url: str = ""
 
-    def _extract_url(self, article_bs: Tag) -> str:
-        """
-        Find and retrieve url from HTML.
-
-        Args:
-            article_bs (bs4.Tag): Tag instance
-
-        Returns:
-            str: Url from HTML
-        """
-        return ""
-
     def find_articles(self) -> None:
         """
         Find articles.
@@ -291,10 +281,12 @@ class Crawler:
         required_count = self.config.get_num_articles()
 
         for seed_url in seed_urls:
+
             if len(self.urls) >= required_count:
                 break
 
             match = re.match(r'(https?://[^/]+)', seed_url)
+
             if match:
                 self.base_url = match.group(1)
             else:
@@ -311,21 +303,66 @@ class Crawler:
             soup = BeautifulSoup(response.text, 'html.parser')
 
             for link in soup.find_all('a', href=True):
+
                 if len(self.urls) >= required_count:
                     break
-                
+
                 href = link.get('href', '')
 
                 if href.startswith('/'):
                     full_url = self.base_url + href
+
                 elif href.startswith('http'):
                     full_url = href
+
                 else:
                     continue
 
-                if 'text_' in full_url and full_url.endswith('.shtml'):
-                    if full_url not in self.urls:
+                if not full_url.endswith('.shtml'):
+                    continue
+
+                if full_url in self.urls:
+                    continue
+
+                try:
+                    article_response = make_request(full_url, self.config)
+
+                    if not article_response.ok:
+                        continue
+
+                    text = article_response.text
+
+                    has_date = re.search(
+                        r'''
+                        \d{1,2}[./]\d{1,2}[./]\d{4}
+                        |
+                        \d{4}-\d{2}-\d{2}
+                        |
+                        \d{1,2}\s+
+                        (января|февраля|марта|апреля|мая|июня|
+                        июля|августа|сентября|октября|ноября|декабря)
+                        \s+\d{4}
+                        |
+                        \d{4}\s*г\.?
+                        ''',
+                        text,
+                        re.IGNORECASE | re.VERBOSE
+                    )
+
+                    if has_date:
                         self.urls.append(full_url)
+
+                except requests.RequestException:
+                    continue
+
+    def get_search_urls(self) -> list[str]:
+        """
+        Retrieve seed urls.
+
+        Returns:
+            list[str]: Seed urls
+        """
+        return self.config.get_seed_urls()
 
 
 class CrawlerRecursive(Crawler):
@@ -378,22 +415,21 @@ class HTMLParser:
         Args:
             article_soup (bs4.BeautifulSoup): BeautifulSoup instance
         """
+
+        pre_tag = article_soup.find('pre')
+
+        if pre_tag:
+            self.article.text = pre_tag.get_text("\n", strip=True)
+            return
+
         paragraphs = article_soup.find_all('p')
+
         text_parts = []
+
         for p in paragraphs:
             text_parts.append(p.get_text(strip=True))
 
-        if not text_parts:
-            content_div = article_soup.find('div', class_='content')
-            if content_div:
-                text_parts.append(content_div.get_text(strip=True))
-
-        if not text_parts:
-            body = article_soup.find('body')
-            if body:
-                text_parts.append(body.get_text(strip=True))
-        
-        self.article.text = ' '.join(text_parts)
+        self.article.text = '\n'.join(text_parts)
 
     def _fill_article_with_meta_information(self, article_soup: BeautifulSoup) -> None:
         """
@@ -402,58 +438,69 @@ class HTMLParser:
         Args:
             article_soup (bs4.BeautifulSoup): BeautifulSoup instance
         """
+
         title_tag = article_soup.find('title')
+
         if title_tag:
             self.article.title = title_tag.get_text(strip=True)
-        
+
+        # AUTHOR
         author_tag = article_soup.find('meta', {'name': 'author'})
+
         if author_tag and author_tag.get('content'):
             self.article.author = [author_tag['content']]
+
         else:
-            author_link = article_soup.find('a', href=re.compile(r'indexdate\.shtml|/a/|/b/|/w/'))
+            author_link = article_soup.find(
+                'a',
+                href=re.compile(r'/[a-z]/')
+            )
+
             if author_link:
                 self.article.author = [author_link.get_text(strip=True)]
+
             else:
                 self.article.author = ["NOT FOUND"]
+
+        text = article_soup.get_text(" ", strip=True)
+
+        date_patterns = [
+            r'\d{1,2}[./]\d{1,2}[./]\d{4}',
+            r'\d{4}-\d{2}-\d{2}',
+            r'\d{1,2}\s+(января|февраля|марта|апреля|мая|июня|июля|августа|сентября|октября|ноября|декабря)\s+\d{4}',
+            r'\d{4}\s*г\.?'
+        ]
+
         date_str = None
 
-        date_tag = article_soup.find('time')
-        if date_tag:
-            date_str = date_tag.get('datetime') or date_tag.get_text(strip=True)
-        if not date_str:
-            meta_date = article_soup.find('meta', {'name': 'article:published_time'})
-            if meta_date:
-                date_str = meta_date.get('content')
-        if not date_str:
-            date_pattern = re.compile(r'\d{1,2}[/.-]\d{1,2}[/.-]\d{2,4}|\d{4}[/.-]\d{1,2}[/.-]\d{1,2}')
-            text = article_soup.get_text()
-            match = date_pattern.search(text)
+        for pattern in date_patterns:
+
+            match = re.search(pattern, text, re.IGNORECASE)
+
             if match:
                 date_str = match.group(0)
+                break
 
-        if date_str:
-            self.article.date = self.unify_date_format(date_str)
+        parsed_date = self.unify_date_format(date_str)
+
+        if parsed_date:
+            self.article.date = parsed_date
         else:
-            self.article.date = datetime.datetime.now()
-
+            self.article.date = datetime.datetime(2000, 1, 1)
 
         topics = []
-        keywords_tag = article_soup.find('meta', {'name': 'keywords'})
-        if keywords_tag and keywords_tag.get('content'):
-            topics = [k.strip() for k in keywords_tag['content'].split(',')]
 
-        if not topics:
-            genre_keywords = ['проза', 'поэзия', 'рассказ', 'роман', 'повесть', 'стихотворение']
-            text_lower = article_soup.get_text().lower()
-            for genre in genre_keywords:
-                if genre in text_lower:
-                    topics.append(genre)
+        keywords_tag = article_soup.find('meta', {'name': 'keywords'})
+
+        if keywords_tag and keywords_tag.get('content'):
+            topics = [
+                k.strip()
+                for k in keywords_tag['content'].split(',')
+            ]
 
         self.article.topics = topics
-        
-        
 
-    def unify_date_format(self, date_str: str) -> datetime.datetime:
+    def unify_date_format(self, date_str: str) -> datetime.datetime | None:
         """
         Unify date format.
 
@@ -463,37 +510,45 @@ class HTMLParser:
         Returns:
             datetime.datetime: Datetime object
         """
+
+        if not date_str:
+            return None
+
         months_ru = {
-        'января': 'January', 'февраля': 'February', 'марта': 'March',
-        'апреля': 'April', 'мая': 'May', 'июня': 'June',
-        'июля': 'July', 'августа': 'August', 'сентября': 'September',
-        'октября': 'October', 'ноября': 'November', 'декабря': 'December'
+            'января': 'January',
+            'февраля': 'February',
+            'марта': 'March',
+            'апреля': 'April',
+            'мая': 'May',
+            'июня': 'June',
+            'июля': 'July',
+            'августа': 'August',
+            'сентября': 'September',
+            'октября': 'October',
+            'ноября': 'November',
+            'декабря': 'December'
         }
-    
+
         for ru, en in months_ru.items():
-            if ru in date_str:
-                date_str = date_str.replace(ru, en)
-                break
-    
+            date_str = date_str.replace(ru, en)
+
         formats = [
-            '%Y-%m-%dT%H:%M:%S',
-            '%Y-%m-%d %H:%M:%S',
             '%d.%m.%Y',
             '%d/%m/%Y',
             '%Y-%m-%d',
-            '%d %B %Y, %H:%M',
             '%d %B %Y',
+            '%Y'
         ]
-    
+
         for fmt in formats:
+
             try:
                 return datetime.datetime.strptime(date_str, fmt)
-            except (ValueError, TypeError):
+
+            except ValueError:
                 continue
-    
-        return datetime.datetime.now()
 
-
+        return None
 
     def parse(self) -> Article | bool:
         """
@@ -502,14 +557,21 @@ class HTMLParser:
         Returns:
             Article | bool: Article instance, False in case of request error
         """
-        response = make_request(self.full_url, self.config)
 
-        if response.ok:
-            article_bs = BeautifulSoup(response.text, 'html.parser')
+        try:
+            response = make_request(self.full_url, self.config)
 
-            self._fill_article_with_text(article_bs)
+        except requests.RequestException:
+            return False
 
-            self._fill_article_with_meta_information(article_bs)
+        if not response.ok:
+            return False
+
+        article_bs = BeautifulSoup(response.text, 'html.parser')
+
+        self._fill_article_with_text(article_bs)
+
+        self._fill_article_with_meta_information(article_bs)
 
         return self.article
 
@@ -521,6 +583,7 @@ def prepare_environment(base_path: Path | str) -> None:
     Args:
         base_path (pathlib.Path | str): Path where articles stores
     """
+    base_path = Path(base_path)
     if base_path.exists():
         shutil.rmtree(base_path)
     base_path.mkdir(parents=True, exist_ok=True)
@@ -541,7 +604,10 @@ def main() -> None:
     for idx, url in enumerate(article_urls[:config.get_num_articles()], start=1):
         parser = HTMLParser(url, idx, config)
         article = parser.parse()
-        
+
+        if not article:
+            continue
+
         to_raw(article)
         to_meta(article) 
 
