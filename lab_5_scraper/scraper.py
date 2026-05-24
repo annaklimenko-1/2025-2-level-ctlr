@@ -281,6 +281,11 @@ class Crawler:
         Returns:
             str: Url from HTML
         """
+        href = article_bs.get('href', '')
+        if href.startswith('/'):
+            return self.base_url + href
+        elif href.startswith('http'):
+            return href
         return ""
 
     def find_articles(self) -> None:
@@ -290,25 +295,17 @@ class Crawler:
         seed_urls = self.config.get_seed_urls()
         required_count = self.config.get_num_articles()
 
-        queue = list(seed_urls)
-        visited = set()
-
-        while queue and len(self.urls) < required_count:
-            current_url = queue.pop(0)
-
-            if current_url in visited:
-                continue
-
-            visited.add(current_url)
-
-            match = re.match(r'(https?://[^/]+)', current_url)
+        if seed_urls:
+            match = re.match(r'(https?://[^/]+)', seed_urls[0])
             if match:
                 self.base_url = match.group(1)
-            else:
-                continue
+
+        for seed_url in seed_urls:
+            if len(self.urls) >= required_count:
+                break
 
             try:
-                response = make_request(current_url, self.config)
+                response = make_request(seed_url, self.config)
             except requests.RequestException:
                 continue
 
@@ -318,25 +315,14 @@ class Crawler:
             soup = BeautifulSoup(response.text, 'html.parser')
 
             for link in soup.find_all('a', href=True):
-                href = link.get('href', '')
+                if len(self.urls) >= required_count:
+                    break
 
-                if href.startswith('/'):
-                    full_url = self.base_url + href
-                elif href.startswith('http'):
-                    full_url = href
-                else:
-                    continue
+                url = self._extract_url(link)
 
-                if 'long.shtml' in full_url:
-                    continue
-
-                if full_url.endswith('.shtml') and 'indexdate' not in full_url:
-                    if full_url not in self.urls:
-                        self.urls.append(full_url)
-
-                elif 'index_' in full_url and full_url.endswith('.shtml'):
-                    if full_url not in visited and full_url not in queue:
-                        queue.append(full_url)
+                if url and url not in self.urls:
+                    if url.endswith('.shtml') and 'indexdate' not in url:
+                        self.urls.append(url)
 
     def get_search_urls(self) -> list:
         """
