@@ -176,7 +176,8 @@ class TextProcessingPipeline(PipelineProtocol):
         articles = self._corpus.get_articles()
 
         for article_id, article_obj in articles.items():
-            raw_text = from_raw(article_obj)
+            raw_file_path = article_obj.get_raw_text_path()
+            raw_text = from_raw(raw_file_path)
             text_lower = raw_text.lower()
             cleaned_text = re.sub(r'[^\w\s\n]', ' ', text_lower)
             cleaned_text = re.sub(r'\s+', ' ', cleaned_text)
