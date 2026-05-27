@@ -180,7 +180,8 @@ class TextProcessingPipeline(PipelineProtocol):
             cleaned_text = re.sub(r'\s+', ' ', cleaned_text)
             cleaned_text = cleaned_text.strip()
 
-            article_obj.set_cleaned_text(cleaned_text)
+            article_obj.cleaned_text = cleaned_text
+
             to_cleaned(article_obj)
 
             if self._analyzer is not None:
