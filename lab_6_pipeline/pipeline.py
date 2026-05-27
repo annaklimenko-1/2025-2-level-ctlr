@@ -219,16 +219,16 @@ class UDPipeAnalyzer(LibraryWrapper):
         nlp.add_pipe(
             ConllFormatter(
                 field_names={
-                    "id": 0,
-                    "form": 1,
-                    "lemma": 2,
-                    "upos": 3,
-                    "xpos": 4,
-                    "feats": 5,
-                    "head": 6,
-                    "deprel": 7,
-                    "deps": 8,
-                    "misc": 9
+                    "ID": 0,
+                    "FORM": 1,
+                    "LEMMA": 2,
+                    "UPOS": 3,
+                    "XPOS": 4,
+                    "FEATS": 5,
+                    "HEAD": 6,
+                    "DEPREL": 7,
+                    "DEPS": 8,
+                    "MISC": 9
                 },
                 include_headers=True
             ),
