@@ -130,18 +130,11 @@ class CorpusManager:
         """
         Register each dataset entry.
         """
-        for file_path in self.path_to_raw_txt_data.iterdir():
-            if not file_path.is_file():
-                continue
-
-            name = file_path.name
-
-            if name.endswith("_raw.txt"):
-                id_str = name[:-8]
-                if id_str.isdigit():
-                    article_id = int(id_str)
-                    if article_id not in self._storage:
-                        self._storage[article_id] = Article(url=None, article_id=article_id)
+        for file_path in self.path_to_raw_txt_data.glob("*_raw.txt"):
+            article_id = int(file_path.stem.split("_")[0])
+            article = Article(url=None, article_id=article_id)
+            from_raw(file_path, article)
+            self._storage[article_id] = article
 
     def get_articles(self) -> dict:
         """
@@ -215,9 +208,6 @@ class UDPipeAnalyzer(LibraryWrapper):
         Returns:
             Language: Analyzer instance
         """
-        if spacy_udpipe is None:
-            raise ImportError("spacy_udpipe is not installed. Please install: pip install spacy-udpipe")
-    
         if spacy_udpipe is None:
             raise ImportError("spacy_udpipe is not installed")
         
