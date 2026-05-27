@@ -85,13 +85,13 @@ class CorpusManager:
             if not file_path.is_file():
                 continue
         
-        name = file_path.name
-        if name.endswith("_raw.txt"):
-            id_str = name[:-8]
-            if id_str.isdigit():
-                raw_id = int(id_str)
-                raw_files.append(file_path)
-                raw_ids.add(raw_id)
+            name = file_path.name
+            if name.endswith("_raw.txt"):
+                id_str = name[:-8]
+                if id_str.isdigit():
+                    raw_id = int(id_str)
+                    raw_files.append(file_path)
+                    raw_ids.add(raw_id)
             elif name.endswith("_meta.json"):
                 id_str = name[:-10]
                 if id_str.isdigit():
@@ -100,27 +100,22 @@ class CorpusManager:
                     meta_ids.add(meta_id)
         if not raw_files:
             raise EmptyDirectoryError(f"No valid raw files found in: {self.path_to_raw_txt_data}")
-        if raw_ids:
-            expected_ids = set(range(1, max(raw_ids) + 1))
-            if raw_ids != expected_ids:
-                raise InconsistentDatasetError(
-                    f"Raw files have inconsistent numbering. Found IDs: {sorted(raw_ids)}. "
-                    f"Expected IDs: {sorted(expected_ids)}"
-                )
-
-        if meta_files and len(raw_files) != len(meta_files):
-            raise InconsistentDatasetError(
-                f"Number of raw files ({len(raw_files)}) "
-                f"does not match number of meta files ({len(meta_files)})"
-            )
         
-        if meta_ids and raw_ids:
-            if meta_ids != raw_ids:
+        if meta_files:
+            if raw_ids != meta_ids:
                 raise InconsistentDatasetError(
-                    f"Meta files have different IDs than raw files. "
+                    f"Raw and meta files have different IDs. "
                     f"Raw IDs: {sorted(raw_ids)}, Meta IDs: {sorted(meta_ids)}"
                 )
-        
+
+            if raw_ids:
+                expected_ids = set(range(1, max(raw_ids) + 1))
+                if raw_ids != expected_ids:
+                    raise InconsistentDatasetError(
+                        f"Raw files have inconsistent numbering. Found IDs: {sorted(raw_ids)}. "
+                        f"Expected IDs: {sorted(expected_ids)}"
+                    )
+
         for file_path in raw_files:
             if file_path.stat().st_size == 0:
                 raise InconsistentDatasetError(f"Raw file is empty: {file_path.name}")
@@ -128,7 +123,6 @@ class CorpusManager:
         for file_path in meta_files:
             if file_path.stat().st_size == 0:
                 raise InconsistentDatasetError(f"Meta file is empty: {file_path.name}")
-
 
     def _scan_dataset(self) -> None:
         """
@@ -144,7 +138,8 @@ class CorpusManager:
                 id_str = name[:-8]
                 if id_str.isdigit():
                     article_id = int(id_str)
-                    self._storage[article_id] = Article(url=None, article_id=article_id)
+                    if article_id not in self._storage:
+                        self._storage[article_id] = Article(url=None, article_id=article_id)
 
     def get_articles(self) -> dict:
         """
@@ -153,7 +148,7 @@ class CorpusManager:
         Returns:
             dict: Storage params
         """
-        return self._storage()
+        return self._storage
 
 
 class TextProcessingPipeline(PipelineProtocol):
