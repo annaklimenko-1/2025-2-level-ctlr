@@ -209,18 +209,37 @@ class UDPipeAnalyzer(LibraryWrapper):
             Language: Analyzer instance
         """
         if spacy_udpipe is None:
-            raise ImportError("spacy_udpipe is not installed")
-        
+            raise ImportError("spacy_udpipe is not installed. Please install: pip install spacy-udpipe")
+    
         spacy_udpipe.download("ru")
         nlp = spacy_udpipe.load("ru")
-        
-        if "conll_formatter" not in nlp.pipe_names:
-            nlp.add_pipe("conll_formatter", last=True)
-        
-        nlp.max_length = 2000000
-        
-        return nlp
 
+        from spacy_conll import ConllFormatter
+
+        nlp.add_pipe(
+            ConllFormatter(
+                nlp=nlp,
+                field_names={
+                    "id": 0,
+                    "form": 1,
+                    "lemma": 2,
+                    "upos": 3,
+                    "xpos": 4,
+                    "feats": 5,
+                    "head": 6,
+                    "deprel": 7,
+                    "deps": 8,
+                    "misc": 9
+                },
+                include_headers=True
+            ),
+            last=True
+        )
+    
+        nlp.max_length = 2000000
+    
+        return nlp
+        
     def analyze(self, texts: list[str]) -> list[str]:
         """
         Process texts into CoNLL-U formatted markup.
