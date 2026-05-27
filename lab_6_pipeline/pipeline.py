@@ -3,11 +3,12 @@ Pipeline for CONLL-U formatting.
 """
 
 # pylint: disable=too-few-public-methods, unused-import, undefined-variable, too-many-nested-blocks, duplicate-code
-import re
 import pathlib
+import re
+from typing import Optional
 
-from core_utils.article.io import from_raw, to_cleaned
 from core_utils.article.article import Article
+from core_utils.article.io import from_raw, to_cleaned
 from core_utils.pipeline import LibraryWrapper, PipelineProtocol, TreeNode
 
 try:
