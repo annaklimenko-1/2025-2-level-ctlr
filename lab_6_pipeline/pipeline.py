@@ -177,7 +177,8 @@ class TextProcessingPipeline(PipelineProtocol):
 
         for article_id, article_obj in articles.items():
             raw_file_path = article_obj.get_raw_text_path()
-            raw_text = from_raw(raw_file_path)
+            article_with_text = from_raw(raw_file_path)
+            raw_text = article_with_text.text
             text_lower = raw_text.lower()
             cleaned_text = re.sub(r'[^\w\s\n]', ' ', text_lower)
             cleaned_text = re.sub(r'\s+', ' ', cleaned_text)
