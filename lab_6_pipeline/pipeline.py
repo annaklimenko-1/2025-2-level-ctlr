@@ -37,6 +37,11 @@ class InconsistentDatasetError(Exception):
     pass
 
 
+class EmptyFileError(Exception):
+    """Raised when file is empty."""
+    pass
+
+
 class CorpusManager:
     """
     Work with articles and store them.
