@@ -57,7 +57,7 @@ class CorpusManager:
         self.path_to_raw_txt_data = path_to_raw_txt_data
         self._storage: dict[int, Article] = {}
         self._validate_dataset()
-        self._scan_dataset
+        self._scan_dataset()
 
     def _validate_dataset(self) -> None:
         """
