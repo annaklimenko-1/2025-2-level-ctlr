@@ -369,20 +369,17 @@ class POSFrequencyPipeline:
         """
         Visualize the frequencies of each part of speech.
         """
-        for article in self._corpus.get_articles().values():
-            try:
-                frequencies = self._count_frequencies(article)
-                if frequencies:
-                    article.set_pos_info(frequencies)
-                    to_meta(article)
-                    from core_utils.constants import ASSETS_PATH
-                    visualize(
-                        article=article,
-                        path_to_save=ASSETS_PATH / f"{article.article_id}_image.png"
-                    )
-            except EmptyFileError as e:
-                print(f"Error processing article {article.article_id}: {e}")
+        from core_utils.constants import ASSETS_PATH
 
+        for article in self._corpus.get_articles().values():
+            frequencies = self._count_frequencies(article)
+            if frequencies:
+                article.set_pos_info(frequencies)
+                to_meta(article)
+                visualize(
+                    article=article,
+                    path_to_save=ASSETS_PATH / f'{article.article_id}.image.png'
+                )
 
 class PatternSearchPipeline(PipelineProtocol):
     """
