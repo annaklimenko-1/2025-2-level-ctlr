@@ -6,7 +6,6 @@ Pipeline for CONLL-U formatting.
 import json
 import pathlib
 import re
-from collections import Counter
 from typing import Optional
 
 from core_utils.article.article import Article, ArtifactType
