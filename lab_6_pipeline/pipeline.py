@@ -186,7 +186,6 @@ class TextProcessingPipeline(PipelineProtocol):
             article_with_text = from_raw(raw_file_path)
             raw_text = article_with_text.text
 
-            # Очистка для *_cleaned.txt (оценка 4)
             text_lower = raw_text.lower()
             cleaned_text = re.sub(r'[^\w\s\n]', ' ', text_lower)
             cleaned_text = re.sub(r'\s+', ' ', cleaned_text)
@@ -195,7 +194,6 @@ class TextProcessingPipeline(PipelineProtocol):
             article_obj.cleaned_text = cleaned_text
             to_cleaned(article_obj)
 
-            # UDPipe использует оригинальный текст
             if self._analyzer is not None:
                 conllu_results = self._analyzer.analyze([raw_text])
                 if conllu_results:
