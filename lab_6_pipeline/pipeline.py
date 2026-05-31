@@ -17,7 +17,8 @@ try:
     from networkx import DiGraph
     from networkx.algorithms.isomorphism import DiGraphMatcher
 except ImportError:
-    DiGraph = None  # type: ignore
+    DiGraph = None
+    DiGraphMatcher = None
     print("No libraries installed. Failed to import.")
 
 try:
@@ -26,8 +27,8 @@ try:
     from spacy.tokens import Doc
     from spacy_conll import ConllParser
 except ImportError:
-    Language = None  # type: ignore
-    Doc = None  # type: ignore
+    Language = None
+    Doc = None
     spacy_udpipe = None
     ConllParser = None
     print("No libraries installed. Failed to import.")
@@ -73,7 +74,7 @@ class CorpusManager:
             raise FileNotFoundError(f"Path does not exist: {self.path_to_raw_txt_data}")
         if not self.path_to_raw_txt_data.is_dir():
             raise NotADirectoryError(f"Path is not a directory: {self.path_to_raw_txt_data}")
-        
+
         try:
             files = list(self.path_to_raw_txt_data.iterdir())
         except OSError:
@@ -81,7 +82,7 @@ class CorpusManager:
 
         if not files:
             raise EmptyDirectoryError(f"Directory is empty: {self.path_to_raw_txt_data}")
-        
+
         raw_files = []
         meta_files = []
         raw_ids = set()
@@ -90,7 +91,7 @@ class CorpusManager:
         for file_path in files:
             if not file_path.is_file():
                 continue
-        
+
             name = file_path.name
             if name.endswith("_raw.txt"):
                 id_str = name[:-8]
@@ -98,16 +99,16 @@ class CorpusManager:
                     raw_id = int(id_str)
                     raw_files.append(file_path)
                     raw_ids.add(raw_id)
-            elif name.endswith("_meta.json"):
+            elif name.endswith("_eta.json"):
                 id_str = name[:-10]
                 if id_str.isdigit():
                     meta_id = int(id_str)
                     meta_files.append(file_path)
                     meta_ids.add(meta_id)
-                    
+
         if not raw_files:
             raise EmptyDirectoryError(f"No valid raw files found in: {self.path_to_raw_txt_data}")
-        
+
         if meta_files:
             if raw_ids != meta_ids:
                 raise InconsistentDatasetError(
@@ -175,7 +176,7 @@ class TextProcessingPipeline(PipelineProtocol):
         """
         articles = self._corpus.get_articles()
 
-        for article_id, article_obj in articles.items():
+        for article_obj in articles.values():
             raw_file_path = article_obj.get_raw_text_path()
             article_with_text = from_raw(raw_file_path)
             raw_text = article_with_text.text
@@ -183,7 +184,7 @@ class TextProcessingPipeline(PipelineProtocol):
             cleaned_text = re.sub(r'[^\w\s\n]', ' ', text_lower)
             cleaned_text = re.sub(r'\s+', ' ', cleaned_text)
             cleaned_text = cleaned_text.strip()
-            
+
             article_obj.cleaned_text = cleaned_text
             to_cleaned(article_obj)
 
@@ -221,16 +222,16 @@ class UDPipeAnalyzer(LibraryWrapper):
         """
         if spacy_udpipe is None:
             raise ImportError("spacy_udpipe is not installed")
-        
+
         from core_utils.constants import PROJECT_ROOT
-        
+
         model_path = PROJECT_ROOT / 'lab_6_pipeline' / 'assets' / 'model' / 'russian-syntagrus-ud-2.0-170801.udpipe'
-        
+
         if not model_path.exists():
             raise FileNotFoundError(f"Model not found at {model_path}")
-        
+
         nlp = spacy_udpipe.load_from_path(lang='ru', path=str(model_path))
-        
+
         if "conll_formatter" not in nlp.pipe_names:
             nlp.add_pipe(
                 "conll_formatter",
@@ -252,9 +253,9 @@ class UDPipeAnalyzer(LibraryWrapper):
                     }
                 }
             )
-        
+
         nlp.max_length = 2000000
-        
+
         return nlp
 
     def analyze(self, texts: list[str]) -> list[str]:
@@ -269,13 +270,13 @@ class UDPipeAnalyzer(LibraryWrapper):
         """
         if self._analyzer is None:
             return []
-        
+
         results = []
         for text in texts:
             doc = self._analyzer(text)
             conllu = doc._.conll_str
             results.append(conllu)
-        
+
         return results
 
     def to_conllu(self, article: Article) -> None:
@@ -302,17 +303,17 @@ class UDPipeAnalyzer(LibraryWrapper):
         """
         if self._parser is None:
             raise ImportError("ConllParser is not available")
-        
+
         conllu_path = article.get_file_path(ArtifactType.UDPIPE_CONLLU)
-        
+
         if not conllu_path.exists():
             raise FileNotFoundError(f"CoNLL-U file not found: {conllu_path}")
-        
+
         conllu_content = conllu_path.read_text(encoding='utf-8')
-        
+
         if len(conllu_content.strip()) == 0:
             raise EmptyFileError(f"CoNLL-U file is empty: {conllu_path}")
-        
+
         doc = self._parser.parse_conll_text_as_spacy(conllu_content.rstrip('\n'))
         return doc
 
@@ -344,19 +345,23 @@ class POSFrequencyPipeline:
             dict[str, int]: POS frequencies
         """
         doc = self._analyzer.from_conllu(article)
-        pos_counter = Counter()
-        
+        pos_counter = {}
+
         for token in doc:
-            pos_counter[token.pos_] += 1
-        
-        return dict(pos_counter)
+            pos = token.pos_
+            if pos in pos_counter:
+                pos_counter[pos] += 1
+            else:
+                pos_counter[pos] = 1
+
+        return pos_counter
 
     def run(self) -> None:
         """
         Visualize the frequencies of each part of speech.
         """
         from core_utils.constants import ASSETS_PATH
-        
+
         for article in self._corpus.get_articles().values():
             try:
                 frequencies = self._count_frequencies(article)
@@ -447,7 +452,7 @@ def main() -> None:
         analyzer = UDPipeAnalyzer()
         pipeline = TextProcessingPipeline(corpus_manager, analyzer)
         pipeline.run()
-        
+
         pos_pipeline = POSFrequencyPipeline(corpus_manager, analyzer)
         pos_pipeline.run()
     else:
