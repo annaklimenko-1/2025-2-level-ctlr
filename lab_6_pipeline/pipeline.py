@@ -3,13 +3,17 @@ Pipeline for CONLL-U formatting.
 """
 
 # pylint: disable=too-few-public-methods, unused-import, undefined-variable, too-many-nested-blocks, duplicate-code
-import json
 import pathlib
 import re
+import json
 from typing import Optional
 
+import spacy_udpipe
+from spacy_conll.parser import ConllParser
+
 from core_utils.article.article import Article, ArtifactType
-from core_utils.article.io import from_raw, to_cleaned, to_meta
+from core_utils.article.io import from_meta, from_raw, to_cleaned, to_meta
+from core_utils.constants import ASSETS_PATH, PROJECT_ROOT
 from core_utils.pipeline import LibraryWrapper, PipelineProtocol, TreeNode
 from core_utils.visualizer import visualize
 
@@ -21,15 +25,11 @@ except ImportError:
     DiGraphMatcher = None
 
 try:
-    import spacy_udpipe
     from spacy.language import Language
     from spacy.tokens import Doc
-    from spacy_conll import ConllParser
 except ImportError:
     Language = None
     Doc = None
-    spacy_udpipe = None
-    ConllParser = None
 
 
 class EmptyDirectoryError(Exception):
