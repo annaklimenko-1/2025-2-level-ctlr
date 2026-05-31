@@ -2,10 +2,11 @@
 Pipeline for CONLL-U formatting.
 """
 
+import json
+
 # pylint: disable=too-few-public-methods, unused-import, undefined-variable, too-many-nested-blocks, duplicate-code
 import pathlib
 import re
-import json
 from typing import Optional
 
 import spacy_udpipe
@@ -104,9 +105,7 @@ class CorpusManager:
                     meta_ids.add(meta_id)
 
         if not raw_files:
-            raise EmptyDirectoryError(
-                f"No valid raw files found in: {self.path_to_raw_txt_data}"
-            )
+            raise EmptyDirectoryError(f"No valid raw files found in: {self.path_to_raw_txt_data}")
 
         if meta_files:
             if raw_ids != meta_ids:
@@ -187,8 +186,8 @@ class TextProcessingPipeline(PipelineProtocol):
             raw_text = article_with_text.text
 
             text_lower = raw_text.lower()
-            cleaned_text = re.sub(r'[^\w\s\n]', ' ', text_lower)
-            cleaned_text = re.sub(r'\s+', ' ', cleaned_text)
+            cleaned_text = re.sub(r"[^\w\s\n]", " ", text_lower)
+            cleaned_text = re.sub(r"\s+", " ", cleaned_text)
             cleaned_text = cleaned_text.strip()
 
             article_obj.cleaned_text = cleaned_text
@@ -230,14 +229,17 @@ class UDPipeAnalyzer(LibraryWrapper):
         from core_utils.constants import PROJECT_ROOT
 
         model_path = (
-            PROJECT_ROOT / 'lab_6_pipeline' / 'assets' / 'model'
-            / 'russian-syntagrus-ud-2.0-170801.udpipe'
+            PROJECT_ROOT
+            / "lab_6_pipeline"
+            / "assets"
+            / "model"
+            / "russian-syntagrus-ud-2.0-170801.udpipe"
         )
 
         if not model_path.exists():
             raise FileNotFoundError(f"Model not found at {model_path}")
 
-        nlp = spacy_udpipe.load_from_path(lang='ru', path=str(model_path))
+        nlp = spacy_udpipe.load_from_path(lang="ru", path=str(model_path))
 
         if "conll_formatter" not in nlp.pipe_names:
             nlp.add_pipe(
@@ -296,7 +298,7 @@ class UDPipeAnalyzer(LibraryWrapper):
         conllu_info = article.get_conllu_info()
         if conllu_info:
             conllu_path = article.get_file_path(ArtifactType.UDPIPE_CONLLU)
-            conllu_path.write_text(conllu_info + '\n', encoding='utf-8')
+            conllu_path.write_text(conllu_info + "\n", encoding="utf-8")
 
     def from_conllu(self, article: Article) -> Doc:
         """
@@ -316,12 +318,12 @@ class UDPipeAnalyzer(LibraryWrapper):
         if not conllu_path.exists():
             raise FileNotFoundError(f"CoNLL-U file not found: {conllu_path}")
 
-        conllu_content = conllu_path.read_text(encoding='utf-8')
+        conllu_content = conllu_path.read_text(encoding="utf-8")
 
         if len(conllu_content.strip()) == 0:
             raise EmptyFileError(f"CoNLL-U file is empty: {conllu_path}")
 
-        doc = self._parser.parse_conll_text_as_spacy(conllu_content.rstrip('\n'))
+        doc = self._parser.parse_conll_text_as_spacy(conllu_content.rstrip("\n"))
         return doc
 
 
@@ -367,17 +369,14 @@ class POSFrequencyPipeline:
         """
         Visualize the frequencies of each part of speech.
         """
-        from core_utils.constants import ASSETS_PATH
-
         for article in self._corpus.get_articles().values():
             frequencies = self._count_frequencies(article)
             if frequencies:
                 article.set_pos_info(frequencies)
                 to_meta(article)
-                visualize(
-                    article=article,
-                    path_to_save=ASSETS_PATH / f'{article.article_id}.image.png'
-                )
+                image_path = article.get_raw_text_path().parent / f"{article.article_id}_image.png"
+                visualize(article=article, path_to_save=image_path)
+
 
 class PatternSearchPipeline(PipelineProtocol):
     """
@@ -447,6 +446,7 @@ def main() -> None:
     Entrypoint for pipeline module.
     """
     from core_utils.constants import ASSETS_PATH
+
     corpus_manager = CorpusManager(path_to_raw_txt_data=ASSETS_PATH)
 
     if spacy_udpipe is not None:
