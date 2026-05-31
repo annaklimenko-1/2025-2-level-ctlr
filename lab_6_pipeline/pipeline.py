@@ -19,7 +19,6 @@ try:
 except ImportError:
     DiGraph = None
     DiGraphMatcher = None
-    print("No libraries installed. Failed to import.")
 
 try:
     import spacy_udpipe
@@ -31,22 +30,18 @@ except ImportError:
     Doc = None
     spacy_udpipe = None
     ConllParser = None
-    print("No libraries installed. Failed to import.")
 
 
 class EmptyDirectoryError(Exception):
     """Raised when directory is empty."""
-    pass
 
 
 class InconsistentDatasetError(Exception):
     """Raised when dataset has inconsistent structure."""
-    pass
 
 
 class EmptyFileError(Exception):
     """Raised when file is empty."""
-    pass
 
 
 class CorpusManager:
@@ -77,8 +72,10 @@ class CorpusManager:
 
         try:
             files = list(self.path_to_raw_txt_data.iterdir())
-        except OSError:
-            raise EmptyDirectoryError(f"Cannot read directory: {self.path_to_raw_txt_data}")
+        except OSError as exc:
+            raise EmptyDirectoryError(
+                f"Cannot read directory: {self.path_to_raw_txt_data}"
+            ) from exc
 
         if not files:
             raise EmptyDirectoryError(f"Directory is empty: {self.path_to_raw_txt_data}")
@@ -99,7 +96,7 @@ class CorpusManager:
                     raw_id = int(id_str)
                     raw_files.append(file_path)
                     raw_ids.add(raw_id)
-            elif name.endswith("_eta.json"):
+            elif name.endswith("_meta.json"):
                 id_str = name[:-10]
                 if id_str.isdigit():
                     meta_id = int(id_str)
@@ -107,7 +104,9 @@ class CorpusManager:
                     meta_ids.add(meta_id)
 
         if not raw_files:
-            raise EmptyDirectoryError(f"No valid raw files found in: {self.path_to_raw_txt_data}")
+            raise EmptyDirectoryError(
+                f"No valid raw files found in: {self.path_to_raw_txt_data}"
+            )
 
         if meta_files:
             if raw_ids != meta_ids:
@@ -116,13 +115,19 @@ class CorpusManager:
                     f"Raw IDs: {sorted(raw_ids)}, Meta IDs: {sorted(meta_ids)}"
                 )
 
-            if raw_ids:
-                expected_ids = set(range(1, max(raw_ids) + 1))
-                if raw_ids != expected_ids:
-                    raise InconsistentDatasetError(
-                        f"Raw files have inconsistent numbering. Found IDs: {sorted(raw_ids)}. "
-                        f"Expected IDs: {sorted(expected_ids)}"
-                    )
+        if raw_ids:
+            expected_ids = set(range(1, max(raw_ids) + 1))
+            if raw_ids != expected_ids:
+                raise InconsistentDatasetError(
+                    f"Raw files have inconsistent numbering. Found IDs: {sorted(raw_ids)}. "
+                    f"Expected IDs: {sorted(expected_ids)}"
+                )
+
+        if len(raw_ids) != len(meta_ids):
+            raise InconsistentDatasetError(
+                f"Number of raw files ({len(raw_ids)}) "
+                f"does not match number of meta files ({len(meta_ids)})"
+            )
 
         for file_path in raw_files:
             if file_path.stat().st_size == 0:
@@ -180,6 +185,8 @@ class TextProcessingPipeline(PipelineProtocol):
             raw_file_path = article_obj.get_raw_text_path()
             article_with_text = from_raw(raw_file_path)
             raw_text = article_with_text.text
+
+            # Очистка для *_cleaned.txt (оценка 4)
             text_lower = raw_text.lower()
             cleaned_text = re.sub(r'[^\w\s\n]', ' ', text_lower)
             cleaned_text = re.sub(r'\s+', ' ', cleaned_text)
@@ -188,8 +195,9 @@ class TextProcessingPipeline(PipelineProtocol):
             article_obj.cleaned_text = cleaned_text
             to_cleaned(article_obj)
 
+            # UDPipe использует оригинальный текст
             if self._analyzer is not None:
-                conllu_results = self._analyzer.analyze([cleaned_text])
+                conllu_results = self._analyzer.analyze([raw_text])
                 if conllu_results:
                     article_obj.set_conllu_info(conllu_results[0])
                     self._analyzer.to_conllu(article_obj)
@@ -200,20 +208,18 @@ class UDPipeAnalyzer(LibraryWrapper):
     Wrapper for udpipe library.
     """
 
-    _analyzer: Language
-    _parser: Optional[ConllParser]
+    _analyzer: Optional[Language] = None
+    _parser: Optional[ConllParser] = None
 
     def __init__(self) -> None:
         """
         Initialize an instance of the UDPipeAnalyzer class.
         """
         self._analyzer = self._bootstrap()
-        if ConllParser is not None:
+        if ConllParser is not None and self._analyzer is not None:
             self._parser = ConllParser(self._analyzer)
-        else:
-            self._parser = None
 
-    def _bootstrap(self) -> Language:
+    def _bootstrap(self) -> Optional[Language]:
         """
         Load and set up the UDPipe model.
 
@@ -225,7 +231,10 @@ class UDPipeAnalyzer(LibraryWrapper):
 
         from core_utils.constants import PROJECT_ROOT
 
-        model_path = PROJECT_ROOT / 'lab_6_pipeline' / 'assets' / 'model' / 'russian-syntagrus-ud-2.0-170801.udpipe'
+        model_path = (
+            PROJECT_ROOT / 'lab_6_pipeline' / 'assets' / 'model'
+            / 'russian-syntagrus-ud-2.0-170801.udpipe'
+        )
 
         if not model_path.exists():
             raise FileNotFoundError(f"Model not found at {model_path}")
@@ -249,9 +258,9 @@ class UDPipeAnalyzer(LibraryWrapper):
                         "HEAD": "HEAD",
                         "DEPREL": "DEPREL",
                         "DEPS": "DEPS",
-                        "MISC": "MISC"
-                    }
-                }
+                        "MISC": "MISC",
+                    },
+                },
             )
 
         nlp.max_length = 2000000
@@ -345,7 +354,7 @@ class POSFrequencyPipeline:
             dict[str, int]: POS frequencies
         """
         doc = self._analyzer.from_conllu(article)
-        pos_counter = {}
+        pos_counter: dict[str, int] = {}
 
         for token in doc:
             pos = token.pos_
@@ -360,14 +369,13 @@ class POSFrequencyPipeline:
         """
         Visualize the frequencies of each part of speech.
         """
-        from core_utils.constants import ASSETS_PATH
-
         for article in self._corpus.get_articles().values():
             try:
                 frequencies = self._count_frequencies(article)
                 if frequencies:
                     article.set_pos_info(frequencies)
                     to_meta(article)
+                    from core_utils.constants import ASSETS_PATH
                     visualize(
                         article=article,
                         path_to_save=ASSETS_PATH / f"{article.article_id}_image.png"
@@ -420,7 +428,6 @@ class PatternSearchPipeline(PipelineProtocol):
             node_id (int): ID of root node of the match
             tree_node (TreeNode): Root node of the match
         """
-        pass
 
     def _find_pattern(self, doc_graphs: list) -> dict[int, list[TreeNode]]:
         """
@@ -438,7 +445,6 @@ class PatternSearchPipeline(PipelineProtocol):
         """
         Search for a pattern in documents and writes found information to JSON file.
         """
-        pass
 
 
 def main() -> None:
