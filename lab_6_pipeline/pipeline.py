@@ -34,15 +34,21 @@ except ImportError:
 
 
 class EmptyDirectoryError(Exception):
-    """Raised when directory is empty."""
+    """
+    Raised when directory is empty.
+    """
 
 
 class InconsistentDatasetError(Exception):
-    """Raised when dataset has inconsistent structure."""
+    """
+    Raised when dataset has inconsistent structure.
+    """
 
 
 class EmptyFileError(Exception):
-    """Raised when file is empty."""
+    """
+    Raised when file is empty.
+    """
 
 
 class CorpusManager:
