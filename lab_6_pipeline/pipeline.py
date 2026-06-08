@@ -67,7 +67,7 @@ class CorpusManager:
         self._validate_dataset()
         self._scan_dataset()
 
-    def _validate_dataset(self) -> None:
+    def _validate_dataset(self) -> None: # pylint: disable=too-many-branches
         """
         Validate folder with assets.
         """
@@ -445,7 +445,7 @@ class PatternSearchPipeline(PipelineProtocol):
                 tree_node.children.append(child_node)
                 self._add_children(graph, subgraph_to_graph, child_id, child_node)
 
-    def _find_pattern(self, doc_graphs: list) -> dict[int, list[TreeNode]]:
+    def _find_pattern(self, doc_graphs: list) -> dict[int, list[TreeNode]]: # pylint: disable=too-many-locals
         """
         Search for the required pattern.
 
