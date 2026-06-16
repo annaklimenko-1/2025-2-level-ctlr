@@ -82,11 +82,11 @@
             }
         },
         {
-            "name": "[SEMINAR 4] Try NetworkX",
+            "name": "[SEMINAR 5] Try NetworkX",
             "type": "debugpy",
             "request": "launch",
-            "program": "${workspaceFolder}/seminars/seminar_05_18_2026/try_networkx.py",
-            "cwd": "${workspaceFolder}/seminars/seminar_05_18_2026",
+            "program": "${workspaceFolder}/seminars/seminar_05_25_2026/try_networkx.py",
+            "cwd": "${workspaceFolder}/seminars/seminar_05_25_2026",
             "console": "integratedTerminal",
             "env": {
                 "PYTHONPATH": "${workspaceFolder}"

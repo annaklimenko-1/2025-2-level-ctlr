@@ -30,9 +30,9 @@ fi
 
 export PYTHONPATH=$(pwd)
 
-if [[ "$1" != "public" ]]; then
-  autoflake -vv .
+autoflake -vv .
 
+if [[ "$1" != "public" ]]; then
   fiplconfig.generate_labs_stubs
 fi
 

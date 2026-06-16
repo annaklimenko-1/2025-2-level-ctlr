@@ -17,6 +17,7 @@ markers = [
     "stage_5_pattern_search_pipeline_checks: tests for PatternSearchPipeline",
     "lab_5_scraper: all checks for the scraper",
     "lab_6_pipeline: all checks for the pipeline",
+    "final_project: tests for final project",
     "core_utils: all checks for the core utils"
 ]
 norecursedirs = [

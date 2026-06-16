@@ -1,0 +1,1926 @@
+# sent_id = 1
+# text = Денис родился в с.
+1	Денис	денис	NOUN	_	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	2	nsubj	_	_
+2	родился	рождаться	VERB	_	Aspect=Perf|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Mid	0	ROOT	_	_
+3	в	в	ADP	_	_	4	case	_	_
+4	с	секунда	NOUN	_	Animacy=Inan|Case=Loc|Gender=Fem|Number=Sing	2	obl	_	SpaceAfter=No
+5	.	.	PUNCT	_	_	4	punct	_	_
+
+# sent_id = 2
+# text = Кондрыкине в 2002 году, учился в основной школе в пос.Большевик.
+1	Кондрыкине	Кондрыкина	ADV	_	Degree=Pos	4	advmod	_	_
+2	в	в	ADP	_	_	4	case	_	_
+3	2002	2002	NUM	_	_	4	nummod	_	_
+4	году	год	NOUN	_	Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing	6	obl	_	SpaceAfter=No
+5	,	,	PUNCT	_	_	4	punct	_	_
+6	учился	учиться	VERB	_	Aspect=Imp|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Mid	0	ROOT	_	_
+7	в	в	ADP	_	_	9	case	_	_
+8	основной	основной	ADJ	_	Case=Loc|Degree=Pos|Gender=Fem|Number=Sing	9	amod	_	_
+9	школе	школа	NOUN	_	Animacy=Inan|Case=Loc|Gender=Fem|Number=Sing	6	obl	_	_
+10	в	в	ADP	_	_	11	case	_	_
+11	пос.Большевик	пос.Большевик	PROPN	_	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	9	nmod	_	SpaceAfter=No
+12	.	.	PUNCT	_	_	11	punct	_	_
+
+# sent_id = 3
+# text = Любимым предметом для него стали физика и математика, неслучайно при сдаче ОГЭ в 9-м классе выпускник выбрал именно физику.
+1	Любимым	любимый	ADJ	_	Case=Ins|Degree=Pos|Gender=Masc|Number=Sing	2	amod	_	_
+2	предметом	предмет	NOUN	_	Animacy=Inan|Case=Ins|Gender=Masc|Number=Sing	5	obl	_	_
+3	для	для	ADP	_	_	4	case	_	_
+4	него	он	PRON	_	Case=Gen|Gender=Masc|Number=Sing|Person=3	2	nmod	_	_
+5	стали	становиться	VERB	_	Aspect=Perf|Mood=Ind|Number=Plur|Tense=Past|VerbForm=Fin|Voice=Mid	0	ROOT	_	_
+6	физика	физика	NOUN	_	Animacy=Inan|Case=Nom|Gender=Fem|Number=Sing	5	nsubj	_	_
+7	и	и	CCONJ	_	_	8	cc	_	_
+8	математика	математика	NOUN	_	Animacy=Inan|Case=Nom|Gender=Fem|Number=Sing	6	conj	_	SpaceAfter=No
+9	,	,	PUNCT	_	_	8	punct	_	_
+10	неслучайно	неслучайно	ADV	_	Degree=Pos	18	advmod	_	_
+11	при	при	ADP	_	_	12	case	_	_
+12	сдаче	сдача	NOUN	_	Animacy=Inan|Case=Loc|Gender=Fem|Number=Sing	10	nmod	_	_
+13	ОГЭ	Огэ	PROPN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	12	nmod	_	_
+14	в	в	ADP	_	_	16	case	_	_
+15	9-м	9-ый	ADJ	_	Case=Loc|Degree=Pos|Gender=Masc|Number=Sing	16	amod	_	_
+16	классе	класс	NOUN	_	Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing	12	nmod	_	_
+17	выпускник	выпускник	NOUN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	18	nsubj	_	_
+18	выбрал	выбирать	VERB	_	Aspect=Perf|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	6	conj	_	_
+19	именно	именно	PART	_	_	20	advmod	_	_
+20	физику	физика	NOUN	_	Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing	18	obj	_	SpaceAfter=No
+21	.	.	PUNCT	_	_	20	punct	_	_
+
+# sent_id = 4
+# text = В школьные годы юноша занимался волейболом под руководством классного руководителя и учителя физкультуры О.Н.Коноваловой.
+1	В	в	ADP	_	_	3	case	_	_
+2	школьные	школьный	ADJ	_	Animacy=Inan|Case=Acc|Degree=Pos|Number=Plur	3	amod	_	_
+3	годы	год	NOUN	_	Animacy=Inan|Case=Acc|Gender=Masc|Number=Plur	5	obl	_	_
+4	юноша	юноша	NOUN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	5	nsubj	_	_
+5	занимался	заниматься	VERB	_	Aspect=Imp|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Mid	0	ROOT	_	_
+6	волейболом	волейбол	NOUN	_	Animacy=Inan|Case=Ins|Gender=Masc|Number=Sing	5	obl	_	_
+7	под	под	ADP	_	_	8	case	_	_
+8	руководством	руководство	NOUN	_	Animacy=Inan|Case=Ins|Gender=Neut|Number=Sing	6	nmod	_	_
+9	классного	классный	ADJ	_	Case=Gen|Degree=Pos|Gender=Masc|Number=Sing	10	amod	_	_
+10	руководителя	руководитель	NOUN	_	Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing	8	nmod	_	_
+11	и	и	CCONJ	_	_	12	cc	_	_
+12	учителя	учитель	NOUN	_	Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing	10	conj	_	_
+13	физкультуры	физкультура	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	10	nmod	_	_
+14	О.	о.	PROPN	_	Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing	13	nmod	_	SpaceAfter=No
+15	Н.	н.	PROPN	_	Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing	14	flat:name	_	SpaceAfter=No
+16	Коноваловой	Коновалова	PROPN	_	Animacy=Anim|Case=Gen|Gender=Fem|Number=Sing	14	flat:name	_	SpaceAfter=No
+17	.	.	PUNCT	_	_	16	punct	_	_
+
+# sent_id = 5
+# text = После окончания школы поступил в Арзамасский приборостроительный колледж имени П.И.
+1	После	после	ADP	_	_	2	case	_	_
+2	окончания	окончание	NOUN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	4	obl	_	_
+3	школы	школа	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	2	nmod	_	_
+4	поступил	поступать	VERB	_	Aspect=Perf|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	0	ROOT	_	_
+5	в	в	ADP	_	_	8	case	_	_
+6	Арзамасский	Арзамасский	ADJ	_	Animacy=Inan|Case=Acc|Degree=Pos|Gender=Masc|Number=Sing	8	amod	_	_
+7	приборостроительный	приборостроительный	ADJ	_	Animacy=Inan|Case=Acc|Degree=Pos|Gender=Masc|Number=Sing	8	amod	_	_
+8	колледж	колледж	NOUN	_	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	4	obl	_	_
+9	имени	имя	NOUN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	8	nmod	_	_
+10	П.	п.	PROPN	_	Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing	9	nmod	_	SpaceAfter=No
+11	И.	и.	PROPN	_	Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing	10	flat:name	_	_
+
+# sent_id = 6
+# text = Пландина на специальность «информационные системы и технологии по отраслям».
+1	Пландина	Пландина	NOUN	_	Animacy=Inan|Case=Nom|Gender=Fem|Number=Sing	0	ROOT	_	_
+2	на	на	ADP	_	_	3	case	_	_
+3	специальность	специальность	NOUN	_	Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing	1	nmod	_	_
+4	«информационные	«информационный	ADJ	_	Case=Nom|Degree=Pos|Number=Plur	5	amod	_	_
+5	системы	система	NOUN	_	Animacy=Inan|Case=Nom|Gender=Fem|Number=Plur	1	nsubj	_	_
+6	и	и	CCONJ	_	_	7	cc	_	_
+7	технологии	технология	NOUN	_	Animacy=Inan|Case=Nom|Gender=Fem|Number=Plur	5	conj	_	_
+8	по	по	ADP	_	_	9	case	_	_
+9	отраслям»	отраслям»	ADJ	_	Case=Gen|Degree=Pos|Number=Plur	7	nmod	_	SpaceAfter=No
+10	.	.	PUNCT	_	_	9	punct	_	_
+
+# sent_id = 7
+# text = Вскоре после окончания учебного заведения в ноябре 2022 года был призван в Вооруженные силы Российской Федерации.
+1	Вскоре	вскоре	ADV	_	Degree=Pos	11	advmod	_	_
+2	после	после	ADP	_	_	3	case	_	_
+3	окончания	окончание	NOUN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	11	obl	_	_
+4	учебного	учебный	ADJ	_	Case=Gen|Degree=Pos|Gender=Neut|Number=Sing	5	amod	_	_
+5	заведения	заведение	NOUN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	3	nmod	_	_
+6	в	в	ADP	_	_	7	case	_	_
+7	ноябре	ноябрь	NOUN	_	Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing	11	obl	_	_
+8	2022	2022	NUM	_	_	9	nummod	_	_
+9	года	год	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	7	nmod	_	_
+10	был	быть	AUX	_	Aspect=Imp|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	11	aux:pass	_	_
+11	призван	призывать	VERB	_	Aspect=Perf|Gender=Masc|Number=Sing|Tense=Past|Variant=Short|VerbForm=Part|Voice=Pass	0	ROOT	_	_
+12	в	в	ADP	_	_	14	case	_	_
+13	Вооруженные	вооруженный	VERB	_	Animacy=Inan|Aspect=Perf|Case=Acc|Number=Plur|Tense=Past|VerbForm=Part|Voice=Pass	14	amod	_	_
+14	силы	сила	NOUN	_	Animacy=Inan|Case=Acc|Gender=Fem|Number=Plur	11	obl	_	_
+15	Российской	российский	ADJ	_	Case=Gen|Degree=Pos|Gender=Fem|Number=Sing	16	amod	_	_
+16	Федерации	федерация	PROPN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	14	nmod	_	SpaceAfter=No
+17	.	.	PUNCT	_	_	16	punct	_	_
+
+# sent_id = 8
+# text = Денис был определен для прохождения службы в Военно-космических войсках.
+1	Денис	денис	NOUN	_	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	3	nsubj	_	_
+2	был	быть	AUX	_	Aspect=Imp|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	3	aux:pass	_	_
+3	определен	определять	VERB	_	Aspect=Perf|Gender=Masc|Number=Sing|Tense=Past|Variant=Short|VerbForm=Part|Voice=Pass	0	ROOT	_	_
+4	для	для	ADP	_	_	5	case	_	_
+5	прохождения	прохождение	NOUN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	3	obl	_	_
+6	службы	служба	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	5	nmod	_	_
+7	в	в	ADP	_	_	9	case	_	_
+8	Военно-космических	Военно-космический	ADJ	_	Case=Loc|Degree=Pos|Number=Plur	9	amod	_	_
+9	войсках	войска	NOUN	_	Animacy=Inan|Case=Loc|Gender=Neut|Number=Plur	5	nmod	_	SpaceAfter=No
+10	.	.	PUNCT	_	_	9	punct	_	_
+
+# sent_id = 9
+# text = Этот род войск входит в состав Воздушно-космических сил России и занимается обеспечением безопасности нашей страны в космосе.–
+1	Этот	этот	DET	_	Case=Nom|Gender=Masc|Number=Sing	2	amod	_	_
+2	род	род	NOUN	_	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	4	nsubj	_	_
+3	войск	войска	NOUN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Plur	2	nmod	_	_
+4	входит	входить	VERB	_	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	0	ROOT	_	_
+5	в	в	ADP	_	_	6	case	_	_
+6	состав	состав	NOUN	_	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	4	obl	_	_
+7	Воздушно-космических	Воздушно-космический	ADJ	_	Case=Gen|Degree=Pos|Number=Plur	8	amod	_	_
+8	сил	сила	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Plur	6	nmod	_	_
+9	России	россия	PROPN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	8	nmod	_	_
+10	и	и	CCONJ	_	_	11	cc	_	_
+11	занимается	заниматься	VERB	_	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Mid	4	conj	_	_
+12	обеспечением	обеспечение	NOUN	_	Animacy=Inan|Case=Ins|Gender=Neut|Number=Sing	11	obl	_	_
+13	безопасности	безопасность	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	12	nmod	_	_
+14	нашей	наш	DET	_	Case=Gen|Gender=Fem|Number=Sing	15	amod	_	_
+15	страны	страна	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	13	nmod	_	_
+16	в	в	ADP	_	_	17	case	_	_
+17	космосе	космос	NOUN	_	Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing	13	nmod	_	SpaceAfter=No
+18	.	.	PUNCT	_	_	17	punct	_	SpaceAfter=No
+19	–	–	PUNCT	_	_	17	punct	_	_
+
+# sent_id = 10
+# text = В армии я служил за полярным кругом в Оленогорске.
+1	В	в	ADP	_	_	2	case	_	_
+2	армии	армия	NOUN	_	Animacy=Inan|Case=Loc|Gender=Fem|Number=Sing	4	obl	_	_
+3	я	я	PRON	_	Case=Nom|Number=Sing|Person=1	4	nsubj	_	_
+4	служил	служить	VERB	_	Aspect=Imp|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	0	ROOT	_	_
+5	за	за	ADP	_	_	7	case	_	_
+6	полярным	полярный	ADJ	_	Case=Ins|Degree=Pos|Gender=Masc|Number=Sing	7	amod	_	_
+7	кругом	круг	NOUN	_	Animacy=Inan|Case=Ins|Gender=Masc|Number=Sing	4	obl	_	_
+8	в	в	ADP	_	_	9	case	_	_
+9	Оленогорске	Оленогорск	PROPN	_	Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing	7	nmod	_	SpaceAfter=No
+10	.	.	PUNCT	_	_	9	punct	_	_
+
+# sent_id = 11
+# text = Природные условия были суровые, и первые четыре месяца я нес службу в патруле в метели и морозы при температуре 40 градусов ниже нуля.
+1	Природные	природный	ADJ	_	Case=Nom|Degree=Pos|Number=Plur	2	amod	_	_
+2	условия	условие	NOUN	_	Animacy=Inan|Case=Nom|Gender=Neut|Number=Plur	4	nsubj	_	_
+3	были	быть	AUX	_	Aspect=Imp|Mood=Ind|Number=Plur|Tense=Past|VerbForm=Fin|Voice=Act	4	cop	_	_
+4	суровые	суровый	ADJ	_	Case=Nom|Degree=Pos|Number=Plur	0	ROOT	_	SpaceAfter=No
+5	,	,	PUNCT	_	_	4	punct	_	_
+6	и	и	CCONJ	_	_	8	cc	_	_
+7	первые	первый	ADJ	_	Case=Nom|Degree=Pos|Number=Plur	8	amod	_	_
+8	четыре	четыре	NUM	_	Case=Nom	9	nummod:gov	_	_
+9	месяца	месяц	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	11	obl	_	_
+10	я	я	PRON	_	Case=Nom|Number=Sing|Person=1	11	nsubj	_	_
+11	нес	нести	VERB	_	Aspect=Imp|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	4	conj	_	_
+12	службу	служба	NOUN	_	Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing	11	obj	_	_
+13	в	в	ADP	_	_	14	case	_	_
+14	патруле	патруль	NOUN	_	Animacy=Inan|Case=Loc|Gender=Neut|Number=Sing	11	obl	_	_
+15	в	в	ADP	_	_	16	case	_	_
+16	метели	метель	NOUN	_	Animacy=Inan|Case=Loc|Gender=Fem|Number=Sing	14	nmod	_	_
+17	и	и	CCONJ	_	_	18	cc	_	_
+18	морозы	мороз	NOUN	_	Animacy=Inan|Case=Nom|Gender=Masc|Number=Plur	4	conj	_	_
+19	при	при	ADP	_	_	20	case	_	_
+20	температуре	температура	NOUN	_	Animacy=Inan|Case=Loc|Gender=Fem|Number=Sing	18	nmod	_	_
+21	40	40	NUM	_	_	22	nummod	_	_
+22	градусов	градус	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Plur	20	nmod	_	_
+23	ниже	низкий	ADP	_	_	24	case	_	_
+24	нуля	нуль	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	22	nmod	_	SpaceAfter=No
+25	.	.	PUNCT	_	_	24	punct	_	_
+
+# sent_id = 12
+# text = Не скажу, что в детстве я всерьёз занимался спортом, но, тем не менее, физическая подготовка для меня была важным моментом, и она имела большое значение затем в армии.
+1	Не	не	PART	_	_	2	advmod	_	_
+2	скажу	сказать	VERB	_	Aspect=Perf|Mood=Ind|Number=Sing|Person=1|Tense=Fut|VerbForm=Fin|Voice=Act	0	ROOT	_	SpaceAfter=No
+3	,	,	PUNCT	_	_	2	punct	_	_
+4	что	что	SCONJ	_	_	2	mark	_	_
+5	в	в	ADP	_	_	6	case	_	_
+6	детстве	детство	NOUN	_	Animacy=Inan|Case=Loc|Gender=Neut|Number=Sing	9	obl	_	_
+7	я	я	PRON	_	Case=Nom|Number=Sing|Person=1	9	nsubj	_	_
+8	всерьёз	всерьёз	ADV	_	Degree=Pos	9	advmod	_	_
+9	занимался	заниматься	VERB	_	Aspect=Imp|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Mid	2	advcl	_	_
+10	спортом	спорт	NOUN	_	Animacy=Inan|Case=Ins|Gender=Masc|Number=Sing	9	obl	_	SpaceAfter=No
+11	,	,	PUNCT	_	_	10	punct	_	_
+12	но	но	CCONJ	_	_	24	cc	_	SpaceAfter=No
+13	,	,	PUNCT	_	_	12	punct	_	_
+14	тем	то	PRON	_	Animacy=Inan|Case=Ins|Gender=Neut|Number=Sing	24	discourse	_	_
+15	не	не	PART	_	Polarity=Neg	14	fixed	_	_
+16	менее	менее	ADV	_	Degree=Cmp	15	fixed	_	SpaceAfter=No
+17	,	,	PUNCT	_	_	16	punct	_	_
+18	физическая	физический	ADJ	_	Case=Nom|Degree=Pos|Gender=Fem|Number=Sing	19	amod	_	_
+19	подготовка	подготовка	NOUN	_	Animacy=Inan|Case=Nom|Gender=Fem|Number=Sing	24	nsubj	_	_
+20	для	для	ADP	_	_	21	case	_	_
+21	меня	я	PRON	_	Case=Gen|Number=Sing|Person=1	19	nmod	_	_
+22	была	быть	AUX	_	Aspect=Imp|Gender=Fem|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	24	cop	_	_
+23	важным	важный	ADJ	_	Case=Ins|Degree=Pos|Gender=Masc|Number=Sing	24	amod	_	_
+24	моментом	момент	NOUN	_	Animacy=Inan|Case=Ins|Gender=Masc|Number=Sing	9	conj	_	SpaceAfter=No
+25	,	,	PUNCT	_	_	24	punct	_	_
+26	и	и	CCONJ	_	_	28	cc	_	_
+27	она	она	PRON	_	Case=Nom|Gender=Fem|Number=Sing|Person=3	28	nsubj	_	_
+28	имела	иметь	VERB	_	Aspect=Imp|Gender=Fem|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	9	conj	_	_
+29	большое	большой	ADJ	_	Case=Acc|Degree=Pos|Gender=Neut|Number=Sing	30	amod	_	_
+30	значение	значение	NOUN	_	Animacy=Inan|Case=Acc|Gender=Neut|Number=Sing	28	obj	_	_
+31	затем	затем	ADV	_	Degree=Pos	33	advmod	_	_
+32	в	в	ADP	_	_	33	case	_	_
+33	армии	армия	NOUN	_	Animacy=Inan|Case=Loc|Gender=Fem|Number=Sing	28	obl	_	SpaceAfter=No
+34	.	.	PUNCT	_	_	33	punct	_	_
+
+# sent_id = 13
+# text = Я мог без труда подтянуться 10-15 раз, без проблем отжаться 20 раз, как того требовал норматив.
+1	Я	я	PRON	_	Case=Nom|Number=Sing|Person=1	2	nsubj	_	_
+2	мог	мочь	VERB	_	Aspect=Imp|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	0	ROOT	_	_
+3	без	без	ADP	_	_	4	case	_	_
+4	труда	труд	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	5	obl	_	_
+5	подтянуться	подтягиваться	VERB	_	Aspect=Perf|VerbForm=Inf|Voice=Mid	2	xcomp	_	_
+6	10	10	NUM	_	_	9	nummod	_	SpaceAfter=No
+7	-	-	PUNCT	_	_	6	punct	_	SpaceAfter=No
+8	15	15	NUM	_	_	6	nummod	_	_
+9	раз	раз	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Plur	5	obl	_	SpaceAfter=No
+10	,	,	PUNCT	_	_	9	punct	_	_
+11	без	без	ADP	_	_	12	case	_	_
+12	проблем	проблема	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Plur	13	obl	_	_
+13	отжаться	отжаться	VERB	_	Aspect=Perf|VerbForm=Inf|Voice=Mid	5	conj	_	_
+14	20	20	NUM	_	_	15	nummod	_	_
+15	раз	раз	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Plur	13	obl	_	SpaceAfter=No
+16	,	,	PUNCT	_	_	15	punct	_	_
+17	как	как	SCONJ	_	_	19	cc	_	_
+18	того	то	DET	_	Case=Acc|Gender=Masc|Number=Sing	19	obl	_	_
+19	требовал	требовать	VERB	_	Aspect=Imp|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	13	advmod	_	_
+20	норматив	норматив	NOUN	_	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	19	obj	_	SpaceAfter=No
+21	.	.	PUNCT	_	_	20	punct	_	_
+
+# sent_id = 14
+# text = Моя основная функция в воинской части состояла в обеспечении полета военных самолетов, и в этом плане мне очень помогла полученная профессия программиста и опыт работы на ПК.
+1	Моя	мой	DET	_	Case=Nom|Gender=Fem|Number=Sing	3	amod	_	_
+2	основная	основной	ADJ	_	Case=Nom|Degree=Pos|Gender=Fem|Number=Sing	3	amod	_	_
+3	функция	функция	NOUN	_	Animacy=Inan|Case=Nom|Gender=Fem|Number=Sing	7	nsubj	_	_
+4	в	в	ADP	_	_	6	case	_	_
+5	воинской	воинский	ADJ	_	Case=Loc|Degree=Pos|Gender=Fem|Number=Sing	6	amod	_	_
+6	части	часть	NOUN	_	Animacy=Inan|Case=Loc|Gender=Fem|Number=Sing	3	nmod	_	_
+7	состояла	состоять	VERB	_	Aspect=Imp|Gender=Fem|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	0	ROOT	_	_
+8	в	в	ADP	_	_	9	case	_	_
+9	обеспечении	обеспечение	NOUN	_	Animacy=Inan|Case=Loc|Gender=Neut|Number=Sing	7	obl	_	_
+10	полета	полет	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	9	nmod	_	_
+11	военных	военный	ADJ	_	Case=Gen|Degree=Pos|Number=Plur	12	amod	_	_
+12	самолетов	самолет	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Plur	10	nmod	_	SpaceAfter=No
+13	,	,	PUNCT	_	_	12	punct	_	_
+14	и	и	CCONJ	_	_	20	cc	_	_
+15	в	в	ADP	_	_	17	case	_	_
+16	этом	этот	DET	_	Case=Loc|Gender=Masc|Number=Sing	17	amod	_	_
+17	плане	план	NOUN	_	Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing	20	obl	_	_
+18	мне	я	PRON	_	Case=Dat|Number=Sing|Person=1	20	obl	_	_
+19	очень	очень	ADV	_	Degree=Pos	20	advmod	_	_
+20	помогла	помогать	VERB	_	Aspect=Perf|Gender=Fem|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	7	conj	_	_
+21	полученная	получать	VERB	_	Aspect=Perf|Case=Nom|Gender=Fem|Number=Sing|Tense=Past|VerbForm=Part|Voice=Pass	22	amod	_	_
+22	профессия	профессия	NOUN	_	Animacy=Inan|Case=Nom|Gender=Fem|Number=Sing	20	nsubj	_	_
+23	программиста	программиста	NOUN	_	Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing	22	nmod	_	_
+24	и	и	CCONJ	_	_	25	cc	_	_
+25	опыт	опыт	NOUN	_	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	22	conj	_	_
+26	работы	работа	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	25	nmod	_	_
+27	на	на	ADP	_	_	28	case	_	_
+28	ПК	пк	PROPN	_	Animacy=Inan|Case=Acc|Gender=Masc|Number=Plur	26	nmod	_	SpaceAfter=No
+29	.	.	PUNCT	_	_	28	punct	_	_
+
+# sent_id = 15
+# text = В воинской части у нас был дружный и слаженный коллектив, как семья.
+1	В	в	ADP	_	_	3	case	_	_
+2	воинской	воинский	ADJ	_	Case=Loc|Degree=Pos|Gender=Fem|Number=Sing	3	amod	_	_
+3	части	часть	NOUN	_	Animacy=Inan|Case=Loc|Gender=Fem|Number=Sing	0	ROOT	_	_
+4	у	у	ADP	_	_	5	case	_	_
+5	нас	мы	PRON	_	Case=Gen|Number=Plur|Person=1	3	nmod	_	_
+6	был	быть	AUX	_	Aspect=Imp|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	3	cop	_	_
+7	дружный	дружный	ADJ	_	Case=Nom|Degree=Pos|Gender=Masc|Number=Sing	10	amod	_	_
+8	и	и	CCONJ	_	_	9	cc	_	_
+9	слаженный	слаженный	ADJ	_	Case=Nom|Degree=Pos|Gender=Masc|Number=Sing	7	conj	_	_
+10	коллектив	коллектив	NOUN	_	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	3	nsubj	_	SpaceAfter=No
+11	,	,	PUNCT	_	_	10	punct	_	_
+12	как	как	SCONJ	_	_	13	cc	_	_
+13	семья	семья	NOUN	_	Animacy=Inan|Case=Nom|Gender=Fem|Number=Sing	10	advmod	_	SpaceAfter=No
+14	.	.	PUNCT	_	_	13	punct	_	_
+
+# sent_id = 16
+# text = Для меня такие понятия, как боевое братство и взаимовыручка, – это не просто слова, это жизнь, когда на деле работает принцип один за всех и все за одного, – рассказывает о своей армейской жизни Денис.
+1	Для	для	ADP	_	_	2	case	_	_
+2	меня	я	PRON	_	Case=Gen|Number=Sing|Person=1	19	nmod	_	_
+3	такие	такой	DET	_	Case=Nom|Number=Plur	4	amod	_	_
+4	понятия	понятие	NOUN	_	Animacy=Inan|Case=Nom|Gender=Neut|Number=Plur	2	nsubj	_	SpaceAfter=No
+5	,	,	PUNCT	_	_	4	punct	_	_
+6	как	как	SCONJ	_	_	8	cc	_	_
+7	боевое	боевой	ADJ	_	Case=Nom|Degree=Pos|Gender=Neut|Number=Sing	8	amod	_	_
+8	братство	братство	NOUN	_	Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing	3	advmod	_	_
+9	и	и	CCONJ	_	_	10	cc	_	_
+10	взаимовыручка	взаимовыручка	NOUN	_	Animacy=Inan|Case=Nom|Gender=Fem|Number=Sing	8	conj	_	SpaceAfter=No
+11	,	,	PUNCT	_	_	10	punct	_	_
+12	–	–	PUNCT	_	_	10	punct	_	_
+13	это	это	PRON	_	Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing	16	nsubj	_	_
+14	не	не	PART	_	_	15	advmod	_	_
+15	просто	просто	PART	_	_	16	advmod	_	_
+16	слова	слово	NOUN	_	Animacy=Inan|Case=Nom|Gender=Neut|Number=Plur	2	conj	_	SpaceAfter=No
+17	,	,	PUNCT	_	_	16	punct	_	_
+18	это	это	PRON	_	Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing	19	nsubj	_	_
+19	жизнь	жизнь	NOUN	_	Animacy=Inan|Case=Nom|Gender=Fem|Number=Sing	0	ROOT	_	SpaceAfter=No
+20	,	,	PUNCT	_	_	19	punct	_	_
+21	когда	когда	SCONJ	_	_	19	mark	_	_
+22	на	на	ADP	_	_	23	case	_	_
+23	деле	дело	NOUN	_	Animacy=Inan|Case=Loc|Gender=Neut|Number=Sing	24	obl	_	_
+24	работает	работать	VERB	_	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	19	advcl	_	_
+25	принцип	принцип	NOUN	_	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	24	nsubj	_	_
+26	один	один	NUM	_	Case=Nom|Gender=Masc	25	nummod:gov	_	_
+27	за	за	ADP	_	_	28	case	_	_
+28	всех	все	DET	_	Case=Acc|Number=Plur	25	nmod	_	_
+29	и	и	CCONJ	_	_	32	cc	_	_
+30	все	все	PART	_	_	32	advmod	_	_
+31	за	за	ADP	_	_	32	case	_	_
+32	одного	один	NUM	_	Case=Gen|Gender=Masc	28	conj	_	SpaceAfter=No
+33	,	,	PUNCT	_	_	32	punct	_	_
+34	–	–	PUNCT	_	_	32	punct	_	_
+35	рассказывает	рассказывать	VERB	_	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	19	parataxis	_	_
+36	о	о	ADP	_	_	39	case	_	_
+37	своей	свой	DET	_	Case=Loc|Gender=Fem|Number=Sing	39	amod	_	_
+38	армейской	армейский	ADJ	_	Case=Loc|Degree=Pos|Gender=Fem|Number=Sing	39	amod	_	_
+39	жизни	жизнь	NOUN	_	Animacy=Inan|Case=Loc|Gender=Fem|Number=Sing	35	obl	_	_
+40	Денис	денис	PROPN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	35	nsubj	_	SpaceAfter=No
+41	.	.	PUNCT	_	_	40	punct	_	_
+
+# sent_id = 17
+# text = – Мне довелось пережить полярный день и полярную ночь и длинную зиму Заполярья, которая продолжается 9 месяцев.
+1	–	–	PUNCT	_	_	2	punct	_	_
+2	Мне	я	PRON	_	Case=Dat|Number=Sing|Person=1	3	obl	_	_
+3	довелось	доводиться	VERB	_	Aspect=Perf|Gender=Neut|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Mid	0	ROOT	_	_
+4	пережить	переживать	VERB	_	Aspect=Perf|VerbForm=Inf|Voice=Act	3	nsubj	_	_
+5	полярный	полярный	ADJ	_	Animacy=Inan|Case=Acc|Degree=Pos|Gender=Masc|Number=Sing	6	amod	_	_
+6	день	день	NOUN	_	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	4	obj	_	_
+7	и	и	CCONJ	_	_	9	cc	_	_
+8	полярную	полярный	ADJ	_	Case=Acc|Degree=Pos|Gender=Fem|Number=Sing	9	amod	_	_
+9	ночь	ночь	NOUN	_	Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing	6	conj	_	_
+10	и	и	CCONJ	_	_	12	cc	_	_
+11	длинную	длинный	ADJ	_	Case=Acc|Degree=Pos|Gender=Fem|Number=Sing	12	amod	_	_
+12	зиму	зима	NOUN	_	Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing	6	conj	_	_
+13	Заполярья	заполярье	PROPN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	12	nmod	_	SpaceAfter=No
+14	,	,	PUNCT	_	_	13	punct	_	_
+15	которая	который	PRON	_	Case=Nom	16	nsubj	_	_
+16	продолжается	продолжаться	VERB	_	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Mid	6	acl:relcl	_	_
+17	9	9	NUM	_	_	18	nummod	_	_
+18	месяцев	месяц	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Plur	16	obl	_	SpaceAfter=No
+19	.	.	PUNCT	_	_	18	punct	_	_
+
+# sent_id = 18
+# text = Навсегда яркое впечатление оставило невероятное зрелище – северное сияние.
+1	Навсегда	навсегда	ADV	_	Degree=Pos	4	advmod	_	_
+2	яркое	яркий	ADJ	_	Case=Nom|Degree=Pos|Gender=Neut|Number=Sing	3	amod	_	_
+3	впечатление	впечатление	NOUN	_	Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing	4	nsubj	_	_
+4	оставило	оставлять	VERB	_	Aspect=Perf|Gender=Neut|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	0	ROOT	_	_
+5	невероятное	невероятный	ADJ	_	Case=Nom|Degree=Pos|Gender=Neut|Number=Sing	6	amod	_	_
+6	зрелище	зрелище	NOUN	_	Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing	9	nsubj	_	_
+7	–	–	PUNCT	_	_	6	punct	_	_
+8	северное	северный	ADJ	_	Case=Nom|Degree=Pos|Gender=Neut|Number=Sing	9	amod	_	_
+9	сияние	сияние	NOUN	_	Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing	4	conj	_	SpaceAfter=No
+10	.	.	PUNCT	_	_	9	punct	_	_
+
+# sent_id = 19
+# text = А главное – я обрел настоящих и надежных друзей, с которыми поддерживаю связь и общение.
+1	А	а	CCONJ	_	_	5	cc	_	_
+2	главное	главное	ADV	_	Degree=Pos	5	parataxis	_	_
+3	–	–	PUNCT	_	_	2	punct	_	_
+4	я	я	PRON	_	Case=Nom|Number=Sing|Person=1	5	nsubj	_	_
+5	обрел	обретать	VERB	_	Aspect=Perf|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	0	ROOT	_	_
+6	настоящих	настоящий	ADJ	_	Animacy=Anim|Case=Acc|Degree=Pos|Number=Plur	9	amod	_	_
+7	и	и	CCONJ	_	_	8	cc	_	_
+8	надежных	надежный	ADJ	_	Animacy=Anim|Case=Acc|Degree=Pos|Number=Plur	6	conj	_	_
+9	друзей	друг	NOUN	_	Animacy=Anim|Case=Acc|Gender=Masc|Number=Plur	5	obj	_	SpaceAfter=No
+10	,	,	PUNCT	_	_	9	punct	_	_
+11	с	с	ADP	_	_	12	case	_	_
+12	которыми	который	PRON	_	Case=Ins	13	obl	_	_
+13	поддерживаю	поддерживать	VERB	_	Aspect=Imp|Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin|Voice=Act	9	acl:relcl	_	_
+14	связь	связь	NOUN	_	Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing	13	obj	_	_
+15	и	и	CCONJ	_	_	16	cc	_	_
+16	общение	общение	NOUN	_	Animacy=Inan|Case=Acc|Gender=Neut|Number=Sing	14	conj	_	SpaceAfter=No
+17	.	.	PUNCT	_	_	16	punct	_	SpaceAfter=No
+
+# sent_id = 20
+# text = На мой вопрос «Чему научила служба в армии?» Денис ответил: «Выдержке, терпению, выносливости и умению ждать».–
+1	На	на	ADP	_	_	3	case	_	_
+2	мой	мой	DET	_	Case=Acc|Gender=Masc|Number=Sing	3	amod	_	_
+3	вопрос	вопрос	NOUN	_	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	5	obl	_	_
+4	«Чему	«что	PRON	_	Case=Dat	3	nmod	_	_
+5	научила	научать	VERB	_	Aspect=Perf|Gender=Fem|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	0	ROOT	_	_
+6	служба	служба	NOUN	_	Animacy=Inan|Case=Nom|Gender=Fem|Number=Sing	5	nsubj	_	_
+7	в	в	ADP	_	_	8	case	_	_
+8	армии	армия	NOUN	_	Animacy=Inan|Case=Loc|Gender=Fem|Number=Sing	6	nmod	_	SpaceAfter=No
+9	?	?	PUNCT	_	_	8	punct	_	SpaceAfter=No
+10	»	»	PUNCT	_	_	8	punct	_	_
+11	Денис	денис	PROPN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	12	nsubj	_	_
+12	ответил	отвечать	VERB	_	Aspect=Perf|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	5	conj	_	SpaceAfter=No
+13	:	:	PUNCT	_	_	12	punct	_	_
+14	«Выдержке	«Выдержок	NOUN	_	Animacy=Inan|Case=Dat|Gender=Fem|Number=Sing	12	obl	_	SpaceAfter=No
+15	,	,	PUNCT	_	_	14	punct	_	_
+16	терпению	терпение	NOUN	_	Animacy=Inan|Case=Dat|Gender=Neut|Number=Sing	14	conj	_	SpaceAfter=No
+17	,	,	PUNCT	_	_	16	punct	_	_
+18	выносливости	выносливость	NOUN	_	Animacy=Inan|Case=Dat|Gender=Fem|Number=Sing	14	conj	_	_
+19	и	и	CCONJ	_	_	20	cc	_	_
+20	умению	умение	NOUN	_	Animacy=Inan|Case=Dat|Gender=Neut|Number=Sing	14	conj	_	_
+21	ждать»	ждать»	ADJ	_	Case=Gen|Degree=Pos|Number=Plur	20	nmod	_	SpaceAfter=No
+22	.	.	PUNCT	_	_	21	punct	_	SpaceAfter=No
+23	–	–	PUNCT	_	_	21	punct	_	_
+
+# sent_id = 21
+# text = Каждый мальчик, юноша – это будущий воин, будущий солдат и защитник своей Родины, и поэтому священный долг и обязанность каждого мужчины пройти срочную службу в Вооруженных силах, иначе быть не должно, – считает Д.Г.Балахнин.
+1	Каждый	каждый	ADJ	_	Case=Nom|Degree=Pos|Gender=Masc|Number=Sing	2	amod	_	_
+2	мальчик	мальчик	NOUN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	0	ROOT	_	SpaceAfter=No
+3	,	,	PUNCT	_	_	2	punct	_	_
+4	юноша	юноша	NOUN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	2	conj	_	_
+5	–	–	PUNCT	_	_	4	punct	_	_
+6	это	это	PRON	_	Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing	8	nsubj	_	_
+7	будущий	будущий	ADJ	_	Case=Nom|Degree=Pos|Gender=Masc|Number=Sing	8	amod	_	_
+8	воин	воин	NOUN	_	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	2	conj	_	SpaceAfter=No
+9	,	,	PUNCT	_	_	8	punct	_	_
+10	будущий	будущий	ADJ	_	Case=Nom|Degree=Pos|Gender=Masc|Number=Sing	11	amod	_	_
+11	солдат	солдат	NOUN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	2	conj	_	_
+12	и	и	CCONJ	_	_	13	cc	_	_
+13	защитник	защитник	NOUN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	2	conj	_	_
+14	своей	свой	DET	_	Case=Gen|Gender=Fem|Number=Sing	15	amod	_	_
+15	Родины	родина	PROPN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	13	nmod	_	SpaceAfter=No
+16	,	,	PUNCT	_	_	15	punct	_	_
+17	и	и	CCONJ	_	_	25	cc	_	_
+18	поэтому	поэтому	ADV	_	Degree=Pos	25	advmod	_	_
+19	священный	священный	ADJ	_	Case=Nom|Degree=Pos|Gender=Masc|Number=Sing	20	amod	_	_
+20	долг	долг	NOUN	_	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	25	parataxis	_	_
+21	и	и	CCONJ	_	_	22	cc	_	_
+22	обязанность	обязанность	NOUN	_	Animacy=Inan|Case=Nom|Gender=Fem|Number=Sing	20	conj	_	_
+23	каждого	каждый	ADJ	_	Case=Gen|Degree=Pos|Gender=Masc|Number=Sing	24	amod	_	_
+24	мужчины	мужчина	NOUN	_	Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing	22	nmod	_	_
+25	пройти	проходить	VERB	_	Aspect=Perf|VerbForm=Inf|Voice=Act	2	conj	_	_
+26	срочную	срочный	ADJ	_	Case=Acc|Degree=Pos|Gender=Fem|Number=Sing	27	amod	_	_
+27	службу	служба	NOUN	_	Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing	25	obj	_	_
+28	в	в	ADP	_	_	30	case	_	_
+29	Вооруженных	вооружать	VERB	_	Aspect=Perf|Case=Loc|Number=Plur|Tense=Past|VerbForm=Part|Voice=Pass	30	amod	_	_
+30	силах	сила	NOUN	_	Animacy=Inan|Case=Loc|Gender=Fem|Number=Plur	25	obl	_	SpaceAfter=No
+31	,	,	PUNCT	_	_	30	punct	_	_
+32	иначе	иначе	CCONJ	_	_	35	cc	_	_
+33	быть	быть	VERB	_	Aspect=Imp|VerbForm=Inf|Voice=Act	35	nsubj	_	_
+34	не	не	PART	_	_	35	advmod	_	_
+35	должно	должен	ADJ	_	Degree=Pos|Gender=Neut|Number=Sing|Variant=Short	20	conj	_	SpaceAfter=No
+36	,	,	PUNCT	_	_	35	punct	_	_
+37	–	–	PUNCT	_	_	35	punct	_	_
+38	считает	считать	VERB	_	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	35	parataxis	_	_
+39	Д.	д.	PROPN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	38	nsubj	_	SpaceAfter=No
+40	Г.	г.	PROPN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	39	flat:name	_	SpaceAfter=No
+41	Балахнин	Балахнин	PROPN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	39	flat:name	_	SpaceAfter=No
+42	.	.	PUNCT	_	_	41	punct	_	_
+
+# sent_id = 22
+# text = Марина МУХИНА
+1	Марина	марина	NOUN	_	Animacy=Anim|Case=Nom|Gender=Fem|Number=Sing	0	ROOT	_	_
+2	МУХИНА	МУХИНа	PROPN	_	Animacy=Anim|Case=Nom|Gender=Fem|Number=Sing	1	appos	_	_
+
+# sent_id = 23
+# text = Огонь, символизирующий семейный очаг «Сердце России», был торжественно зажжен на Всероссийском семейном форуме «Родные – любимые», где президент В.В.Путин дал старт Году семьи.
+1	Огонь	огонь	NOUN	_	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	11	nsubj	_	SpaceAfter=No
+2	,	,	PUNCT	_	_	1	punct	_	_
+3	символизирующий	символизировать	VERB	_	Aspect=Imp|Case=Nom|Gender=Masc|Number=Sing|Tense=Pres|VerbForm=Part|Voice=Act	1	amod	_	_
+4	семейный	семейный	ADJ	_	Animacy=Inan|Case=Acc|Degree=Pos|Gender=Masc|Number=Sing	5	amod	_	_
+5	очаг	очаг	NOUN	_	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	3	obj	_	_
+6	«Сердце	«Сердц	ADJ	_	Case=Gen|Degree=Pos|Number=Plur	5	nmod	_	_
+7	России»	России»	ADJ	_	Case=Gen|Degree=Pos|Number=Plur	6	amod	_	SpaceAfter=No
+8	,	,	PUNCT	_	_	7	punct	_	_
+9	был	быть	AUX	_	Aspect=Imp|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	11	aux:pass	_	_
+10	торжественно	торжественно	ADV	_	Degree=Pos	11	advmod	_	_
+11	зажжен	зажжать	VERB	_	Aspect=Perf|Gender=Masc|Number=Sing|Tense=Past|Variant=Short|VerbForm=Part|Voice=Pass	0	ROOT	_	_
+12	на	на	ADP	_	_	15	case	_	_
+13	Всероссийском	всероссийский	ADJ	_	Case=Loc|Degree=Pos|Gender=Masc|Number=Sing	15	amod	_	_
+14	семейном	семейный	ADJ	_	Case=Loc|Degree=Pos|Gender=Masc|Number=Sing	15	amod	_	_
+15	форуме	форум	NOUN	_	Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing	11	obl	_	_
+16	«Родные	«Родный	ADJ	_	Case=Nom|Degree=Pos|Number=Plur	15	amod	_	_
+17	–	–	PUNCT	_	_	16	punct	_	_
+18	любимые»	любимые»	ADJ	_	Case=Gen|Degree=Pos|Number=Plur	16	nmod	_	SpaceAfter=No
+19	,	,	PUNCT	_	_	18	punct	_	_
+20	где	где	ADV	_	Degree=Pos	25	advmod	_	_
+21	президент	президент	NOUN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	25	nsubj	_	_
+22	В.	в.	PROPN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	21	appos	_	SpaceAfter=No
+23	В.	в.	PROPN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	22	flat:name	_	SpaceAfter=No
+24	Путин	путин	PROPN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	22	flat:name	_	_
+25	дал	давать	VERB	_	Aspect=Perf|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	18	acl:relcl	_	_
+26	старт	старт	NOUN	_	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	25	obj	_	_
+27	Году	год	PROPN	_	Animacy=Inan|Case=Dat|Gender=Masc|Number=Sing	26	nmod	_	_
+28	семьи	семья	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	27	nmod	_	SpaceAfter=No
+29	.	.	PUNCT	_	_	28	punct	_	_
+
+# sent_id = 24
+# text = Огонь для него доставили из Муромского Свято-Троицкого монастыря – родины святых Петра и Февроньи.
+1	Огонь	огонь	NOUN	_	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	4	nsubj	_	_
+2	для	для	ADP	_	_	3	case	_	_
+3	него	он	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3	4	obl	_	_
+4	доставили	доставлять	VERB	_	Aspect=Perf|Mood=Ind|Number=Plur|Tense=Past|VerbForm=Fin|Voice=Act	0	ROOT	_	_
+5	из	из	ADP	_	_	8	case	_	_
+6	Муромского	Муромский	ADJ	_	Case=Gen|Degree=Pos|Gender=Masc|Number=Sing	8	amod	_	_
+7	Свято-Троицкого	Свято-Троицкий	ADJ	_	Case=Gen|Degree=Pos|Gender=Masc|Number=Sing	8	amod	_	_
+8	монастыря	монастырь	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	4	obl	_	_
+9	–	–	PUNCT	_	_	8	punct	_	_
+10	родины	родина	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	8	nmod	_	_
+11	святых	святой	ADJ	_	Case=Gen|Degree=Pos|Number=Plur	12	amod	_	_
+12	Петра	петр	PROPN	_	Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing	10	nmod	_	_
+13	и	и	CCONJ	_	_	14	cc	_	_
+14	Февроньи	Февронья	PROPN	_	Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing	12	conj	_	SpaceAfter=No
+15	.	.	PUNCT	_	_	14	punct	_	_
+
+# sent_id = 25
+# text = В Нижнем Новгороде торжественная церемония открытия Года семьи состоялась 26 января на площадке ТЮЗа.
+1	В	в	ADP	_	_	3	case	_	_
+2	Нижнем	нижний	ADJ	_	Case=Loc|Degree=Pos|Gender=Masc|Number=Sing	3	amod	_	_
+3	Новгороде	новгород	PROPN	_	Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing	9	obl	_	_
+4	торжественная	торжественный	ADJ	_	Case=Nom|Degree=Pos|Gender=Fem|Number=Sing	5	amod	_	_
+5	церемония	церемония	NOUN	_	Animacy=Inan|Case=Nom|Gender=Fem|Number=Sing	9	nsubj	_	_
+6	открытия	открытие	NOUN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	5	nmod	_	_
+7	Года	год	PROPN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	6	nmod	_	_
+8	семьи	семья	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	7	nmod	_	_
+9	состоялась	состояться	VERB	_	Aspect=Perf|Gender=Fem|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Mid	0	ROOT	_	_
+10	26	26	NUM	_	_	9	nummod	_	_
+11	января	январь	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	10	nmod	_	_
+12	на	на	ADP	_	_	13	case	_	_
+13	площадке	площадка	NOUN	_	Animacy=Inan|Case=Loc|Gender=Fem|Number=Sing	9	obl	_	_
+14	ТЮЗа	ТЮЗ	PROPN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	13	nmod	_	SpaceAfter=No
+15	.	.	PUNCT	_	_	14	punct	_	_
+
+# sent_id = 26
+# text = Важнейшим событием дня стала торжественная передача частицы огня семейного очага «Сердце России» из Казани в Нижний Новгород.
+1	Важнейшим	важный	ADJ	_	Case=Ins|Degree=Sup|Gender=Masc|Number=Sing	2	amod	_	_
+2	событием	событие	NOUN	_	Animacy=Inan|Case=Ins|Gender=Neut|Number=Sing	4	obl	_	_
+3	дня	день	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	2	nmod	_	_
+4	стала	становиться	VERB	_	Aspect=Perf|Gender=Fem|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Mid	0	ROOT	_	_
+5	торжественная	торжественный	ADJ	_	Case=Nom|Degree=Pos|Gender=Fem|Number=Sing	6	amod	_	_
+6	передача	передача	NOUN	_	Animacy=Inan|Case=Nom|Gender=Fem|Number=Sing	4	nsubj	_	_
+7	частицы	частица	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	6	nmod	_	_
+8	огня	огонь	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	7	nmod	_	_
+9	семейного	семейный	ADJ	_	Case=Gen|Degree=Pos|Gender=Masc|Number=Sing	10	amod	_	_
+10	очага	очаг	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	7	nmod	_	_
+11	«Сердце	«Сердц	ADJ	_	Case=Gen|Degree=Pos|Number=Plur	10	nmod	_	_
+12	России»	России»	ADJ	_	Case=Gen|Degree=Pos|Number=Plur	11	nmod	_	_
+13	из	из	ADP	_	_	14	case	_	_
+14	Казани	казань	PROPN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	12	nmod	_	_
+15	в	в	ADP	_	_	17	case	_	_
+16	Нижний	нижний	ADJ	_	Animacy=Inan|Case=Acc|Degree=Pos|Gender=Masc|Number=Sing	17	amod	_	_
+17	Новгород	новгород	PROPN	_	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	12	nmod	_	SpaceAfter=No
+18	.	.	PUNCT	_	_	17	punct	_	_
+
+# sent_id = 27
+# text = В Нижегородской области местом постоянного размещения очага определен Нижегородский Дом бракосочетания.В настоящее время семейный очаг «Сердце России» продолжает свое путешествие по Нижегородской области и передается в каждый муниципалитет.
+1	В	в	ADP	_	_	3	case	_	_
+2	Нижегородской	нижегородский	ADJ	_	Case=Loc|Degree=Pos|Gender=Fem|Number=Sing	3	amod	_	_
+3	области	область	NOUN	_	Animacy=Inan|Case=Loc|Gender=Fem|Number=Sing	8	obl	_	_
+4	местом	место	NOUN	_	Animacy=Inan|Case=Ins|Gender=Neut|Number=Sing	8	obl	_	_
+5	постоянного	постоянный	ADJ	_	Case=Gen|Degree=Pos|Gender=Neut|Number=Sing	6	amod	_	_
+6	размещения	размещение	NOUN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	4	nmod	_	_
+7	очага	очаг	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	6	nmod	_	_
+8	определен	определять	VERB	_	Aspect=Perf|Gender=Masc|Number=Sing|Tense=Past|Variant=Short|VerbForm=Part|Voice=Pass	0	ROOT	_	_
+9	Нижегородский	Нижегородский	ADJ	_	Case=Nom|Degree=Pos|Gender=Masc|Number=Sing	10	amod	_	_
+10	Дом	дом	PROPN	_	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	8	nsubj:pass	_	_
+11	бракосочетания	бракосочетание	NOUN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	10	nmod	_	SpaceAfter=No
+12	.	.	PUNCT	_	_	11	punct	_	SpaceAfter=No
+13	В	в	ADP	_	_	20	advmod	_	_
+14	настоящее	настоящий	ADJ	_	Animacy=Inan|Case=Acc|Degree=Pos|Gender=Neut|Number=Sing	13	fixed	_	_
+15	время	время	NOUN	_	Animacy=Inan|Case=Acc|Gender=Neut|Number=Sing	14	fixed	_	_
+16	семейный	семейный	ADJ	_	Case=Nom|Degree=Pos|Gender=Masc|Number=Sing	17	amod	_	_
+17	очаг	очаг	NOUN	_	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	20	nsubj	_	_
+18	«Сердце	«Сердц	ADJ	_	Case=Gen|Degree=Pos|Number=Plur	19	amod	_	_
+19	России»	России»	ADJ	_	Case=Gen|Degree=Pos|Number=Plur	17	nmod	_	_
+20	продолжает	продолжать	VERB	_	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	10	acl:relcl	_	_
+21	свое	свой	DET	_	Case=Acc|Gender=Neut|Number=Sing	22	amod	_	_
+22	путешествие	путешествие	NOUN	_	Animacy=Inan|Case=Acc|Gender=Neut|Number=Sing	20	obj	_	_
+23	по	по	ADP	_	_	25	case	_	_
+24	Нижегородской	нижегородский	ADJ	_	Case=Dat|Degree=Pos|Gender=Fem|Number=Sing	25	amod	_	_
+25	области	область	NOUN	_	Animacy=Inan|Case=Dat|Gender=Fem|Number=Sing	22	nmod	_	_
+26	и	и	CCONJ	_	_	27	cc	_	_
+27	передается	передавать	VERB	_	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Mid	20	conj	_	_
+28	в	в	ADP	_	_	30	case	_	_
+29	каждый	каждый	ADJ	_	Animacy=Inan|Case=Acc|Degree=Pos|Gender=Masc|Number=Sing	30	amod	_	_
+30	муниципалитет	муниципалитет	NOUN	_	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	27	obl	_	SpaceAfter=No
+31	.	.	PUNCT	_	_	30	punct	_	_
+
+# sent_id = 28
+# text = Марина Мухина
+1	Марина	марина	NOUN	_	Animacy=Anim|Case=Nom|Gender=Fem|Number=Sing	0	ROOT	_	_
+2	Мухина	Мухин	PROPN	_	Animacy=Anim|Case=Nom|Gender=Fem|Number=Sing	1	appos	_	_
+
+# sent_id = 29
+# text = 10 февраля вместе с большой командой заместитель губернатора Нижегородской области О.А.
+1	10	10	NUM	_	_	0	ROOT	_	_
+2	февраля	февраль	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	1	nmod	_	_
+3	вместе	вместе	ADV	_	Degree=Pos	7	advmod	_	_
+4	с	с	ADP	_	_	6	case	_	_
+5	большой	большой	ADJ	_	Case=Ins|Degree=Pos|Gender=Fem|Number=Sing	6	amod	_	_
+6	командой	команда	NOUN	_	Animacy=Inan|Case=Ins|Gender=Fem|Number=Sing	3	nmod	_	_
+7	заместитель	заместитель	NOUN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	1	nsubj	_	_
+8	губернатора	губернатор	NOUN	_	Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing	7	nmod	_	_
+9	Нижегородской	нижегородский	ADJ	_	Case=Gen|Degree=Pos|Gender=Fem|Number=Sing	10	amod	_	_
+10	области	область	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	8	nmod	_	_
+11	О.	о.	PROPN	_	Animacy=Anim|Case=Nom|Gender=Fem|Number=Sing	7	appos	_	SpaceAfter=No
+12	А.	а.	PROPN	_	Animacy=Anim|Case=Nom|Gender=Fem|Number=Sing	11	flat:name	_	SpaceAfter=No
+
+# sent_id = 30
+# text = Беркович почтил память поэта и провел ряд рабочих встреч по подготовке к юбилею А.С.Пушкина.
+1	Беркович	Беркович	NOUN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	2	nsubj	_	_
+2	почтил	чтить	VERB	_	Aspect=Perf|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	0	ROOT	_	_
+3	память	память	NOUN	_	Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing	2	obj	_	_
+4	поэта	поэт	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	3	nmod	_	_
+5	и	и	CCONJ	_	_	6	cc	_	_
+6	провел	проводить	VERB	_	Aspect=Perf|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	2	conj	_	_
+7	ряд	ряд	NOUN	_	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	6	obj	_	_
+8	рабочих	рабочий	ADJ	_	Case=Gen|Degree=Pos|Number=Plur	9	amod	_	_
+9	встреч	встреча	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Plur	7	nmod	_	_
+10	по	по	ADP	_	_	11	case	_	_
+11	подготовке	подготовка	NOUN	_	Animacy=Inan|Case=Dat|Gender=Fem|Number=Sing	9	nmod	_	_
+12	к	к	ADP	_	_	13	case	_	_
+13	юбилею	юбилей	NOUN	_	Animacy=Inan|Case=Dat|Gender=Masc|Number=Sing	11	nmod	_	_
+14	А.	а.	PROPN	_	Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing	13	nmod	_	SpaceAfter=No
+15	С.	с.	PROPN	_	Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing	14	flat:name	_	SpaceAfter=No
+16	Пушкина	пушкин	PROPN	_	Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing	14	flat:name	_	SpaceAfter=No
+17	.	.	PUNCT	_	_	16	punct	_	_
+
+# sent_id = 31
+# text = Руководство округа в лице главы местного самоуправления Морозовой А. А. обсудило в целом ход работ по подготовке к юбилею поэта с представителем Российской ассоциации реставраторов по Нижегородской области Молокановым В.А. и сотрудниками музея-заповедника А. С.Пушкина "Болдино" по вопросам реставрации объектов музея-заповедника в Б.-Болдине и во Львовке.
+1	Руководство	руководство	NOUN	_	Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing	0	ROOT	_	_
+2	округа	округ	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	1	nmod	_	_
+3	в	в	ADP	_	_	4	case	_	_
+4	лице	лицо	NOUN	_	Animacy=Inan|Case=Loc|Gender=Neut|Number=Sing	1	nmod	_	_
+5	главы	глава	NOUN	_	Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing	4	nmod	_	_
+6	местного	местный	ADJ	_	Case=Gen|Degree=Pos|Gender=Neut|Number=Sing	7	amod	_	_
+7	самоуправления	самоуправление	NOUN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	5	nmod	_	_
+8	Морозовой	морозова	PROPN	_	Animacy=Anim|Case=Gen|Gender=Fem|Number=Sing	5	nmod	_	_
+9	А.	а.	PROPN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	11	nsubj	_	_
+10	А.	а.	PROPN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	9	flat:name	_	_
+11	обсудило	обсуждать	VERB	_	Aspect=Perf|Gender=Neut|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	1	parataxis	_	_
+12	в	в	ADP	_	_	13	case	_	_
+13	целом	целое	NOUN	_	Animacy=Inan|Case=Loc|Gender=Neut|Number=Sing	11	obl	_	_
+14	ход	ход	NOUN	_	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	11	obj	_	_
+15	работ	работа	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Plur	14	nmod	_	_
+16	по	по	ADP	_	_	17	case	_	_
+17	подготовке	подготовка	NOUN	_	Animacy=Inan|Case=Dat|Gender=Fem|Number=Sing	15	nmod	_	_
+18	к	к	ADP	_	_	19	case	_	_
+19	юбилею	юбилей	NOUN	_	Animacy=Inan|Case=Dat|Gender=Masc|Number=Sing	17	nmod	_	_
+20	поэта	поэт	NOUN	_	Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing	19	nmod	_	_
+21	с	с	ADP	_	_	22	case	_	_
+22	представителем	представитель	NOUN	_	Animacy=Anim|Case=Ins|Gender=Masc|Number=Sing	17	nmod	_	_
+23	Российской	российский	ADJ	_	Case=Gen|Degree=Pos|Gender=Fem|Number=Sing	24	amod	_	_
+24	ассоциации	ассоциация	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	22	nmod	_	_
+25	реставраторов	реставратор	NOUN	_	Animacy=Anim|Case=Gen|Gender=Masc|Number=Plur	24	nmod	_	_
+26	по	по	ADP	_	_	28	case	_	_
+27	Нижегородской	нижегородский	ADJ	_	Case=Dat|Degree=Pos|Gender=Fem|Number=Sing	28	amod	_	_
+28	области	область	NOUN	_	Animacy=Inan|Case=Dat|Gender=Fem|Number=Sing	24	nmod	_	_
+29	Молокановым	Молоканов	PROPN	_	Animacy=Anim|Case=Ins|Gender=Masc|Number=Sing	22	appos	_	_
+30	В.	в.	PROPN	_	Animacy=Anim|Case=Ins|Gender=Masc|Number=Sing	29	flat:name	_	SpaceAfter=No
+31	А.	а.	PROPN	_	Animacy=Anim|Case=Ins|Gender=Masc|Number=Sing	30	flat:name	_	_
+32	и	и	CCONJ	_	_	33	cc	_	_
+33	сотрудниками	сотрудник	NOUN	_	Animacy=Anim|Case=Ins|Gender=Masc|Number=Plur	22	conj	_	_
+34	музея	музей	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	33	nmod	_	SpaceAfter=No
+35	-	-	PUNCT	_	_	34	punct	_	SpaceAfter=No
+36	заповедника	заповедник	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	34	appos	_	_
+37	А.	а.	PROPN	_	Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing	34	nmod	_	_
+38	С.	с.	PROPN	_	Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing	37	flat:name	_	SpaceAfter=No
+39	Пушкина	пушкин	PROPN	_	Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing	37	flat:name	_	_
+40	"	"	PUNCT	_	_	41	punct	_	SpaceAfter=No
+41	Болдино	Болдино	PROPN	_	Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing	34	appos	_	SpaceAfter=No
+42	"	"	PUNCT	_	_	41	punct	_	_
+43	по	по	ADP	_	_	44	case	_	_
+44	вопросам	вопрос	NOUN	_	Animacy=Inan|Case=Dat|Gender=Masc|Number=Plur	41	nmod	_	_
+45	реставрации	реставрация	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	44	nmod	_	_
+46	объектов	объект	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Plur	45	nmod	_	_
+47	музея	музей	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	46	nmod	_	SpaceAfter=No
+48	-	-	PUNCT	_	_	47	punct	_	SpaceAfter=No
+49	заповедника	заповедник	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	47	appos	_	_
+50	в	в	ADP	_	_	52	case	_	_
+51	Б.	б.	ADJ	_	Animacy=Inan|Case=Acc|Degree=Pos|Gender=Masc|Number=Sing	52	amod	_	SpaceAfter=No
+52	-Болдине	-Болдине	ADV	_	Degree=Pos	11	obl	_	_
+53	и	и	CCONJ	_	_	55	cc	_	_
+54	во	в	ADP	_	_	55	case	_	_
+55	Львовке	Львовка	PROPN	_	Animacy=Inan|Case=Loc|Gender=Fem|Number=Sing	52	conj	_	SpaceAfter=No
+56	.	.	PUNCT	_	_	55	punct	_	_
+
+# sent_id = 32
+# text = С участием директора АНО управляющей компании "Паломническо-туристический кластер "Арзамас-Дивеево-Саров" И.С.Филипповым и представителем гостиничной сети рассмотрен ряд вопросов по строительству и ремонту объектов гостиничной инфраструктуры на территории округа, развитию сервисной зоны музея-заповедника А.С.Пушкина «Болдино».
+1	С	с	ADP	_	_	2	case	_	_
+2	участием	участие	NOUN	_	Animacy=Inan|Case=Ins|Gender=Neut|Number=Sing	21	obl	_	_
+3	директора	директор	NOUN	_	Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing	2	nmod	_	_
+4	АНО	Ано	ADV	_	Degree=Pos	5	advmod	_	_
+5	управляющей	управлять	VERB	_	Aspect=Imp|Case=Gen|Gender=Fem|Number=Sing|Tense=Pres|VerbForm=Part|Voice=Act	6	amod	_	_
+6	компании	компания	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	3	nmod	_	_
+7	"	"	PUNCT	_	_	6	punct	_	SpaceAfter=No
+8	Паломническо-	Паломническо-	PUNCT	_	_	6	punct	_	SpaceAfter=No
+9	туристический	туристический	ADJ	_	Case=Nom|Degree=Pos|Gender=Masc|Number=Sing	10	amod	_	_
+10	кластер	кластер	NOUN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	21	nsubj:pass	_	_
+11	"	"	PUNCT	_	_	12	punct	_	SpaceAfter=No
+12	Арзамас-Дивеево-Саров	Арзамас-Дивеево-Саров	PROPN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	10	appos	_	SpaceAfter=No
+13	"	"	PUNCT	_	_	12	punct	_	_
+14	И.	и.	PROPN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	10	appos	_	SpaceAfter=No
+15	С.	с.	PROPN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	14	flat:name	_	SpaceAfter=No
+16	Филипповым	филиппов	PROPN	_	Animacy=Anim|Case=Ins|Gender=Masc|Number=Sing	14	flat:name	_	_
+17	и	и	CCONJ	_	_	18	cc	_	_
+18	представителем	представитель	NOUN	_	Animacy=Anim|Case=Ins|Gender=Masc|Number=Sing	10	conj	_	_
+19	гостиничной	гостиничный	ADJ	_	Case=Gen|Degree=Pos|Gender=Fem|Number=Sing	20	amod	_	_
+20	сети	сеть	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	18	nmod	_	_
+21	рассмотрен	рассматривать	VERB	_	Aspect=Perf|Gender=Masc|Number=Sing|Tense=Past|Variant=Short|VerbForm=Part|Voice=Pass	0	ROOT	_	_
+22	ряд	ряд	NOUN	_	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	21	nsubj:pass	_	_
+23	вопросов	вопрос	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Plur	22	nmod	_	_
+24	по	по	ADP	_	_	25	case	_	_
+25	строительству	строительство	NOUN	_	Animacy=Inan|Case=Dat|Gender=Neut|Number=Sing	23	nmod	_	_
+26	и	и	CCONJ	_	_	27	cc	_	_
+27	ремонту	ремонт	NOUN	_	Animacy=Inan|Case=Dat|Gender=Masc|Number=Sing	25	conj	_	_
+28	объектов	объект	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Plur	27	nmod	_	_
+29	гостиничной	гостиничный	ADJ	_	Case=Gen|Degree=Pos|Gender=Fem|Number=Sing	30	amod	_	_
+30	инфраструктуры	инфраструктура	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	28	nmod	_	_
+31	на	на	ADP	_	_	32	case	_	_
+32	территории	территория	NOUN	_	Animacy=Inan|Case=Loc|Gender=Fem|Number=Sing	22	nmod	_	_
+33	округа	округ	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	32	nmod	_	SpaceAfter=No
+34	,	,	PUNCT	_	_	33	punct	_	_
+35	развитию	развитие	NOUN	_	Animacy=Inan|Case=Dat|Gender=Neut|Number=Sing	32	conj	_	_
+36	сервисной	сервисный	ADJ	_	Case=Gen|Degree=Pos|Gender=Fem|Number=Sing	37	amod	_	_
+37	зоны	зона	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	35	nmod	_	_
+38	музея	музей	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	37	nmod	_	SpaceAfter=No
+39	-	-	PUNCT	_	_	38	punct	_	SpaceAfter=No
+40	заповедника	заповедник	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	38	parataxis	_	_
+41	А.	а.	PROPN	_	Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing	40	nmod	_	SpaceAfter=No
+42	С.	с.	PROPN	_	Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing	41	flat:name	_	SpaceAfter=No
+43	Пушкина	пушкин	PROPN	_	Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing	41	flat:name	_	_
+44	«Болдино»	«Болдино»	ADJ	_	Case=Gen|Degree=Pos|Number=Plur	38	nmod	_	SpaceAfter=No
+45	.	.	PUNCT	_	_	44	punct	_	_
+
+# sent_id = 33
+# text = С представителями компании по созданию парков обсудили перспективу развития зоны отдыха и мини-парка по произведениям Пушкина рядом с музеем-заповедником.
+1	С	с	ADP	_	_	2	case	_	_
+2	представителями	представитель	NOUN	_	Animacy=Anim|Case=Ins|Gender=Masc|Number=Plur	7	obl	_	_
+3	компании	компания	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	2	nmod	_	_
+4	по	по	ADP	_	_	5	case	_	_
+5	созданию	создание	NOUN	_	Animacy=Inan|Case=Dat|Gender=Neut|Number=Sing	7	obl	_	_
+6	парков	парк	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Plur	5	nmod	_	_
+7	обсудили	обсуждать	VERB	_	Aspect=Perf|Mood=Ind|Number=Plur|Tense=Past|VerbForm=Fin|Voice=Act	0	ROOT	_	_
+8	перспективу	перспектива	NOUN	_	Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing	7	obj	_	_
+9	развития	развитие	NOUN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	8	nmod	_	_
+10	зоны	зона	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	9	nmod	_	_
+11	отдыха	отдых	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	10	nmod	_	_
+12	и	и	CCONJ	_	_	13	cc	_	_
+13	мини-парка	мини-парка	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	10	conj	_	_
+14	по	по	ADP	_	_	15	case	_	_
+15	произведениям	произведение	NOUN	_	Animacy=Inan|Case=Dat|Gender=Neut|Number=Plur	13	nmod	_	_
+16	Пушкина	пушкин	PROPN	_	Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing	15	nmod	_	_
+17	рядом	рядом	ADV	_	Degree=Pos	7	advmod	_	_
+18	с	с	ADP	_	_	19	case	_	_
+19	музеем	музей	NOUN	_	Animacy=Anim|Case=Ins|Gender=Masc|Number=Sing	17	nmod	_	SpaceAfter=No
+20	-	-	PUNCT	_	_	19	punct	_	SpaceAfter=No
+21	заповедником	заповедник	NOUN	_	Animacy=Anim|Case=Ins|Gender=Masc|Number=Sing	7	obl	_	SpaceAfter=No
+22	.	.	PUNCT	_	_	21	punct	_	_
+
+# sent_id = 34
+# text = Также в ходе объезда и осмотра объектов показа обсудили вопросы благоустройства территории и дальнейшее развитие проекта "Пушкинское Болдино – место творческой силы".
+1	Также	также	ADV	_	Degree=Pos	9	advmod	_	_
+2	в	в	ADP	_	_	4	case	_	_
+3	ходе	ход	NOUN	_	Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing	2	fixed	_	_
+4	объезда	объезд	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	9	obl	_	_
+5	и	и	CCONJ	_	_	6	cc	_	_
+6	осмотра	осмотр	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	4	conj	_	_
+7	объектов	объект	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Plur	4	nmod	_	_
+8	показа	показ	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	7	nmod	_	_
+9	обсудили	обсуждать	VERB	_	Aspect=Perf|Mood=Ind|Number=Plur|Tense=Past|VerbForm=Fin|Voice=Act	0	ROOT	_	_
+10	вопросы	вопрос	NOUN	_	Animacy=Inan|Case=Acc|Gender=Masc|Number=Plur	9	obj	_	_
+11	благоустройства	благоустройство	NOUN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	10	nmod	_	_
+12	территории	территория	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	11	nmod	_	_
+13	и	и	CCONJ	_	_	21	cc	_	_
+14	дальнейшее	дальнейший	ADJ	_	Case=Nom|Degree=Pos|Gender=Neut|Number=Sing	15	amod	_	_
+15	развитие	развитие	NOUN	_	Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing	21	nsubj	_	_
+16	проекта	проект	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	15	nmod	_	_
+17	"	"	PUNCT	_	_	18	punct	_	SpaceAfter=No
+18	Пушкинское	Пушкинский	ADJ	_	Case=Nom|Degree=Pos|Gender=Neut|Number=Sing	19	amod	_	_
+19	Болдино	Болдино	PROPN	_	Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing	16	appos	_	_
+20	–	–	PUNCT	_	_	19	punct	_	_
+21	место	место	NOUN	_	Animacy=Inan|Case=Acc|Gender=Neut|Number=Sing	9	conj	_	_
+22	творческой	творческий	ADJ	_	Case=Gen|Degree=Pos|Gender=Fem|Number=Sing	23	amod	_	_
+23	силы	сила	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	21	nmod	_	SpaceAfter=No
+24	"	"	PUNCT	_	_	23	punct	_	SpaceAfter=No
+25	.	.	PUNCT	_	_	23	punct	_	_
+
+# sent_id = 35
+# text = Работы на всех объектах идут активно, планов наметили тоже много.
+1	Работы	работа	NOUN	_	Animacy=Inan|Case=Nom|Gender=Fem|Number=Plur	5	nsubj	_	_
+2	на	на	ADP	_	_	4	case	_	_
+3	всех	весь	DET	_	Case=Loc|Number=Plur	4	amod	_	_
+4	объектах	объект	NOUN	_	Animacy=Inan|Case=Loc|Gender=Masc|Number=Plur	1	nmod	_	_
+5	идут	идти	VERB	_	Aspect=Imp|Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	0	ROOT	_	_
+6	активно	активно	ADV	_	Degree=Pos	5	advmod	_	SpaceAfter=No
+7	,	,	PUNCT	_	_	6	punct	_	_
+8	планов	план	NOUN	_	Animacy=Anim|Case=Acc|Gender=Masc|Number=Plur	9	obj	_	_
+9	наметили	намечать	VERB	_	Aspect=Perf|Mood=Ind|Number=Plur|Tense=Past|VerbForm=Fin|Voice=Act	5	conj	_	_
+10	тоже	тоже	PART	_	_	9	advmod	_	_
+11	много	много	ADV	_	Degree=Pos	9	advmod	_	SpaceAfter=No
+12	.	.	PUNCT	_	_	11	punct	_	_
+
+# sent_id = 36
+# text = – Очень важно использовать потенциал события на благо развития территории, – подчеркнул Олег Беркович, подводя итог своего визита на болдинскую землю.
+1	–	–	PUNCT	_	_	2	punct	_	_
+2	Очень	очень	ADV	_	Degree=Pos	3	advmod	_	_
+3	важно	важный	ADJ	_	Degree=Pos|Gender=Neut|Number=Sing|Variant=Short	0	ROOT	_	_
+4	использовать	использовать	VERB	_	Aspect=Imp|VerbForm=Inf|Voice=Act	3	nsubj	_	_
+5	потенциал	потенциал	NOUN	_	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	4	obj	_	_
+6	события	событие	NOUN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	5	nmod	_	_
+7	на	на	ADP	_	_	8	case	_	_
+8	благо	благо	NOUN	_	Animacy=Inan|Case=Acc|Gender=Neut|Number=Sing	4	obl	_	_
+9	развития	развитие	NOUN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	8	nmod	_	_
+10	территории	территория	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	9	nmod	_	SpaceAfter=No
+11	,	,	PUNCT	_	_	10	punct	_	_
+12	–	–	PUNCT	_	_	10	punct	_	_
+13	подчеркнул	подчеркивать	VERB	_	Aspect=Perf|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	3	parataxis	_	_
+14	Олег	олег	PROPN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	13	nsubj	_	_
+15	Беркович	Беркович	PROPN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	14	flat:name	_	SpaceAfter=No
+16	,	,	PUNCT	_	_	15	punct	_	_
+17	подводя	подводить	VERB	_	Aspect=Imp|Tense=Pres|VerbForm=Conv|Voice=Act	13	advcl	_	_
+18	итог	итог	NOUN	_	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	17	obj	_	_
+19	своего	свой	DET	_	Case=Gen|Gender=Masc|Number=Sing	20	amod	_	_
+20	визита	визит	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	18	nmod	_	_
+21	на	на	ADP	_	_	23	case	_	_
+22	болдинскую	болдинский	ADJ	_	Case=Acc|Degree=Pos|Gender=Fem|Number=Sing	23	amod	_	_
+23	землю	земля	NOUN	_	Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing	20	nmod	_	SpaceAfter=No
+24	.	.	PUNCT	_	_	23	punct	_	_
+
+# sent_id = 37
+# text = – Спасибо курирующему блок культуры и туризма заместителю Губернатора Олегу Берковичу и команде Правительства региона, коллегам за огромный вклад в развитие Большого Болдина! – отметила Морозова А.А.
+1	–	–	PUNCT	_	_	2	punct	_	_
+2	Спасибо	спасибо	NOUN	_	Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing	0	ROOT	_	_
+3	курирующему	курировать	VERB	_	Aspect=Imp|Case=Dat|Gender=Masc|Number=Sing|Tense=Pres|VerbForm=Part|Voice=Act	2	amod	_	_
+4	блок	блок	NOUN	_	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	3	obj	_	_
+5	культуры	культура	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	4	nmod	_	_
+6	и	и	CCONJ	_	_	7	cc	_	_
+7	туризма	туризм	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	5	conj	_	_
+8	заместителю	заместитель	NOUN	_	Animacy=Anim|Case=Dat|Gender=Masc|Number=Sing	2	nmod	_	_
+9	Губернатора	губернатор	PROPN	_	Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing	8	nmod	_	_
+10	Олегу	олег	PROPN	_	Animacy=Anim|Case=Dat|Gender=Masc|Number=Sing	2	appos	_	_
+11	Берковичу	Беркович	PROPN	_	Animacy=Anim|Case=Dat|Gender=Masc|Number=Sing	10	flat:name	_	_
+12	и	и	CCONJ	_	_	13	cc	_	_
+13	команде	команда	NOUN	_	Animacy=Inan|Case=Dat|Gender=Fem|Number=Sing	27	obl	_	_
+14	Правительства	правительство	PROPN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	13	nmod	_	_
+15	региона	регион	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	14	nmod	_	SpaceAfter=No
+16	,	,	PUNCT	_	_	15	punct	_	_
+17	коллегам	коллега	NOUN	_	Animacy=Anim|Case=Dat|Gender=Masc|Number=Plur	27	obl	_	_
+18	за	за	ADP	_	_	20	case	_	_
+19	огромный	огромный	ADJ	_	Animacy=Inan|Case=Acc|Degree=Pos|Gender=Masc|Number=Sing	20	amod	_	_
+20	вклад	вклад	NOUN	_	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	17	nmod	_	_
+21	в	в	ADP	_	_	22	case	_	_
+22	развитие	развитие	NOUN	_	Animacy=Inan|Case=Acc|Gender=Neut|Number=Sing	20	nmod	_	_
+23	Большого	большой	ADJ	_	Case=Gen|Degree=Pos|Gender=Masc|Number=Sing	24	amod	_	_
+24	Болдина	Болдин	PROPN	_	Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing	22	nmod	_	SpaceAfter=No
+25	!	!	PUNCT	_	_	24	punct	_	_
+26	–	–	PUNCT	_	_	24	punct	_	_
+27	отметила	отмечать	VERB	_	Aspect=Perf|Gender=Fem|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	2	parataxis	_	_
+28	Морозова	Морозов	PROPN	_	Animacy=Anim|Case=Nom|Gender=Fem|Number=Sing	27	nsubj	_	_
+29	А.	а.	PROPN	_	Animacy=Anim|Case=Nom|Gender=Fem|Number=Sing	28	flat:name	_	SpaceAfter=No
+30	А.	а.	PROPN	_	Animacy=Anim|Case=Nom|Gender=Fem|Number=Sing	28	flat:name	_	_
+
+# sent_id = 38
+# text = Алла Морозова, глава местного самоуправления Большеболдинского муниципального округа
+1	Алла	алла	NOUN	_	Animacy=Anim|Case=Nom|Gender=Fem|Number=Sing	0	ROOT	_	_
+2	Морозова	Морозов	PROPN	_	Animacy=Anim|Case=Nom|Gender=Fem|Number=Sing	1	appos	_	SpaceAfter=No
+3	,	,	PUNCT	_	_	2	punct	_	_
+4	глава	глава	NOUN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	1	appos	_	_
+5	местного	местный	ADJ	_	Case=Gen|Degree=Pos|Gender=Neut|Number=Sing	6	amod	_	_
+6	самоуправления	самоуправление	NOUN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	4	nmod	_	_
+7	Большеболдинского	Большеболдинский	ADJ	_	Case=Gen|Degree=Pos|Gender=Masc|Number=Sing	9	amod	_	_
+8	муниципального	муниципальный	ADJ	_	Case=Gen|Degree=Pos|Gender=Masc|Number=Sing	9	amod	_	_
+9	округа	округ	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	6	nmod	_	_
+
+# sent_id = 39
+# text = По традиции, в господской усадьбе музея-заповедника в Большом Болдине отслужена заупокойная лития и к подножию памятника поэту возложены цветы.
+1	По	по	ADP	_	_	2	case	_	_
+2	традиции	традиция	NOUN	_	Animacy=Inan|Case=Dat|Gender=Fem|Number=Sing	13	obl	_	SpaceAfter=No
+3	,	,	PUNCT	_	_	2	punct	_	_
+4	в	в	ADP	_	_	6	case	_	_
+5	господской	господский	ADJ	_	Case=Loc|Degree=Pos|Gender=Fem|Number=Sing	6	amod	_	_
+6	усадьбе	усадьба	NOUN	_	Animacy=Inan|Case=Loc|Gender=Fem|Number=Sing	2	conj	_	_
+7	музея	музей	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	6	nmod	_	SpaceAfter=No
+8	-	-	PUNCT	_	_	7	punct	_	SpaceAfter=No
+9	заповедника	заповедник	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	7	appos	_	_
+10	в	в	ADP	_	_	12	case	_	_
+11	Большом	большой	ADJ	_	Case=Loc|Degree=Pos|Gender=Masc|Number=Sing	12	amod	_	_
+12	Болдине	Болдина	PROPN	_	Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing	13	obl	_	_
+13	отслужена	отслуживать	VERB	_	Aspect=Perf|Gender=Fem|Number=Sing|Tense=Past|Variant=Short|VerbForm=Part|Voice=Pass	0	ROOT	_	_
+14	заупокойная	заупокойный	ADJ	_	Case=Nom|Degree=Pos|Gender=Fem|Number=Sing	15	amod	_	_
+15	лития	литий	NOUN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	13	nsubj:pass	_	_
+16	и	и	CCONJ	_	_	21	cc	_	_
+17	к	к	ADP	_	_	18	case	_	_
+18	подножию	подножие	NOUN	_	Animacy=Inan|Case=Dat|Gender=Neut|Number=Sing	21	obl	_	_
+19	памятника	памятник	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	18	nmod	_	_
+20	поэту	поэт	NOUN	_	Animacy=Inan|Case=Dat|Gender=Masc|Number=Sing	21	obl	_	_
+21	возложены	возлагать	VERB	_	Aspect=Perf|Number=Plur|Tense=Past|Variant=Short|VerbForm=Part|Voice=Pass	13	conj	_	_
+22	цветы	цветы	NOUN	_	Animacy=Inan|Case=Nom|Gender=Masc|Number=Plur	21	nsubj:pass	_	SpaceAfter=No
+23	.	.	PUNCT	_	_	22	punct	_	_
+
+# sent_id = 40
+# text = В этот день на болдинской земле в заснеженном парке особенно трогательно и проникновенно звучат бессмертные стихи поэта.
+1	В	в	ADP	_	_	3	case	_	_
+2	этот	этот	DET	_	Case=Acc|Gender=Masc|Number=Sing	3	amod	_	_
+3	день	день	NOUN	_	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	14	obl	_	_
+4	на	на	ADP	_	_	6	case	_	_
+5	болдинской	болдинский	ADJ	_	Case=Loc|Degree=Pos|Gender=Fem|Number=Sing	6	amod	_	_
+6	земле	земля	NOUN	_	Animacy=Inan|Case=Loc|Gender=Fem|Number=Sing	14	obl	_	_
+7	в	в	ADP	_	_	9	case	_	_
+8	заснеженном	заснеженный	ADJ	_	Case=Loc|Degree=Pos|Gender=Masc|Number=Sing	9	amod	_	_
+9	парке	парк	NOUN	_	Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing	14	obl	_	_
+10	особенно	особенно	ADV	_	Degree=Pos	11	advmod	_	_
+11	трогательно	трогательно	ADV	_	Degree=Pos	14	advmod	_	_
+12	и	и	CCONJ	_	_	13	cc	_	_
+13	проникновенно	проникновенно	ADV	_	Degree=Pos	11	conj	_	_
+14	звучат	звучать	VERB	_	Aspect=Imp|Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	0	ROOT	_	_
+15	бессмертные	бессмертный	ADJ	_	Animacy=Inan|Case=Acc|Degree=Pos|Number=Plur	16	amod	_	_
+16	стихи	стих	NOUN	_	Animacy=Inan|Case=Acc|Gender=Masc|Number=Plur	14	obj	_	_
+17	поэта	поэт	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	16	nmod	_	SpaceAfter=No
+18	.	.	PUNCT	_	_	17	punct	_	_
+
+# sent_id = 41
+# text = «Сегодня вся Россия отдает дань памяти Александру Сергеевичу Пушкину, и Болдино занимает важное место в этом пространстве.
+1	«Сегодня	«Сегодня	ADV	_	Degree=Pos	4	advmod	_	_
+2	вся	весь	DET	_	Case=Nom|Gender=Fem|Number=Sing	3	amod	_	_
+3	Россия	россия	PROPN	_	Animacy=Inan|Case=Nom|Gender=Fem|Number=Sing	4	nsubj	_	_
+4	отдает	отдавать	VERB	_	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	0	ROOT	_	_
+5	дань	дань	NOUN	_	Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing	4	obj	_	_
+6	памяти	память	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	5	nmod	_	_
+7	Александру	александр	PROPN	_	Animacy=Anim|Case=Dat|Gender=Masc|Number=Sing	4	obl	_	_
+8	Сергеевичу	сергеевич	PROPN	_	Animacy=Anim|Case=Dat|Gender=Masc|Number=Sing	7	flat:name	_	_
+9	Пушкину	пушкин	PROPN	_	Animacy=Anim|Case=Dat|Gender=Masc|Number=Sing	8	flat:name	_	SpaceAfter=No
+10	,	,	PUNCT	_	_	9	punct	_	_
+11	и	и	CCONJ	_	_	13	cc	_	_
+12	Болдино	Болдино	PROPN	_	Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing	13	nsubj	_	_
+13	занимает	занимать	VERB	_	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	4	conj	_	_
+14	важное	важный	ADJ	_	Case=Acc|Degree=Pos|Gender=Neut|Number=Sing	15	amod	_	_
+15	место	место	NOUN	_	Animacy=Inan|Case=Acc|Gender=Neut|Number=Sing	13	obj	_	_
+16	в	в	ADP	_	_	18	case	_	_
+17	этом	этот	DET	_	Case=Loc|Gender=Neut|Number=Sing	18	amod	_	_
+18	пространстве	пространство	NOUN	_	Animacy=Inan|Case=Loc|Gender=Neut|Number=Sing	15	nmod	_	SpaceAfter=No
+19	.	.	PUNCT	_	_	18	punct	_	_
+
+# sent_id = 42
+# text = Ведь именно болдинская земля пропитана атмосферой присутствия гения, – сказала в своем обращении заместитель директора по научно-просветительской деятельности музея В.А.Чернышова.
+1	Ведь	ведь	PART	_	_	2	advmod	_	_
+2	именно	именно	PART	_	_	3	advmod	_	_
+3	болдинская	болдинский	ADJ	_	Case=Nom|Degree=Pos|Gender=Fem|Number=Sing	4	amod	_	_
+4	земля	земля	NOUN	_	Animacy=Inan|Case=Nom|Gender=Fem|Number=Sing	5	nsubj:pass	_	_
+5	пропитана	пропитывать	VERB	_	Aspect=Perf|Gender=Fem|Number=Sing|Tense=Past|Variant=Short|VerbForm=Part|Voice=Pass	0	ROOT	_	_
+6	атмосферой	атмосфера	NOUN	_	Animacy=Inan|Case=Ins|Gender=Fem|Number=Sing	5	obl	_	_
+7	присутствия	присутствие	NOUN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	6	nmod	_	_
+8	гения	гений	NOUN	_	Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing	7	nmod	_	SpaceAfter=No
+9	,	,	PUNCT	_	_	8	punct	_	_
+10	–	–	PUNCT	_	_	8	punct	_	_
+11	сказала	сказать	VERB	_	Aspect=Perf|Gender=Fem|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	5	parataxis	_	_
+12	в	в	ADP	_	_	14	case	_	_
+13	своем	свой	DET	_	Case=Loc|Gender=Neut|Number=Sing	14	amod	_	_
+14	обращении	обращение	NOUN	_	Animacy=Inan|Case=Loc|Gender=Neut|Number=Sing	11	obl	_	_
+15	заместитель	заместитель	NOUN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	11	nsubj	_	_
+16	директора	директор	NOUN	_	Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing	15	nmod	_	_
+17	по	по	ADP	_	_	19	case	_	_
+18	научно-просветительской	научно-просветительский	ADJ	_	Case=Dat|Degree=Pos|Gender=Fem|Number=Sing	19	amod	_	_
+19	деятельности	деятельность	NOUN	_	Animacy=Inan|Case=Dat|Gender=Fem|Number=Sing	16	nmod	_	_
+20	музея	музей	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	19	nmod	_	_
+21	В.	в.	PROPN	_	Animacy=Anim|Case=Nom|Gender=Fem|Number=Sing	15	appos	_	SpaceAfter=No
+22	А.	а.	PROPN	_	Animacy=Anim|Case=Nom|Gender=Fem|Number=Sing	21	flat:name	_	SpaceAfter=No
+23	Чернышова	Чернышов	PROPN	_	Animacy=Anim|Case=Nom|Gender=Fem|Number=Sing	21	flat:name	_	SpaceAfter=No
+24	.	.	PUNCT	_	_	23	punct	_	_
+
+# sent_id = 43
+# text = – Имя Пушкина живет в сердце каждого из нас.
+1	–	–	PUNCT	_	_	2	punct	_	_
+2	Имя	имя	NOUN	_	Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing	4	nsubj	_	_
+3	Пушкина	пушкин	PROPN	_	Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing	2	nmod	_	_
+4	живет	жить	VERB	_	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	0	ROOT	_	_
+5	в	в	ADP	_	_	6	case	_	_
+6	сердце	сердце	NOUN	_	Animacy=Inan|Case=Acc|Gender=Neut|Number=Sing	4	obl	_	_
+7	каждого	каждый	ADJ	_	Case=Gen|Degree=Pos|Gender=Masc|Number=Sing	6	nmod	_	_
+8	из	из	ADP	_	_	9	case	_	_
+9	нас	мы	PRON	_	Case=Gen|Number=Plur|Person=1	4	obl	_	SpaceAfter=No
+10	.	.	PUNCT	_	_	9	punct	_	_
+
+# sent_id = 44
+# text = В свои 16 лет он писал: «Великим быть желаю, люблю России честь, я много обещаю, исполню ли?
+1	В	в	ADP	_	_	4	case	_	_
+2	свои	свой	DET	_	Case=Acc|Number=Plur	4	amod	_	_
+3	16	16	NUM	_	_	4	nummod	_	_
+4	лет	год	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Plur	6	obl	_	_
+5	он	он	PRON	_	Case=Nom|Gender=Masc|Number=Sing|Person=3	6	nsubj	_	_
+6	писал	писать	VERB	_	Aspect=Imp|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	0	ROOT	_	SpaceAfter=No
+7	:	:	PUNCT	_	_	6	punct	_	_
+8	«Великим	«Великий	ADJ	_	Case=Ins|Degree=Pos|Gender=Masc|Number=Sing	10	obl	_	_
+9	быть	быть	AUX	_	Aspect=Imp|VerbForm=Inf|Voice=Act	8	cop	_	_
+10	желаю	желать	VERB	_	Aspect=Imp|Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin|Voice=Act	6	xcomp	_	SpaceAfter=No
+11	,	,	PUNCT	_	_	10	punct	_	_
+12	люблю	любить	VERB	_	Aspect=Imp|Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin|Voice=Act	10	conj	_	_
+13	России	россия	PROPN	_	Animacy=Inan|Case=Dat|Gender=Fem|Number=Sing	12	obl	_	_
+14	честь	честь	NOUN	_	Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing	12	obj	_	SpaceAfter=No
+15	,	,	PUNCT	_	_	14	punct	_	_
+16	я	я	PRON	_	Case=Nom|Number=Sing|Person=1	18	nsubj	_	_
+17	много	много	ADV	_	Degree=Pos	18	advmod	_	_
+18	обещаю	обещать	VERB	_	Aspect=Imp|Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin|Voice=Act	10	conj	_	SpaceAfter=No
+19	,	,	PUNCT	_	_	18	punct	_	_
+20	исполню	исполинать	VERB	_	Aspect=Imp|Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin|Voice=Act	10	conj	_	_
+21	ли	ли	PART	_	_	20	advmod	_	SpaceAfter=No
+22	?	?	PUNCT	_	_	21	punct	_	_
+
+# sent_id = 45
+# text = – Бог весть!».
+1	–	–	PUNCT	_	_	2	punct	_	_
+2	Бог	бог	PROPN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	3	nsubj	_	_
+3	весть	весть	NOUN	_	Animacy=Inan|Case=Nom|Gender=Fem|Number=Sing	0	ROOT	_	SpaceAfter=No
+4	!	!	PUNCT	_	_	3	punct	_	SpaceAfter=No
+5	»	»	PUNCT	_	_	3	punct	_	SpaceAfter=No
+6	.	.	PUNCT	_	_	3	punct	_	_
+
+# sent_id = 46
+# text = И мы, потомки Александра Сергеевича Пушкина, ведаем, что исполнились его чаяния, он действительно стал великим, незабвенным, его творчество сопровождает нас на протяжении всей нашей жизни».
+1	И	и	CCONJ	_	_	9	cc	_	_
+2	мы	мы	PRON	_	Case=Nom|Number=Plur|Person=1	9	nsubj	_	SpaceAfter=No
+3	,	,	PUNCT	_	_	2	punct	_	_
+4	потомки	потомок	NOUN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Plur	2	appos	_	_
+5	Александра	александр	PROPN	_	Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing	4	nmod	_	_
+6	Сергеевича	сергеевич	PROPN	_	Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing	5	flat:name	_	_
+7	Пушкина	пушкин	PROPN	_	Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing	6	flat:name	_	SpaceAfter=No
+8	,	,	PUNCT	_	_	7	punct	_	_
+9	ведаем	ведать	VERB	_	Aspect=Imp|Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin|Voice=Act	0	ROOT	_	SpaceAfter=No
+10	,	,	PUNCT	_	_	9	punct	_	_
+11	что	что	SCONJ	_	_	9	mark	_	_
+12	исполнились	исполняться	VERB	_	Aspect=Perf|Mood=Ind|Number=Plur|Tense=Past|VerbForm=Fin|Voice=Mid	9	advcl	_	_
+13	его	он	PRON	_	Case=Gen|Gender=Masc|Number=Sing|Person=3	14	nmod	_	_
+14	чаяния	чаяние	NOUN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	12	obl	_	SpaceAfter=No
+15	,	,	PUNCT	_	_	14	punct	_	_
+16	он	он	PRON	_	Case=Nom|Gender=Masc|Number=Sing|Person=3	18	nsubj	_	_
+17	действительно	действительно	ADV	_	Degree=Pos	18	advmod	_	_
+18	стал	становиться	VERB	_	Aspect=Perf|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Mid	9	conj	_	_
+19	великим	великий	ADJ	_	Case=Ins|Degree=Pos|Gender=Masc|Number=Sing	18	amod	_	SpaceAfter=No
+20	,	,	PUNCT	_	_	19	punct	_	_
+21	незабвенным	незабвенный	ADJ	_	Case=Ins|Degree=Pos|Gender=Masc|Number=Sing	18	amod	_	SpaceAfter=No
+22	,	,	PUNCT	_	_	21	punct	_	_
+23	его	он	PRON	_	Case=Gen|Gender=Masc|Number=Sing|Person=3	24	nmod	_	_
+24	творчество	творчество	NOUN	_	Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing	25	nsubj	_	_
+25	сопровождает	сопровождать	VERB	_	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	9	conj	_	_
+26	нас	мы	PRON	_	Case=Acc|Number=Plur|Person=1	25	obj	_	_
+27	на	на	ADP	_	_	28	case	_	_
+28	протяжении	протяжение	NOUN	_	Animacy=Inan|Case=Loc|Gender=Neut|Number=Sing	25	obl	_	_
+29	всей	весь	DET	_	Case=Gen|Gender=Fem|Number=Sing	31	amod	_	_
+30	нашей	наш	DET	_	Case=Gen|Gender=Fem|Number=Sing	31	amod	_	_
+31	жизни»	жизни»	ADJ	_	Case=Gen|Degree=Pos|Number=Plur	28	nmod	_	SpaceAfter=No
+32	.	.	PUNCT	_	_	31	punct	_	_
+
+# sent_id = 47
+# text = В 14 час.45 минут объявляется Минута молчания.
+1	В	в	ADP	_	_	3	case	_	_
+2	14	14	NUM	_	_	3	nummod	_	_
+3	час.45	час.45	NOUN	_	_	5	obl	_	_
+4	минут	минута	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Plur	3	nmod	_	_
+5	объявляется	объявлять	VERB	_	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Pass	0	ROOT	_	_
+6	Минута	минута	NOUN	_	Animacy=Inan|Case=Nom|Gender=Fem|Number=Sing	5	nsubj:pass	_	_
+7	молчания	молчание	NOUN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	6	nmod	_	SpaceAfter=No
+8	.	.	PUNCT	_	_	7	punct	_	_
+
+# sent_id = 48
+# text = В ярком свете февральского солнца на фоне покрытого снегом парка предстает фигура для каждого из нас такого близкого сердцу задумавшегося Пушкина – непостижимо загадочного, общение с творчеством которого удивляет и будет удивлять еще не одно поколение болдинцев и гостей обители трудов и вдохновения.
+1	В	в	ADP	_	_	3	case	_	_
+2	ярком	яркий	ADJ	_	Case=Loc|Degree=Pos|Gender=Masc|Number=Sing	3	amod	_	_
+3	свете	свет	NOUN	_	Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing	11	obl	_	_
+4	февральского	февральский	ADJ	_	Case=Gen|Degree=Pos|Gender=Neut|Number=Sing	5	amod	_	_
+5	солнца	солнце	NOUN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	3	nmod	_	_
+6	на	на	ADP	_	_	7	case	_	_
+7	фоне	фон	NOUN	_	Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing	11	obl	_	_
+8	покрытого	покрывать	VERB	_	Aspect=Perf|Case=Gen|Gender=Masc|Number=Sing|Tense=Past|VerbForm=Part|Voice=Pass	10	amod	_	_
+9	снегом	снег	NOUN	_	Animacy=Inan|Case=Ins|Gender=Masc|Number=Sing	8	obl:agent	_	_
+10	парка	парк	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	7	nmod	_	_
+11	предстает	представать	VERB	_	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	0	ROOT	_	_
+12	фигура	фигура	NOUN	_	Animacy=Inan|Case=Nom|Gender=Fem|Number=Sing	11	nsubj	_	_
+13	для	для	ADP	_	_	14	case	_	_
+14	каждого	каждый	ADJ	_	Case=Gen|Degree=Pos|Gender=Masc|Number=Sing	21	amod	_	_
+15	из	из	ADP	_	_	16	case	_	_
+16	нас	мы	PRON	_	Case=Gen|Number=Plur|Person=1	14	nmod	_	_
+17	такого	такой	DET	_	Case=Gen|Gender=Neut|Number=Sing	21	amod	_	_
+18	близкого	близкий	ADJ	_	Case=Gen|Degree=Pos|Gender=Masc|Number=Sing	21	amod	_	_
+19	сердцу	сердце	NOUN	_	Animacy=Anim|Case=Dat|Gender=Masc|Number=Sing	18	nmod	_	_
+20	задумавшегося	задумываться	VERB	_	Animacy=Anim|Aspect=Perf|Case=Acc|Gender=Masc|Number=Sing|Tense=Past|VerbForm=Part|Voice=Mid	21	amod	_	_
+21	Пушкина	пушкин	PROPN	_	Animacy=Anim|Case=Acc|Gender=Masc|Number=Sing	11	obj	_	_
+22	–	–	PUNCT	_	_	21	punct	_	_
+23	непостижимо	непостижимо	ADV	_	Degree=Pos	24	advmod	_	_
+24	загадочного	загадочный	ADJ	_	Case=Gen|Degree=Pos|Gender=Neut|Number=Sing	21	nmod	_	SpaceAfter=No
+25	,	,	PUNCT	_	_	24	punct	_	_
+26	общение	общение	NOUN	_	Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing	30	nsubj	_	_
+27	с	с	ADP	_	_	28	case	_	_
+28	творчеством	творчество	NOUN	_	Animacy=Inan|Case=Ins|Gender=Neut|Number=Sing	26	nmod	_	_
+29	которого	который	PRON	_	Case=Gen	28	nmod	_	_
+30	удивляет	удивлять	VERB	_	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	21	parataxis	_	_
+31	и	и	CCONJ	_	_	33	advmod	_	_
+32	будет	быть	AUX	_	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	33	aux	_	_
+33	удивлять	удивлять	VERB	_	Aspect=Imp|VerbForm=Inf|Voice=Act	30	conj	_	_
+34	еще	еще	ADV	_	Degree=Pos	36	advmod	_	_
+35	не	не	PART	_	_	36	advmod	_	_
+36	одно	один	NUM	_	Case=Nom|Gender=Neut	37	nummod:gov	_	_
+37	поколение	поколение	NOUN	_	Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing	33	nsubj	_	_
+38	болдинцев	болдинец	NOUN	_	Animacy=Anim|Case=Gen|Gender=Masc|Number=Plur	37	nmod	_	_
+39	и	и	CCONJ	_	_	40	cc	_	_
+40	гостей	гость	NOUN	_	Animacy=Anim|Case=Gen|Gender=Masc|Number=Plur	38	conj	_	_
+41	обители	обитель	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	40	nmod	_	_
+42	трудов	труд	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Plur	41	nmod	_	_
+43	и	и	CCONJ	_	_	44	cc	_	_
+44	вдохновения	вдохновение	NOUN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	42	conj	_	SpaceAfter=No
+45	.	.	PUNCT	_	_	44	punct	_	SpaceAfter=No
+
+# sent_id = 49
+# text = Программа Дня памяти поэта продолжилась музыкально-поэтической композицией «Здесь Пушкин жил», представленной артистами из Пензы.
+1	Программа	программа	NOUN	_	Animacy=Inan|Case=Nom|Gender=Fem|Number=Sing	5	nsubj	_	_
+2	Дня	день	PROPN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	1	nmod	_	_
+3	памяти	память	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	2	nmod	_	_
+4	поэта	поэт	DET	_	Case=Nom|Gender=Fem|Number=Sing	5	nsubj	_	_
+5	продолжилась	продолжиться	VERB	_	Aspect=Perf|Gender=Fem|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Mid	0	ROOT	_	_
+6	музыкально	музыкально	ADJ	_	Degree=Pos	8	compound	_	SpaceAfter=No
+7	-	-	PUNCT	_	_	6	punct	_	SpaceAfter=No
+8	поэтической	поэтический	ADJ	_	Case=Ins|Degree=Pos|Gender=Fem|Number=Sing	9	amod	_	_
+9	композицией	композиция	NOUN	_	Animacy=Inan|Case=Ins|Gender=Fem|Number=Sing	5	obl	_	_
+10	«Здесь	«Здесь	ADV	_	Degree=Pos	11	advmod	_	_
+11	Пушкин	пушкин	PROPN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	5	obl	_	_
+12	жил»	жил»	ADJ	_	Case=Gen|Degree=Pos|Number=Plur	15	amod	_	SpaceAfter=No
+13	,	,	PUNCT	_	_	12	punct	_	_
+14	представленной	представлять	VERB	_	Aspect=Perf|Case=Gen|Gender=Fem|Number=Sing|Tense=Past|VerbForm=Part|Voice=Pass	12	conj	_	_
+15	артистами	артист	NOUN	_	Animacy=Anim|Case=Ins|Gender=Masc|Number=Plur	11	nmod	_	_
+16	из	из	ADP	_	_	17	case	_	_
+17	Пензы	Пенза	PROPN	_	Animacy=Inan|Case=Nom|Gender=Fem|Number=Plur	15	nmod	_	SpaceAfter=No
+18	.	.	PUNCT	_	_	17	punct	_	_
+
+# sent_id = 50
+# text = Вечером в концертном зале НКЦ состоялась демонстрация драматического художественного фильма «Пушкин.
+1	Вечером	вечер	NOUN	_	Animacy=Inan|Case=Ins|Gender=Masc|Number=Sing	6	obl	_	_
+2	в	в	ADP	_	_	4	case	_	_
+3	концертном	концертный	ADJ	_	Case=Loc|Degree=Pos|Gender=Masc|Number=Sing	4	amod	_	_
+4	зале	зал	NOUN	_	Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing	6	obl	_	_
+5	НКЦ	Нкц	PROPN	_	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	6	nsubj	_	_
+6	состоялась	состояться	VERB	_	Aspect=Perf|Gender=Fem|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Mid	0	ROOT	_	_
+7	демонстрация	демонстрация	NOUN	_	Animacy=Inan|Case=Nom|Gender=Fem|Number=Sing	6	nsubj	_	_
+8	драматического	драматический	ADJ	_	Case=Gen|Degree=Pos|Gender=Masc|Number=Sing	10	amod	_	_
+9	художественного	художественный	ADJ	_	Case=Gen|Degree=Pos|Gender=Masc|Number=Sing	10	amod	_	_
+10	фильма	фильм	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	7	nmod	_	_
+11	«Пушкин	«Пушкин	PROPN	_	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	10	appos	_	SpaceAfter=No
+12	.	.	PUNCT	_	_	11	punct	_	_
+
+# sent_id = 51
+# text = Последняя дуэль».
+1	Последняя	последний	ADJ	_	Case=Nom|Degree=Pos|Gender=Fem|Number=Sing	0	ROOT	_	_
+2	дуэль»	дуэль»	ADJ	_	Case=Gen|Degree=Pos|Number=Plur	1	nmod	_	SpaceAfter=No
+3	.	.	PUNCT	_	_	2	punct	_	_
+
+# sent_id = 52
+# text = Марина МУХИНА
+1	Марина	марина	NOUN	_	Animacy=Anim|Case=Nom|Gender=Fem|Number=Sing	0	ROOT	_	_
+2	МУХИНА	МУХИНа	PROPN	_	Animacy=Anim|Case=Nom|Gender=Fem|Number=Sing	1	appos	_	_
+
+# sent_id = 53
+# text = Мероприятие посетили более 70 представителей АПК из 20 южных районов Нижегородской области.
+1	Мероприятие	мероприятие	NOUN	_	Animacy=Inan|Case=Acc|Gender=Neut|Number=Sing	2	obj	_	_
+2	посетили	посещать	VERB	_	Aspect=Perf|Mood=Ind|Number=Plur|Tense=Past|VerbForm=Fin|Voice=Act	0	ROOT	_	_
+3	более	более	ADV	_	Degree=Cmp	5	nummod:gov	_	_
+4	70	70	NUM	_	_	5	nummod	_	_
+5	представителей	представитель	NOUN	_	Animacy=Anim|Case=Gen|Gender=Masc|Number=Plur	2	obl	_	_
+6	АПК	апк	PROPN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	5	nmod	_	_
+7	из	из	ADP	_	_	10	case	_	_
+8	20	20	NUM	_	_	10	nummod	_	_
+9	южных	южный	ADJ	_	Case=Gen|Degree=Pos|Number=Plur	10	amod	_	_
+10	районов	район	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Plur	5	nmod	_	_
+11	Нижегородской	нижегородский	ADJ	_	Case=Gen|Degree=Pos|Gender=Fem|Number=Sing	12	amod	_	_
+12	области	область	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	10	nmod	_	SpaceAfter=No
+13	.	.	PUNCT	_	_	12	punct	_	SpaceAfter=No
+
+# sent_id = 54
+# text = Семинар был организован совместно с министерством сельского хозяйства и продовольственных ресурсов Нижегородской области, администрацией Большеболдинского муниципального округа и компанией ООО «РусАгроНова».
+1	Семинар	Семинар	NOUN	_	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	3	nsubj	_	_
+2	был	быть	AUX	_	Aspect=Imp|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	3	aux:pass	_	_
+3	организован	организовывать	VERB	_	Aspect=Perf|Gender=Masc|Number=Sing|Tense=Past|Variant=Short|VerbForm=Part|Voice=Pass	0	ROOT	_	_
+4	совместно	совместно	ADV	_	Degree=Pos	3	advmod	_	_
+5	с	с	ADP	_	_	6	case	_	_
+6	министерством	министерство	NOUN	_	Animacy=Inan|Case=Ins|Gender=Neut|Number=Sing	4	nmod	_	_
+7	сельского	сельский	ADJ	_	Case=Gen|Degree=Pos|Gender=Neut|Number=Sing	8	amod	_	_
+8	хозяйства	хозяйство	NOUN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	6	nmod	_	_
+9	и	и	CCONJ	_	_	11	cc	_	_
+10	продовольственных	продовольственный	ADJ	_	Case=Gen|Degree=Pos|Number=Plur	11	amod	_	_
+11	ресурсов	ресурс	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Plur	8	conj	_	_
+12	Нижегородской	нижегородский	ADJ	_	Case=Gen|Degree=Pos|Gender=Fem|Number=Sing	13	amod	_	_
+13	области	область	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	11	nmod	_	SpaceAfter=No
+14	,	,	PUNCT	_	_	13	punct	_	_
+15	администрацией	администрация	NOUN	_	Animacy=Inan|Case=Ins|Gender=Fem|Number=Sing	3	obl:agent	_	_
+16	Большеболдинского	Большеболдинский	ADJ	_	Case=Gen|Degree=Pos|Gender=Masc|Number=Sing	18	amod	_	_
+17	муниципального	муниципальный	ADJ	_	Case=Gen|Degree=Pos|Gender=Masc|Number=Sing	18	amod	_	_
+18	округа	округ	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	15	nmod	_	_
+19	и	и	CCONJ	_	_	20	cc	_	_
+20	компанией	компания	NOUN	_	Animacy=Inan|Case=Ins|Gender=Fem|Number=Sing	15	conj	_	_
+21	ООО	ооо	PROPN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	20	nmod	_	_
+22	«РусАгроНова»	«РусАгроНова»	ADJ	_	Case=Gen|Degree=Pos|Number=Plur	21	nmod	_	SpaceAfter=No
+23	.	.	PUNCT	_	_	22	punct	_	SpaceAfter=No
+
+# sent_id = 55
+# text = Мероприятие открыли заместитель министра сельского хозяйства и продовольственных ресурсов Нижегородской области О.В. Григорьев, глава местного самоуправления Большеболдинского муниципального округа А.А. Морозова, заместитель генерального директора по вопросам агропромышленного комплекса АО «Корпорация развития» Н.П. Шкилев и председатель Совета депутатов Большеболдинского муниципального округа В.М. Кочетов.
+1	Мероприятие	мероприятие	NOUN	_	Animacy=Inan|Case=Acc|Gender=Neut|Number=Sing	2	obj	_	_
+2	открыли	открывать	VERB	_	Aspect=Perf|Mood=Ind|Number=Plur|Tense=Past|VerbForm=Fin|Voice=Act	0	ROOT	_	_
+3	заместитель	заместитель	NOUN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	2	nsubj	_	_
+4	министра	министр	NOUN	_	Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing	3	nmod	_	_
+5	сельского	сельский	ADJ	_	Case=Gen|Degree=Pos|Gender=Neut|Number=Sing	6	amod	_	_
+6	хозяйства	хозяйство	NOUN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	4	nmod	_	_
+7	и	и	CCONJ	_	_	9	cc	_	_
+8	продовольственных	продовольственный	ADJ	_	Case=Gen|Degree=Pos|Number=Plur	9	amod	_	_
+9	ресурсов	ресурс	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Plur	4	conj	_	_
+10	Нижегородской	нижегородский	ADJ	_	Case=Gen|Degree=Pos|Gender=Fem|Number=Sing	11	amod	_	_
+11	области	область	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	9	nmod	_	_
+12	О.	о.	PROPN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	3	appos	_	SpaceAfter=No
+13	В.	в.	PROPN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	12	flat:name	_	_
+14	Григорьев	Григорьев	PROPN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	12	flat:name	_	SpaceAfter=No
+15	,	,	PUNCT	_	_	14	punct	_	_
+16	глава	глава	NOUN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	3	conj	_	_
+17	местного	местный	ADJ	_	Case=Gen|Degree=Pos|Gender=Neut|Number=Sing	18	amod	_	_
+18	самоуправления	самоуправление	NOUN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	16	nmod	_	_
+19	Большеболдинского	Большеболдинский	ADJ	_	Case=Gen|Degree=Pos|Gender=Masc|Number=Sing	21	amod	_	_
+20	муниципального	муниципальный	ADJ	_	Case=Gen|Degree=Pos|Gender=Masc|Number=Sing	21	amod	_	_
+21	округа	округ	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	18	nmod	_	_
+22	А.	а.	PROPN	_	Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing	16	appos	_	SpaceAfter=No
+23	А.	а.	PROPN	_	Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing	22	flat:name	_	_
+24	Морозова	Морозов	PROPN	_	Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing	22	flat:name	_	SpaceAfter=No
+25	,	,	PUNCT	_	_	24	punct	_	_
+26	заместитель	заместитель	NOUN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	3	conj	_	_
+27	генерального	генеральный	ADJ	_	Case=Gen|Degree=Pos|Gender=Masc|Number=Sing	28	amod	_	_
+28	директора	директор	NOUN	_	Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing	26	nmod	_	_
+29	по	по	ADP	_	_	30	case	_	_
+30	вопросам	вопрос	NOUN	_	Animacy=Inan|Case=Dat|Gender=Masc|Number=Plur	28	nmod	_	_
+31	агропромышленного	агропромышленный	ADJ	_	Case=Gen|Degree=Pos|Gender=Masc|Number=Sing	32	amod	_	_
+32	комплекса	комплекс	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	30	nmod	_	_
+33	АО	ао	PROPN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	32	nmod	_	_
+34	«Корпорация	«Корпорация	PROPN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	33	nmod	_	_
+35	развития»	развития»	ADJ	_	Case=Gen|Degree=Pos|Number=Plur	34	nmod	_	_
+36	Н.	н.	PROPN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	26	appos	_	SpaceAfter=No
+37	П.	п.	PROPN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	36	flat:name	_	_
+38	Шкилев	Шкилев	PROPN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	36	flat:name	_	_
+39	и	и	CCONJ	_	_	40	cc	_	_
+40	председатель	председатель	NOUN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	3	conj	_	_
+41	Совета	совет	PROPN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	40	nmod	_	_
+42	депутатов	депутат	NOUN	_	Animacy=Anim|Case=Gen|Gender=Masc|Number=Plur	41	nmod	_	_
+43	Большеболдинского	Большеболдинский	ADJ	_	Case=Gen|Degree=Pos|Gender=Masc|Number=Sing	45	amod	_	_
+44	муниципального	муниципальный	ADJ	_	Case=Gen|Degree=Pos|Gender=Masc|Number=Sing	45	amod	_	_
+45	округа	округ	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	42	nmod	_	_
+46	В.	в.	PROPN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	40	appos	_	SpaceAfter=No
+47	М.	м.	PROPN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	46	flat:name	_	_
+48	Кочетов	Кочетов	PROPN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	46	flat:name	_	SpaceAfter=No
+49	.	.	PUNCT	_	_	48	punct	_	_
+
+# sent_id = 56
+# text = Очень приятно, что данное мероприятие посетил заместитель министра сельского хозяйства и продовольствия Республики Мордовия И.П. Учайкин, в регионе которого большие площади отведены под выращивание сои.
+1	Очень	очень	ADV	_	Degree=Pos	2	advmod	_	_
+2	приятно	приятный	ADJ	_	Degree=Pos|Gender=Neut|Number=Sing|Variant=Short	0	ROOT	_	SpaceAfter=No
+3	,	,	PUNCT	_	_	2	punct	_	_
+4	что	что	SCONJ	_	_	2	mark	_	_
+5	данное	данный	ADJ	_	Case=Nom|Degree=Pos|Gender=Neut|Number=Sing	6	amod	_	_
+6	мероприятие	мероприятие	NOUN	_	Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing	7	obj	_	_
+7	посетил	посещать	VERB	_	Aspect=Perf|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	2	advcl	_	_
+8	заместитель	заместитель	NOUN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	7	nsubj	_	_
+9	министра	министр	NOUN	_	Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing	8	nmod	_	_
+10	сельского	сельский	ADJ	_	Case=Gen|Degree=Pos|Gender=Neut|Number=Sing	11	amod	_	_
+11	хозяйства	хозяйство	NOUN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	9	nmod	_	_
+12	и	и	CCONJ	_	_	13	cc	_	_
+13	продовольствия	продовольствие	NOUN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	11	conj	_	_
+14	Республики	республика	PROPN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	9	conj	_	_
+15	Мордовия	Мордовие	PROPN	_	Animacy=Inan|Case=Nom|Gender=Fem|Number=Sing	14	appos	_	_
+16	И.	и.	PROPN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	8	appos	_	SpaceAfter=No
+17	П.	п.	PROPN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	16	flat:name	_	_
+18	Учайкин	Учайкин	PROPN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	16	flat:name	_	SpaceAfter=No
+19	,	,	PUNCT	_	_	18	punct	_	_
+20	в	в	ADP	_	_	21	case	_	_
+21	регионе	регион	NOUN	_	Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing	25	obl	_	_
+22	которого	который	PRON	_	Case=Gen	21	nmod	_	_
+23	большие	большой	ADJ	_	Case=Nom|Degree=Pos|Number=Plur	24	amod	_	_
+24	площади	площадь	NOUN	_	Animacy=Inan|Case=Nom|Gender=Fem|Number=Plur	25	nsubj:pass	_	_
+25	отведены	отводить	VERB	_	Aspect=Perf|Number=Plur|Tense=Past|Variant=Short|VerbForm=Part|Voice=Pass	7	parataxis	_	_
+26	под	под	ADP	_	_	27	case	_	_
+27	выращивание	выращивание	NOUN	_	Animacy=Inan|Case=Acc|Gender=Neut|Number=Sing	25	obl	_	_
+28	сои	сой	NOUN	_	Animacy=Inan|Case=Nom|Gender=Masc|Number=Plur	27	nmod	_	SpaceAfter=No
+29	.	.	PUNCT	_	_	28	punct	_	_
+
+# sent_id = 57
+# text = В этот день участники семинара собрались для того, чтобы обсудить возделывание в регионе интересной бобовой культуры – сои.
+1	В	в	ADP	_	_	3	case	_	_
+2	этот	этот	DET	_	Case=Acc|Gender=Masc|Number=Sing	3	amod	_	_
+3	день	день	NOUN	_	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	6	obl	_	_
+4	участники	участник	NOUN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Plur	6	nsubj	_	_
+5	семинара	семинар	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	4	nmod	_	_
+6	собрались	собираться	VERB	_	Aspect=Perf|Mood=Ind|Number=Plur|Tense=Past|VerbForm=Fin|Voice=Mid	0	ROOT	_	_
+7	для	для	ADP	_	_	8	case	_	_
+8	того	то	PRON	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	6	obl	_	SpaceAfter=No
+9	,	,	PUNCT	_	_	8	punct	_	_
+10	чтобы	чтобы	SCONJ	_	Mood=Cnd	8	mark	_	_
+11	обсудить	обсуждать	VERB	_	Aspect=Perf|VerbForm=Inf|Voice=Act	8	advcl	_	_
+12	возделывание	возделывание	NOUN	_	Animacy=Inan|Case=Acc|Gender=Neut|Number=Sing	11	obj	_	_
+13	в	в	ADP	_	_	14	case	_	_
+14	регионе	регион	NOUN	_	Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing	12	nmod	_	_
+15	интересной	интересный	ADJ	_	Case=Gen|Degree=Pos|Gender=Fem|Number=Sing	17	amod	_	_
+16	бобовой	бобовый	ADJ	_	Case=Gen|Degree=Pos|Gender=Fem|Number=Sing	17	amod	_	_
+17	культуры	культура	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	14	nmod	_	_
+18	–	–	PUNCT	_	_	17	punct	_	_
+19	сои	сой	NOUN	_	Animacy=Inan|Case=Nom|Gender=Masc|Number=Plur	11	appos	_	SpaceAfter=No
+20	.	.	PUNCT	_	_	19	punct	_	_
+
+# sent_id = 58
+# text = Это одно из древнейших культурных растений в мире, одна из наиболее распространенных сельхозкультур сегодня и, наверное, самая неоднозначная из них.
+1	Это	это	PRON	_	Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing	2	nsubj	_	_
+2	одно	один	NUM	_	Case=Nom|Gender=Neut	0	ROOT	_	_
+3	из	из	ADP	_	_	6	case	_	_
+4	древнейших	древний	ADJ	_	Case=Gen|Degree=Sup|Number=Plur	6	amod	_	_
+5	культурных	культурный	ADJ	_	Case=Gen|Degree=Pos|Number=Plur	6	amod	_	_
+6	растений	растение	NOUN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Plur	2	nmod	_	_
+7	в	в	ADP	_	_	8	case	_	_
+8	мире	мир	NOUN	_	Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing	6	nmod	_	SpaceAfter=No
+9	,	,	PUNCT	_	_	8	punct	_	_
+10	одна	один	NUM	_	Case=Nom|Gender=Fem	2	nummod:gov	_	_
+11	из	из	ADP	_	_	14	case	_	_
+12	наиболее	наиболее	ADV	_	Degree=Pos	13	advmod	_	_
+13	распространенных	распространенный	ADJ	_	Case=Gen|Degree=Pos|Number=Plur	14	amod	_	_
+14	сельхозкультур	сельхозкультура	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Plur	10	nmod	_	_
+15	сегодня	сегодня	ADV	_	Degree=Pos	2	advmod	_	_
+16	и	и	CCONJ	_	_	21	cc	_	SpaceAfter=No
+17	,	,	PUNCT	_	_	16	punct	_	_
+18	наверное	наверное	ADV	_	Degree=Pos	21	parataxis	_	SpaceAfter=No
+19	,	,	PUNCT	_	_	18	punct	_	_
+20	самая	самый	ADJ	_	Case=Nom|Degree=Pos|Gender=Fem|Number=Sing	21	amod	_	_
+21	неоднозначная	неоднозначный	ADJ	_	Case=Nom|Degree=Pos|Gender=Fem|Number=Sing	2	conj	_	_
+22	из	из	ADP	_	_	23	case	_	_
+23	них	они	PRON	_	Case=Gen|Number=Plur|Person=3	21	nmod	_	SpaceAfter=No
+24	.	.	PUNCT	_	_	23	punct	_	_
+
+# sent_id = 59
+# text = Все это – соя.
+1	Все	весь	DET	_	Case=Nom|Gender=Neut|Number=Sing	2	amod	_	_
+2	это	это	PRON	_	Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing	4	nsubj	_	_
+3	–	–	PUNCT	_	_	2	punct	_	_
+4	соя	сой	DET	_	Case=Nom|Gender=Fem|Number=Sing	0	ROOT	_	SpaceAfter=No
+5	.	.	PUNCT	_	_	4	punct	_	_
+
+# sent_id = 60
+# text = У нее есть как ярые противники, так и преданные сторонники.
+1	У	у	ADP	_	_	2	case	_	_
+2	нее	она	PRON	_	Case=Gen|Gender=Fem|Number=Sing|Person=3	0	ROOT	_	_
+3	есть	быть	VERB	_	Aspect=Imp|Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	2	cop	_	_
+4	как	как	SCONJ	_	_	6	cc	_	_
+5	ярые	ярый	ADJ	_	Case=Nom|Degree=Pos|Number=Plur	6	amod	_	_
+6	противники	противник	NOUN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Plur	2	advmod	_	SpaceAfter=No
+7	,	,	PUNCT	_	_	6	punct	_	_
+8	так	так	ADV	_	Degree=Pos	10	advmod	_	_
+9	и	и	PART	_	_	10	advmod	_	_
+10	преданные	предать	VERB	_	Aspect=Perf|Case=Nom|Number=Plur|Tense=Past|VerbForm=Part|Voice=Pass	11	amod	_	_
+11	сторонники	сторонник	NOUN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Plur	2	parataxis	_	SpaceAfter=No
+12	.	.	PUNCT	_	_	11	punct	_	_
+
+# sent_id = 61
+# text = Ещё во времена Советского Союза ученые много занимались изучением сои, но в последние же годы ее рассматривали, в первую очередь, как кормовую культуру.
+1	Ещё	еще	ADV	_	Degree=Pos	3	advmod	_	_
+2	во	в	ADP	_	_	3	case	_	_
+3	времена	время	NOUN	_	Animacy=Inan|Case=Acc|Gender=Neut|Number=Plur	8	obl	_	_
+4	Советского	советский	ADJ	_	Case=Gen|Degree=Pos|Gender=Masc|Number=Sing	5	amod	_	_
+5	Союза	союз	PROPN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	3	nmod	_	_
+6	ученые	ученый	NOUN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Plur	8	nsubj	_	_
+7	много	много	ADV	_	Degree=Pos	8	advmod	_	_
+8	занимались	заниматься	VERB	_	Aspect=Imp|Mood=Ind|Number=Plur|Tense=Past|VerbForm=Fin|Voice=Mid	0	ROOT	_	_
+9	изучением	изучение	NOUN	_	Animacy=Inan|Case=Ins|Gender=Neut|Number=Sing	8	obl	_	_
+10	сои	сой	NOUN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Plur	9	parataxis	_	SpaceAfter=No
+11	,	,	PUNCT	_	_	10	punct	_	_
+12	но	но	CCONJ	_	_	18	cc	_	_
+13	в	в	ADP	_	_	16	case	_	_
+14	последние	последний	ADJ	_	Animacy=Inan|Case=Acc|Degree=Pos|Number=Plur	16	amod	_	_
+15	же	же	PART	_	_	14	advmod	_	_
+16	годы	год	NOUN	_	Animacy=Inan|Case=Acc|Gender=Masc|Number=Plur	18	obl	_	_
+17	ее	она	PRON	_	Case=Gen|Gender=Fem|Number=Sing|Person=3	18	obl	_	_
+18	рассматривали	рассматривать	VERB	_	Aspect=Imp|Mood=Ind|Number=Plur|Tense=Past|VerbForm=Fin|Voice=Act	10	conj	_	SpaceAfter=No
+19	,	,	PUNCT	_	_	18	punct	_	_
+20	в	в	ADP	_	_	22	case	_	_
+21	первую	первый	ADJ	_	Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing	22	amod	_	_
+22	очередь	очередь	NOUN	_	Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing	18	obl	_	SpaceAfter=No
+23	,	,	PUNCT	_	_	22	punct	_	_
+24	как	как	SCONJ	_	_	26	cc	_	_
+25	кормовую	кормовой	ADJ	_	Case=Acc|Degree=Pos|Gender=Fem|Number=Sing	26	amod	_	_
+26	культуру	культура	NOUN	_	Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing	21	advmod	_	SpaceAfter=No
+27	.	.	PUNCT	_	_	26	punct	_	_
+
+# sent_id = 62
+# text = Сейчас идет новая волна – соевые белки привлекают все больше внимания производителей пищевых продуктов.
+1	Сейчас	сейчас	ADV	_	Degree=Pos	2	advmod	_	_
+2	идет	идти	VERB	_	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	0	ROOT	_	_
+3	новая	новый	ADJ	_	Case=Nom|Degree=Pos|Gender=Fem|Number=Sing	4	amod	_	_
+4	волна	волна	NOUN	_	Animacy=Inan|Case=Nom|Gender=Fem|Number=Sing	2	nsubj	_	_
+5	–	–	PUNCT	_	_	4	punct	_	_
+6	соевые	соевой	ADJ	_	Case=Nom|Degree=Pos|Number=Plur	7	amod	_	_
+7	белки	белок	NOUN	_	Animacy=Inan|Case=Nom|Gender=Fem|Number=Plur	8	nsubj	_	_
+8	привлекают	привлекать	VERB	_	Aspect=Imp|Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	2	conj	_	_
+9	все	все	PART	_	_	10	advmod	_	_
+10	больше	много	NUM	_	_	11	nummod:gov	_	_
+11	внимания	внимание	NOUN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	8	obl	_	_
+12	производителей	производитель	NOUN	_	Animacy=Anim|Case=Gen|Gender=Masc|Number=Plur	11	nmod	_	_
+13	пищевых	пищевой	ADJ	_	Case=Gen|Degree=Pos|Number=Plur	14	amod	_	_
+14	продуктов	продукт	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Plur	12	nmod	_	SpaceAfter=No
+15	.	.	PUNCT	_	_	14	punct	_	_
+
+# sent_id = 63
+# text = Такой тренд заставит по-новому посмотреть на технологии переработки, на техническое оснащение предприятий и на селекцию специальных сортов для производства продуктов питания.
+1	Такой	такой	DET	_	Case=Nom|Gender=Masc|Number=Sing	2	amod	_	_
+2	тренд	тренд	NOUN	_	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	3	nsubj	_	_
+3	заставит	заставлять	VERB	_	Aspect=Perf|Mood=Ind|Number=Sing|Person=3|Tense=Fut|VerbForm=Fin|Voice=Act	0	ROOT	_	_
+4	по-новому	по-новому	ADV	_	Degree=Pos	5	advmod	_	_
+5	посмотреть	смотреть	VERB	_	Aspect=Perf|VerbForm=Inf|Voice=Act	3	xcomp	_	_
+6	на	на	ADP	_	_	7	case	_	_
+7	технологии	технология	NOUN	_	Animacy=Inan|Case=Loc|Gender=Fem|Number=Sing	5	obl	_	_
+8	переработки	переработка	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	7	nmod	_	SpaceAfter=No
+9	,	,	PUNCT	_	_	8	punct	_	_
+10	на	на	ADP	_	_	12	case	_	_
+11	техническое	технический	ADJ	_	Case=Acc|Degree=Pos|Gender=Neut|Number=Sing	12	amod	_	_
+12	оснащение	оснащение	NOUN	_	Animacy=Inan|Case=Acc|Gender=Neut|Number=Sing	5	obl	_	_
+13	предприятий	предприятие	NOUN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Plur	12	nmod	_	_
+14	и	и	CCONJ	_	_	16	cc	_	_
+15	на	на	ADP	_	_	16	case	_	_
+16	селекцию	селекция	NOUN	_	Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing	12	conj	_	_
+17	специальных	специальный	ADJ	_	Case=Gen|Degree=Pos|Number=Plur	18	amod	_	_
+18	сортов	сорт	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Plur	16	nmod	_	_
+19	для	для	ADP	_	_	20	case	_	_
+20	производства	производство	NOUN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	18	nmod	_	_
+21	продуктов	продукт	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Plur	20	nmod	_	_
+22	питания	питание	NOUN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	21	nmod	_	SpaceAfter=No
+23	.	.	PUNCT	_	_	22	punct	_	SpaceAfter=No
+
+# sent_id = 64
+# text = На семинаре было представлено несколько докладов на тему современных технологий оценки качества сои, ее переработки.
+1	На	на	ADP	_	_	2	case	_	_
+2	семинаре	семинар	NOUN	_	Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing	4	obl	_	_
+3	было	быть	AUX	_	Aspect=Imp|Gender=Neut|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	4	aux:pass	_	_
+4	представлено	представлять	VERB	_	Aspect=Perf|Gender=Neut|Number=Sing|Tense=Past|Variant=Short|VerbForm=Part|Voice=Pass	0	ROOT	_	_
+5	несколько	несколько	NUM	_	Case=Nom	6	nummod:gov	_	_
+6	докладов	доклад	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Plur	4	nsubj	_	_
+7	на	на	ADP	_	_	8	case	_	_
+8	тему	тема	NOUN	_	Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing	6	nmod	_	_
+9	современных	современный	ADJ	_	Case=Gen|Degree=Pos|Number=Plur	10	amod	_	_
+10	технологий	технология	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Plur	8	nmod	_	_
+11	оценки	оценка	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	10	nmod	_	_
+12	качества	качество	NOUN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	11	nmod	_	_
+13	сои	сой	DET	_	Case=Nom|Number=Plur	16	amod	_	SpaceAfter=No
+14	,	,	PUNCT	_	_	13	punct	_	_
+15	ее	она	PRON	_	Case=Gen|Gender=Fem|Number=Sing|Person=3	16	nmod	_	_
+16	переработки	переработка	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	6	nmod	_	SpaceAfter=No
+17	.	.	PUNCT	_	_	16	punct	_	SpaceAfter=No
+
+# sent_id = 65
+# text = В рамках семинара была продемонстрирована презентация компании ООО «Рус-АгроНова», которую провел один из организаторов мероприятия – руководитель направления филиала ПФО ООО «РусАгроНова» А.А. Цулин.
+1	В	в	ADP	_	_	2	case	_	_
+2	рамках	рамка	NOUN	_	Animacy=Inan|Case=Loc|Gender=Fem|Number=Plur	5	obl	_	_
+3	семинара	семинар	NOUN	_	Animacy=Inan|Case=Nom|Gender=Fem|Number=Sing	5	nsubj	_	_
+4	была	быть	AUX	_	Aspect=Imp|Gender=Fem|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	5	aux:pass	_	_
+5	продемонстрирована	демонстрировать	VERB	_	Aspect=Perf|Gender=Fem|Number=Sing|Tense=Past|Variant=Short|VerbForm=Part|Voice=Pass	0	ROOT	_	_
+6	презентация	презентация	NOUN	_	Animacy=Inan|Case=Nom|Gender=Fem|Number=Sing	5	obl:agent	_	_
+7	компании	компания	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	6	nmod	_	_
+8	ООО	ооо	PROPN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	7	nmod	_	_
+9	«Рус-АгроНова»	«Рус-АгроНова»	ADJ	_	Case=Gen|Degree=Pos|Number=Plur	8	amod	_	SpaceAfter=No
+10	,	,	PUNCT	_	_	9	punct	_	_
+11	которую	который	PRON	_	Case=Acc	12	obj	_	_
+12	провел	проводить	VERB	_	Aspect=Perf|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	6	acl:relcl	_	_
+13	один	один	NUM	_	Case=Nom|Gender=Masc	18	nsubj	_	_
+14	из	из	ADP	_	_	15	case	_	_
+15	организаторов	организатор	NOUN	_	Animacy=Anim|Case=Gen|Gender=Masc|Number=Plur	13	nmod	_	_
+16	мероприятия	мероприятие	NOUN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	15	nmod	_	_
+17	–	–	PUNCT	_	_	16	punct	_	_
+18	руководитель	руководитель	NOUN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	12	nsubj	_	_
+19	направления	направление	NOUN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	18	nmod	_	_
+20	филиала	филиал	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	19	nmod	_	_
+21	ПФО	Пфо	PROPN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	20	nmod	_	_
+22	ООО	ооо	PROPN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	21	nmod	_	_
+23	«РусАгроНова»	«РусАгроНова»	ADJ	_	Case=Gen|Degree=Pos|Number=Plur	22	nmod	_	_
+24	А.	а.	PROPN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	18	appos	_	SpaceAfter=No
+25	А.	а.	PROPN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	24	flat:name	_	_
+26	Цулин	Цулин	PROPN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	24	flat:name	_	SpaceAfter=No
+27	.	.	PUNCT	_	_	26	punct	_	_
+
+# sent_id = 66
+# text = Он рассказал о возможностях компании по реализации актуальных сортов семян сои для посева и выгодных условиях сотрудничества.
+1	Он	он	PRON	_	Case=Nom|Gender=Masc|Number=Sing|Person=3	2	nsubj	_	_
+2	рассказал	рассказывать	VERB	_	Aspect=Perf|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	0	ROOT	_	_
+3	о	о	ADP	_	_	4	case	_	_
+4	возможностях	возможность	NOUN	_	Animacy=Inan|Case=Loc|Gender=Fem|Number=Plur	2	obl	_	_
+5	компании	компания	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	4	nmod	_	_
+6	по	по	ADP	_	_	7	case	_	_
+7	реализации	реализация	NOUN	_	Animacy=Inan|Case=Dat|Gender=Fem|Number=Sing	4	nmod	_	_
+8	актуальных	актуальный	ADJ	_	Case=Gen|Degree=Pos|Number=Plur	9	amod	_	_
+9	сортов	сорт	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Plur	7	nmod	_	_
+10	семян	семя	NOUN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Plur	9	nmod	_	_
+11	сои	сой	NOUN	_	Animacy=Inan|Case=Acc|Gender=Masc|Number=Plur	2	obj	_	_
+12	для	для	ADP	_	_	13	case	_	_
+13	посева	посев	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	11	nmod	_	_
+14	и	и	CCONJ	_	_	16	cc	_	_
+15	выгодных	выгодный	ADJ	_	Case=Loc|Degree=Pos|Number=Plur	16	amod	_	_
+16	условиях	условие	NOUN	_	Animacy=Inan|Case=Loc|Gender=Neut|Number=Plur	11	conj	_	_
+17	сотрудничества	сотрудничество	NOUN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	16	nmod	_	SpaceAfter=No
+18	.	.	PUNCT	_	_	17	punct	_	SpaceAfter=No
+
+# sent_id = 67
+# text = Далее своим опытом технологии возделывания сои поделился агроном ООО «Смена» Ульяновской области Д.С. Талызин.
+1	Далее	далее	ADV	_	Degree=Pos	7	advmod	_	_
+2	своим	свой	DET	_	Case=Ins|Gender=Masc|Number=Sing	3	amod	_	_
+3	опытом	опыт	NOUN	_	Animacy=Inan|Case=Ins|Gender=Masc|Number=Sing	7	obl	_	_
+4	технологии	технология	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	3	nmod	_	_
+5	возделывания	возделывание	NOUN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	4	nmod	_	_
+6	сои	сой	NOUN	_	Animacy=Inan|Case=Nom|Gender=Masc|Number=Plur	7	nsubj	_	_
+7	поделился	делиться	VERB	_	Aspect=Perf|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Mid	0	ROOT	_	_
+8	агроном	агрон	NOUN	_	Animacy=Anim|Case=Ins|Gender=Masc|Number=Sing	7	obl	_	_
+9	ООО	ооо	PROPN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	8	nmod	_	_
+10	«Смена»	«Смена»	ADJ	_	Case=Gen|Degree=Pos|Number=Plur	12	amod	_	_
+11	Ульяновской	ульяновский	ADJ	_	Case=Gen|Degree=Pos|Gender=Fem|Number=Sing	12	amod	_	_
+12	области	область	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	9	nmod	_	_
+13	Д.	д.	PROPN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	8	appos	_	SpaceAfter=No
+14	С.	с.	PROPN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	13	flat:name	_	_
+15	Талызин	Талызин	PROPN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	13	flat:name	_	SpaceAfter=No
+16	.	.	PUNCT	_	_	15	punct	_	_
+
+# sent_id = 68
+# text = Более 10 лет он возделывает сою на площади 1000 га.
+1	Более	более	ADV	_	Degree=Cmp	3	nummod:gov	_	_
+2	10	10	NUM	_	_	3	nummod	_	_
+3	лет	год	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Plur	5	obl	_	_
+4	он	он	PRON	_	Case=Nom|Gender=Masc|Number=Sing|Person=3	5	nsubj	_	_
+5	возделывает	возделывать	VERB	_	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	0	ROOT	_	_
+6	сою	са	NOUN	_	Animacy=Inan|Case=Ins|Gender=Fem|Number=Sing	5	obl	_	_
+7	на	на	ADP	_	_	8	case	_	_
+8	площади	площадь	NOUN	_	Animacy=Inan|Case=Loc|Gender=Fem|Number=Sing	5	obl	_	_
+9	1000	1000	NUM	_	_	10	nummod	_	_
+10	га	г	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Plur	8	nmod	_	SpaceAfter=No
+11	.	.	PUNCT	_	_	10	punct	_	_
+
+# sent_id = 69
+# text = Рассказал о севообороте, сроках посева, их равномерности, уходе за посевами, обработках пестицидами, уборке и десикации и, конечно, о сортах и их сроках созревания.
+1	Рассказал	рассказывать	VERB	_	Aspect=Perf|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	0	ROOT	_	_
+2	о	о	ADP	_	_	3	case	_	_
+3	севообороте	севооборот	NOUN	_	Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing	1	obl	_	SpaceAfter=No
+4	,	,	PUNCT	_	_	3	punct	_	_
+5	сроках	срок	NOUN	_	Animacy=Inan|Case=Loc|Gender=Masc|Number=Plur	3	conj	_	_
+6	посева	посев	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	5	nmod	_	SpaceAfter=No
+7	,	,	PUNCT	_	_	6	punct	_	_
+8	их	они	PRON	_	Case=Gen|Number=Plur|Person=3	9	nmod	_	_
+9	равномерности	равномерность	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	3	conj	_	SpaceAfter=No
+10	,	,	PUNCT	_	_	9	punct	_	_
+11	уходе	уход	NOUN	_	Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing	3	conj	_	_
+12	за	за	ADP	_	_	13	case	_	_
+13	посевами	посев	NOUN	_	Animacy=Inan|Case=Ins|Gender=Neut|Number=Plur	11	nmod	_	SpaceAfter=No
+14	,	,	PUNCT	_	_	13	punct	_	_
+15	обработках	обработка	NOUN	_	Animacy=Inan|Case=Loc|Gender=Masc|Number=Plur	13	conj	_	_
+16	пестицидами	пестицид	NOUN	_	Animacy=Inan|Case=Ins|Gender=Masc|Number=Plur	15	nmod	_	SpaceAfter=No
+17	,	,	PUNCT	_	_	16	punct	_	_
+18	уборке	уборка	NOUN	_	Animacy=Inan|Case=Dat|Gender=Fem|Number=Sing	16	conj	_	_
+19	и	и	CCONJ	_	_	20	cc	_	_
+20	десикации	десикация	NOUN	_	Animacy=Inan|Case=Dat|Gender=Fem|Number=Sing	16	conj	_	_
+21	и	и	CCONJ	_	_	26	cc	_	SpaceAfter=No
+22	,	,	PUNCT	_	_	21	punct	_	_
+23	конечно	конечно	ADV	_	Degree=Pos	26	parataxis	_	SpaceAfter=No
+24	,	,	PUNCT	_	_	23	punct	_	_
+25	о	о	ADP	_	_	26	case	_	_
+26	сортах	сорт	NOUN	_	Animacy=Inan|Case=Loc|Gender=Masc|Number=Plur	13	conj	_	_
+27	и	и	CCONJ	_	_	29	cc	_	_
+28	их	они	PRON	_	Case=Gen|Number=Plur|Person=3	29	nmod	_	_
+29	сроках	срок	NOUN	_	Animacy=Inan|Case=Loc|Gender=Masc|Number=Plur	26	conj	_	_
+30	созревания	созревание	NOUN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	29	nmod	_	SpaceAfter=No
+31	.	.	PUNCT	_	_	30	punct	_	_
+
+# sent_id = 70
+# text = Затем выступил опытный главный консультант по растениеводству холдинга ООО «Мордовский Бекон» И.Ф. Дьяков.
+1	Затем	затем	ADV	_	Degree=Pos	2	advmod	_	_
+2	выступил	выступать	VERB	_	Aspect=Perf|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	0	ROOT	_	_
+3	опытный	опытный	ADJ	_	Case=Nom|Degree=Pos|Gender=Masc|Number=Sing	5	amod	_	_
+4	главный	главный	ADJ	_	Case=Nom|Degree=Pos|Gender=Masc|Number=Sing	5	amod	_	_
+5	консультант	консультант	NOUN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	2	nsubj	_	_
+6	по	по	ADP	_	_	7	case	_	_
+7	растениеводству	растениеводство	NOUN	_	Animacy=Inan|Case=Dat|Gender=Neut|Number=Sing	5	nmod	_	_
+8	холдинга	холдинг	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	7	nmod	_	_
+9	ООО	ооо	PROPN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	8	nmod	_	_
+10	«Мордовский	«Мордовский	ADJ	_	Case=Nom|Degree=Pos|Gender=Masc|Number=Sing	12	amod	_	_
+11	Бекон»	Бекон»	ADJ	_	Case=Gen|Degree=Pos|Number=Plur	12	amod	_	_
+12	И.	и.	PROPN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	5	conj	_	SpaceAfter=No
+13	Ф.	ф.	PROPN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	12	flat:name	_	_
+14	Дьяков	Дьяков	PROPN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	12	flat:name	_	SpaceAfter=No
+15	.	.	PUNCT	_	_	14	punct	_	_
+
+# sent_id = 71
+# text = Интересно рассказывая о технологии возделывания сои на площади 17000 га, имея опыт выращивания её более 10 лет, Иван Федорович увлёк публику в занимательную историю выращивания сои благодаря красочным примерам из жизни.
+1	Интересно	интересный	ADJ	_	Degree=Pos|Gender=Neut|Number=Sing|Variant=Short	6	mark	_	_
+2	рассказывая	рассказывать	VERB	_	Aspect=Imp|Tense=Pres|VerbForm=Conv|Voice=Act	6	advcl	_	_
+3	о	о	ADP	_	_	4	case	_	_
+4	технологии	технология	NOUN	_	Animacy=Inan|Case=Loc|Gender=Fem|Number=Sing	2	obl	_	_
+5	возделывания	возделывание	NOUN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	4	nmod	_	_
+6	сои	сой	VERB	_	Aspect=Perf|Mood=Imp|Number=Sing|Person=2|VerbForm=Fin|Voice=Act	0	ROOT	_	_
+7	на	на	ADP	_	_	8	case	_	_
+8	площади	площадь	NOUN	_	Animacy=Inan|Case=Loc|Gender=Fem|Number=Sing	6	obl	_	_
+9	17000	17000	NUM	_	_	10	nummod	_	_
+10	га	гектар	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Plur	6	obl	_	SpaceAfter=No
+11	,	,	PUNCT	_	_	10	punct	_	_
+12	имея	иметь	VERB	_	Aspect=Imp|Tense=Pres|VerbForm=Conv|Voice=Act	6	advcl	_	_
+13	опыт	опыт	NOUN	_	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	12	obj	_	_
+14	выращивания	выращивание	NOUN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	13	nmod	_	_
+15	её	она	PRON	_	Case=Acc|Gender=Fem|Number=Sing|Person=3	13	nmod	_	_
+16	более	более	ADV	_	Degree=Cmp	18	nummod:gov	_	_
+17	10	10	NUM	_	_	18	nummod	_	_
+18	лет	год	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Plur	15	nmod	_	SpaceAfter=No
+19	,	,	PUNCT	_	_	18	punct	_	_
+20	Иван	иван	PROPN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	15	conj	_	_
+21	Федорович	Федорович	PROPN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	20	flat:name	_	_
+22	увлёк	увлёк	NOUN	_	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	20	appos	_	_
+23	публику	публика	NOUN	_	Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing	22	nmod	_	_
+24	в	в	ADP	_	_	26	case	_	_
+25	занимательную	занимательный	ADJ	_	Case=Acc|Degree=Pos|Gender=Fem|Number=Sing	26	amod	_	_
+26	историю	история	NOUN	_	Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing	23	nmod	_	_
+27	выращивания	выращивание	NOUN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	26	nmod	_	_
+28	сои	сой	NOUN	_	Animacy=Inan|Case=Acc|Gender=Masc|Number=Plur	22	conj	_	_
+29	благодаря	благодаря	ADP	_	_	31	case	_	_
+30	красочным	красочный	ADJ	_	Case=Dat|Degree=Pos|Number=Plur	31	amod	_	_
+31	примерам	пример	NOUN	_	Animacy=Inan|Case=Dat|Gender=Masc|Number=Plur	28	nmod	_	_
+32	из	из	ADP	_	_	33	case	_	_
+33	жизни	жизнь	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	31	nmod	_	SpaceAfter=No
+34	.	.	PUNCT	_	_	33	punct	_	_
+
+# sent_id = 72
+# text = Зал был вдохновлен данным рассказом и воодушевлен на дальнейшее использование сои в своих севооборотах.
+1	Зал	зал	NOUN	_	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	3	nsubj	_	_
+2	был	быть	AUX	_	Aspect=Imp|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	3	aux:pass	_	_
+3	вдохновлен	вдохновлять	VERB	_	Aspect=Perf|Gender=Masc|Number=Sing|Tense=Past|Variant=Short|VerbForm=Part|Voice=Pass	0	ROOT	_	_
+4	данным	данные	ADJ	_	Case=Ins|Degree=Pos|Gender=Masc|Number=Sing	5	amod	_	_
+5	рассказом	рассказ	NOUN	_	Animacy=Inan|Case=Ins|Gender=Masc|Number=Sing	3	obl:agent	_	_
+6	и	и	CCONJ	_	_	7	cc	_	_
+7	воодушевлен	воодушевлять	VERB	_	Aspect=Perf|Gender=Masc|Number=Sing|Tense=Past|Variant=Short|VerbForm=Part|Voice=Pass	3	conj	_	_
+8	на	на	ADP	_	_	10	case	_	_
+9	дальнейшее	дальнейший	ADJ	_	Case=Acc|Degree=Pos|Gender=Neut|Number=Sing	10	amod	_	_
+10	использование	использование	NOUN	_	Animacy=Inan|Case=Acc|Gender=Neut|Number=Sing	7	obl	_	_
+11	сои	сой	NOUN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Plur	7	nsubj:pass	_	_
+12	в	в	ADP	_	_	14	case	_	_
+13	своих	свой	DET	_	Case=Loc|Number=Plur	14	amod	_	_
+14	севооборотах	севооборот	NOUN	_	Animacy=Inan|Case=Loc|Gender=Fem|Number=Plur	11	nmod	_	SpaceAfter=No
+15	.	.	PUNCT	_	_	14	punct	_	SpaceAfter=No
+
+# sent_id = 73
+# text = Следующим выступающим был менеджер по технической поддержке по ПФО BASF А.В. Альчин, который с акцентом на протеин рассказал о системе защиты сои во время вегетационного периода.
+1	Следующим	следующий	ADJ	_	Case=Ins|Degree=Pos|Gender=Masc|Number=Sing	2	amod	_	_
+2	выступающим	выступать	VERB	_	Aspect=Imp|Case=Ins|Gender=Masc|Number=Sing|Tense=Pres|VerbForm=Part|Voice=Act	0	ROOT	_	_
+3	был	быть	AUX	_	Aspect=Imp|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	2	cop	_	_
+4	менеджер	менеджер	NOUN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	2	nsubj	_	_
+5	по	по	ADP	_	_	7	case	_	_
+6	технической	технический	ADJ	_	Case=Dat|Degree=Pos|Gender=Fem|Number=Sing	7	amod	_	_
+7	поддержке	поддержка	NOUN	_	Animacy=Inan|Case=Dat|Gender=Fem|Number=Sing	4	nmod	_	_
+8	по	по	ADP	_	_	9	case	_	_
+9	ПФО	Пфо	PROPN	_	Animacy=Inan|Case=Dat|Gender=Masc|Number=Sing	7	nmod	_	_
+10	BASF	Basf	PROPN	_	Foreign=Yes	9	flat:foreign	_	_
+11	А.	а.	PROPN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	4	appos	_	SpaceAfter=No
+12	В.	в.	PROPN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	11	flat:name	_	_
+13	Альчин	Альчин	PROPN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	11	flat:name	_	SpaceAfter=No
+14	,	,	PUNCT	_	_	13	punct	_	_
+15	который	который	PRON	_	Case=Nom	20	nsubj	_	_
+16	с	с	ADP	_	_	17	case	_	_
+17	акцентом	акцент	NOUN	_	Animacy=Inan|Case=Ins|Gender=Masc|Number=Sing	20	obl	_	_
+18	на	на	ADP	_	_	19	case	_	_
+19	протеин	протеин	NOUN	_	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	17	nmod	_	_
+20	рассказал	рассказывать	VERB	_	Aspect=Perf|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	4	acl:relcl	_	_
+21	о	о	ADP	_	_	22	case	_	_
+22	системе	система	NOUN	_	Animacy=Inan|Case=Loc|Gender=Fem|Number=Sing	20	obl	_	_
+23	защиты	защита	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	22	nmod	_	_
+24	сои	сой	NOUN	_	Animacy=Inan|Case=Nom|Gender=Masc|Number=Plur	20	obj	_	_
+25	во	во	ADP	_	_	28	case	_	_
+26	время	время	NOUN	_	Animacy=Inan|Case=Acc|Gender=Neut|Number=Sing	25	fixed	_	_
+27	вегетационного	вегетационный	ADJ	_	Case=Gen|Degree=Pos|Gender=Masc|Number=Sing	28	amod	_	_
+28	периода.	периода.	NOUN	_	Animacy=Anim|Case=Ins|Gender=Masc|Number=Sing	24	nmod	_	SpaceAfter=No
+
+# sent_id = 74
+# text = Также очень заинтересовало всех присутствующих выступление представителя компании-переработчика «ЭФКО» ведущего менеджера М.С.
+1	Также	также	ADV	_	Degree=Pos	3	advmod	_	_
+2	очень	очень	ADV	_	Degree=Pos	3	advmod	_	_
+3	заинтересовало	заинтересовывать	VERB	_	Aspect=Imp|Gender=Neut|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	0	ROOT	_	_
+4	всех	весь	DET	_	Case=Acc|Number=Plur	6	amod	_	_
+5	присутствующих	присутствовать	VERB	_	Animacy=Anim|Aspect=Imp|Case=Acc|Number=Plur|Tense=Pres|VerbForm=Part|Voice=Act	6	amod	_	_
+6	выступление	выступление	NOUN	_	Animacy=Inan|Case=Acc|Gender=Neut|Number=Sing	3	obj	_	_
+7	представителя	представитель	NOUN	_	Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing	6	nmod	_	_
+8	компании	компания	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	7	nmod	_	SpaceAfter=No
+9	-	-	PUNCT	_	_	8	punct	_	SpaceAfter=No
+10	переработчика	переработчик	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	8	appos	_	_
+11	«ЭФКО»	«ЭФКО»	ADJ	_	Case=Gen|Degree=Pos|Number=Plur	13	amod	_	_
+12	ведущего	ведущий	ADJ	_	Case=Gen|Degree=Pos|Gender=Masc|Number=Sing	13	amod	_	_
+13	менеджера	менеджер	NOUN	_	Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing	8	nmod	_	_
+14	М.	м.	PROPN	_	Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing	13	appos	_	SpaceAfter=No
+15	С.	с.	PROPN	_	Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing	14	flat:name	_	_
+
+# sent_id = 75
+# text = Рогалева.
+1	Рогалева	Рогалева	ADV	_	Degree=Pos	0	ROOT	_	SpaceAfter=No
+2	.	.	PUNCT	_	_	1	punct	_	_
+
+# sent_id = 76
+# text = Компания занимается переработкой семян сои.
+1	Компания	компания	NOUN	_	Animacy=Inan|Case=Nom|Gender=Fem|Number=Sing	2	nsubj	_	_
+2	занимается	заниматься	VERB	_	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Mid	0	ROOT	_	_
+3	переработкой	переработка	NOUN	_	Animacy=Inan|Case=Ins|Gender=Fem|Number=Sing	2	obl	_	_
+4	семян	семя	NOUN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Plur	3	nmod	_	_
+5	сои	сой	VERB	_	Aspect=Perf|Mood=Imp|Number=Sing|Person=2|VerbForm=Fin|Voice=Act	2	xcomp	_	SpaceAfter=No
+6	.	.	PUNCT	_	_	5	punct	_	_
+
+# sent_id = 77
+# text = Была озвучена закупочная политика компании, в том числе и транспортные расходы.
+1	Была	быть	AUX	_	Aspect=Imp|Gender=Fem|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	2	aux:pass	_	_
+2	озвучена	озвучивать	VERB	_	Aspect=Perf|Gender=Fem|Number=Sing|Tense=Past|Variant=Short|VerbForm=Part|Voice=Pass	0	ROOT	_	_
+3	закупочная	закупочный	ADJ	_	Case=Nom|Degree=Pos|Gender=Fem|Number=Sing	4	amod	_	_
+4	политика	политика	NOUN	_	Animacy=Inan|Case=Nom|Gender=Fem|Number=Sing	2	nsubj	_	_
+5	компании	компания	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	4	nmod	_	SpaceAfter=No
+6	,	,	PUNCT	_	_	5	punct	_	_
+7	в	в	ADP	_	_	9	case	_	_
+8	том	тот	DET	_	Case=Loc|Gender=Neut|Number=Sing	9	amod	_	_
+9	числе	число	NOUN	_	Animacy=Inan|Case=Loc|Gender=Neut|Number=Sing	11	advmod	_	_
+10	и	и	PART	_	_	11	advmod	_	_
+11	транспортные	транспортный	ADJ	_	Animacy=Inan|Case=Acc|Degree=Pos|Number=Plur	12	amod	_	_
+12	расходы	расход	NOUN	_	Animacy=Inan|Case=Acc|Gender=Masc|Number=Plur	4	conj	_	SpaceAfter=No
+13	.	.	PUNCT	_	_	12	punct	_	SpaceAfter=No
+
+# sent_id = 78
+# text = Благодаря состоявшемуся семинару между участниками были заключены предварительные договоренности по сотрудничеству.
+1	Благодаря	благодаря	ADP	_	_	3	case	_	_
+2	состоявшемуся	состоявшемуся	VERB	_	Aspect=Perf|Case=Dat|Gender=Masc|Number=Sing|Tense=Past|VerbForm=Part|Voice=Mid	3	amod	_	_
+3	семинару	семинара	NOUN	_	Animacy=Inan|Case=Dat|Gender=Masc|Number=Sing	7	obl	_	_
+4	между	между	ADP	_	_	5	case	_	_
+5	участниками	участник	NOUN	_	Animacy=Anim|Case=Ins|Gender=Masc|Number=Plur	3	nmod	_	_
+6	были	быть	AUX	_	Aspect=Imp|Mood=Ind|Number=Plur|Tense=Past|VerbForm=Fin|Voice=Act	7	aux:pass	_	_
+7	заключены	заключать	VERB	_	Aspect=Perf|Number=Plur|Tense=Past|Variant=Short|VerbForm=Part|Voice=Pass	0	ROOT	_	_
+8	предварительные	предварительный	ADJ	_	Case=Nom|Degree=Pos|Number=Plur	9	amod	_	_
+9	договоренности	договоренность	NOUN	_	Animacy=Inan|Case=Nom|Gender=Fem|Number=Plur	7	nsubj	_	_
+10	по	по	ADP	_	_	11	case	_	_
+11	сотрудничеству	сотрудничество	NOUN	_	Animacy=Inan|Case=Dat|Gender=Neut|Number=Sing	9	nmod	_	SpaceAfter=No
+12	.	.	PUNCT	_	_	11	punct	_	_
+
+# sent_id = 79
+# text = В этом году уже запланирован посев сои в АО «Агрофирма «Сергеевское» Большеболдинского муниципального округа на площади 194,5 га.По словам руководителей фермерских хозяйств из Спасского и Княгининского округов, их заинтересовала данная культура, и они планируют часть своих посевных площадей отдать под посевы сои.
+1	В	в	ADP	_	_	3	case	_	_
+2	этом	этот	DET	_	Case=Loc|Gender=Masc|Number=Sing	3	amod	_	_
+3	году	год	NOUN	_	Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing	5	obl	_	_
+4	уже	уже	ADV	_	Degree=Pos	5	advmod	_	_
+5	запланирован	планировать	VERB	_	Aspect=Perf|Gender=Masc|Number=Sing|Tense=Past|Variant=Short|VerbForm=Part|Voice=Pass	0	ROOT	_	_
+6	посев	сеть	VERB	_	Aspect=Perf|Tense=Past|VerbForm=Conv|Voice=Act	5	nsubj:pass	_	_
+7	сои	сой	NOUN	_	Animacy=Inan|Case=Acc|Gender=Masc|Number=Plur	6	obj	_	_
+8	в	в	ADP	_	_	9	case	_	_
+9	АО	ао	PROPN	_	Animacy=Inan|Case=Acc|Gender=Neut|Number=Sing	6	obl	_	_
+10	«Агрофирма	«Агрофирма	PROPN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	9	nmod	_	_
+11	«Сергеевское»	«Сергеевское»	ADJ	_	Case=Gen|Degree=Pos|Number=Plur	14	amod	_	_
+12	Большеболдинского	Большеболдинский	ADJ	_	Case=Gen|Degree=Pos|Gender=Masc|Number=Sing	14	amod	_	_
+13	муниципального	муниципальный	ADJ	_	Case=Gen|Degree=Pos|Gender=Masc|Number=Sing	14	amod	_	_
+14	округа	округ	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	10	nmod	_	_
+15	на	на	ADP	_	_	16	case	_	_
+16	площади	площадь	NOUN	_	Animacy=Inan|Case=Loc|Gender=Fem|Number=Sing	9	nmod	_	_
+17	194,5	194,5	NUM	_	_	18	nummod	_	_
+18	га.По	га.По	NOUN	_	Animacy=Inan|Case=Acc|Gender=Neut|Number=Sing	16	appos	_	_
+19	словам	слово	NOUN	_	Animacy=Inan|Case=Dat|Gender=Neut|Number=Plur	18	nmod	_	_
+20	руководителей	руководитель	NOUN	_	Animacy=Anim|Case=Gen|Gender=Masc|Number=Plur	19	nmod	_	_
+21	фермерских	фермерский	ADJ	_	Case=Gen|Degree=Pos|Number=Plur	22	amod	_	_
+22	хозяйств	хозяйство	NOUN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Plur	20	nmod	_	_
+23	из	из	ADP	_	_	27	case	_	_
+24	Спасского	Спасский	ADJ	_	Case=Gen|Degree=Pos|Gender=Masc|Number=Sing	27	amod	_	_
+25	и	и	CCONJ	_	_	26	cc	_	_
+26	Княгининского	Княгининский	ADJ	_	Case=Gen|Degree=Pos|Gender=Masc|Number=Sing	24	conj	_	_
+27	округов	округ	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Plur	20	nmod	_	SpaceAfter=No
+28	,	,	PUNCT	_	_	27	punct	_	_
+29	их	они	PRON	_	Case=Gen|Number=Plur|Person=3	30	obj	_	_
+30	заинтересовала	заинтересовывать	VERB	_	Aspect=Perf|Gender=Fem|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	5	conj	_	_
+31	данная	данный	ADJ	_	Case=Nom|Degree=Pos|Gender=Fem|Number=Sing	32	amod	_	_
+32	культура	культура	NOUN	_	Animacy=Inan|Case=Nom|Gender=Fem|Number=Sing	30	nsubj	_	SpaceAfter=No
+33	,	,	PUNCT	_	_	32	punct	_	_
+34	и	и	CCONJ	_	_	36	cc	_	_
+35	они	они	PRON	_	Case=Nom|Number=Plur|Person=3	36	nsubj	_	_
+36	планируют	планировать	VERB	_	Aspect=Imp|Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	5	conj	_	_
+37	часть	часть	NOUN	_	Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing	36	obj	_	_
+38	своих	свой	DET	_	Case=Gen|Number=Plur	40	amod	_	_
+39	посевных	посевной	ADJ	_	Case=Gen|Degree=Pos|Number=Plur	40	amod	_	_
+40	площадей	площадь	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Plur	37	nmod	_	_
+41	отдать	отдавать	VERB	_	Aspect=Perf|VerbForm=Inf|Voice=Act	36	xcomp	_	_
+42	под	под	ADP	_	_	43	case	_	_
+43	посевы	посев	NOUN	_	Animacy=Inan|Case=Acc|Gender=Masc|Number=Plur	41	obl	_	_
+44	сои	сой	NOUN	_	Animacy=Inan|Case=Acc|Gender=Masc|Number=Plur	41	obj	_	SpaceAfter=No
+45	.	.	PUNCT	_	_	44	punct	_	_
+
+# sent_id = 80
+# text = Также на этот шаг их подтолкнула низкая цена на традиционные зерновые культуры.
+1	Также	также	ADV	_	Degree=Pos	6	advmod	_	_
+2	на	на	ADP	_	_	4	case	_	_
+3	этот	этот	DET	_	Case=Acc|Gender=Masc|Number=Sing	4	amod	_	_
+4	шаг	шаг	NOUN	_	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	6	obl	_	_
+5	их	они	PRON	_	Case=Gen|Number=Plur|Person=3	6	obl	_	_
+6	подтолкнула	подтолкпать	VERB	_	Aspect=Perf|Gender=Fem|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	0	ROOT	_	_
+7	низкая	низкий	ADJ	_	Case=Nom|Degree=Pos|Gender=Fem|Number=Sing	8	amod	_	_
+8	цена	цена	NOUN	_	Animacy=Inan|Case=Nom|Gender=Fem|Number=Sing	6	nsubj	_	_
+9	на	на	ADP	_	_	11	case	_	_
+10	традиционные	традиционный	ADJ	_	Animacy=Inan|Case=Acc|Degree=Pos|Number=Plur	11	amod	_	_
+11	зерновые	зерновой	NOUN	_	Animacy=Inan|Case=Acc|Number=Plur	8	nmod	_	_
+12	культуры	культура	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	11	nmod	_	SpaceAfter=No
+13	.	.	PUNCT	_	_	12	punct	_	SpaceAfter=No
+
+# sent_id = 81
+# text = Можно ещё раз отметить, что производство сои особенно инвестиционно привлекательно, когда есть качественный семенной материал, правильно примененная технология выращивания и, конечно, хороший сбыт.
+1	Можно	можно	ADV	_	Degree=Pos	0	ROOT	_	_
+2	ещё	еще	ADV	_	Degree=Pos	4	advmod	_	_
+3	раз	раз	NOUN	_	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	4	obl	_	_
+4	отметить	отмечать	VERB	_	Aspect=Perf|VerbForm=Inf|Voice=Act	1	nsubj	_	SpaceAfter=No
+5	,	,	PUNCT	_	_	4	punct	_	_
+6	что	что	SCONJ	_	_	4	mark	_	_
+7	производство	производство	NOUN	_	Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing	8	nsubj	_	_
+8	сои	сой	VERB	_	Aspect=Perf|Mood=Imp|Number=Sing|Person=2|VerbForm=Fin|Voice=Act	4	advcl	_	_
+9	особенно	особенно	ADV	_	Degree=Pos	10	advmod	_	_
+10	инвестиционно	инвестиционно	ADV	_	Degree=Pos	11	advmod	_	_
+11	привлекательно	привлекательный	ADJ	_	Degree=Pos|Gender=Neut|Number=Sing|Variant=Short	8	conj	_	SpaceAfter=No
+12	,	,	PUNCT	_	_	11	punct	_	_
+13	когда	когда	SCONJ	_	_	11	mark	_	_
+14	есть	быть	VERB	_	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	17	cop	_	_
+15	качественный	качественный	ADJ	_	Case=Nom|Degree=Pos|Gender=Masc|Number=Sing	17	amod	_	_
+16	семенной	семенный	ADJ	_	Case=Dat|Degree=Pos|Gender=Fem|Number=Sing	17	amod	_	_
+17	материал	материал	NOUN	_	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	11	advcl	_	SpaceAfter=No
+18	,	,	PUNCT	_	_	17	punct	_	_
+19	правильно	правильно	ADV	_	Degree=Pos	20	advmod	_	_
+20	примененная	применять	VERB	_	Aspect=Perf|Case=Nom|Gender=Fem|Number=Sing|Tense=Past|VerbForm=Part|Voice=Pass	21	amod	_	_
+21	технология	технология	NOUN	_	Animacy=Inan|Case=Nom|Gender=Fem|Number=Sing	17	conj	_	_
+22	выращивания	выращивание	NOUN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	21	nmod	_	_
+23	и	и	CCONJ	_	_	28	cc	_	SpaceAfter=No
+24	,	,	PUNCT	_	_	23	punct	_	_
+25	конечно	конечно	ADV	_	Degree=Pos	28	parataxis	_	SpaceAfter=No
+26	,	,	PUNCT	_	_	25	punct	_	_
+27	хороший	хороший	ADJ	_	Case=Nom|Degree=Pos|Gender=Masc|Number=Sing	28	amod	_	_
+28	сбыт	сбыт	NOUN	_	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	17	conj	_	SpaceAfter=No
+29	.	.	PUNCT	_	_	28	punct	_	_
+
+# sent_id = 82
+# text = Если имеются все эти составляющие, то только в этом случае можно начинать заниматься не только соей, но и любым сельскохозяйственным производством.
+1	Если	если	SCONJ	_	_	12	mark	_	_
+2	имеются	иметься	VERB	_	Aspect=Imp|Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Mid	12	advcl	_	_
+3	все	весь	DET	_	Case=Nom|Number=Plur	5	amod	_	_
+4	эти	этот	DET	_	Case=Nom|Number=Plur	5	amod	_	_
+5	составляющие	составляющая	NOUN	_	Animacy=Inan|Case=Nom|Gender=Fem|Number=Plur	2	nsubj	_	SpaceAfter=No
+6	,	,	PUNCT	_	_	5	punct	_	_
+7	то	то	SCONJ	_	_	2	cc	_	_
+8	только	только	PART	_	_	11	advmod	_	_
+9	в	в	ADP	_	_	11	case	_	_
+10	этом	этот	DET	_	Case=Loc|Gender=Masc|Number=Sing	11	amod	_	_
+11	случае	случай	NOUN	_	Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing	12	nmod	_	_
+12	можно	можно	ADV	_	Degree=Pos	0	ROOT	_	_
+13	начинать	начинать	VERB	_	Aspect=Imp|VerbForm=Inf|Voice=Act	12	nsubj	_	_
+14	заниматься	заниматься	VERB	_	Aspect=Imp|VerbForm=Inf|Voice=Mid	13	xcomp	_	_
+15	не	не	PART	_	_	16	advmod	_	_
+16	только	только	PART	_	_	17	advmod	_	_
+17	соей	соь	DET	_	Case=Ins|Gender=Fem|Number=Sing	23	amod	_	SpaceAfter=No
+18	,	,	PUNCT	_	_	17	punct	_	_
+19	но	но	CCONJ	_	_	21	cc	_	_
+20	и	и	PART	_	_	19	advmod	_	_
+21	любым	любой	ADJ	_	Case=Ins|Degree=Pos|Gender=Neut|Number=Sing	17	conj	_	_
+22	сельскохозяйственным	сельскохозяйственный	ADJ	_	Case=Ins|Degree=Pos|Gender=Neut|Number=Sing	23	amod	_	_
+23	производством	производство	NOUN	_	Animacy=Inan|Case=Ins|Gender=Neut|Number=Sing	14	obl	_	SpaceAfter=No
+24	.	.	PUNCT	_	_	23	punct	_	_
+
+# sent_id = 83
+# text = Но давайте не забывать, для кого вся эта цепочка работает – создание новых сортов, обработка полей, производство и переработка бобов на масло, жмых, шрот, изолят.
+1	Но	но	CCONJ	_	_	2	cc	_	_
+2	давайте	давать	VERB	_	Aspect=Imp|Mood=Imp|Number=Plur|Person=2|VerbForm=Fin|Voice=Act	0	ROOT	_	_
+3	не	не	PART	_	_	4	advmod	_	_
+4	забывать	забывать	VERB	_	Aspect=Imp|VerbForm=Inf|Voice=Act	2	xcomp	_	SpaceAfter=No
+5	,	,	PUNCT	_	_	4	punct	_	_
+6	для	для	ADP	_	_	7	case	_	_
+7	кого	кто	PRON	_	Case=Gen	11	obl	_	_
+8	вся	весь	DET	_	Case=Nom|Gender=Fem|Number=Sing	10	amod	_	_
+9	эта	этот	DET	_	Case=Nom|Gender=Fem|Number=Sing	10	amod	_	_
+10	цепочка	цепочка	NOUN	_	Animacy=Inan|Case=Nom|Gender=Fem|Number=Sing	11	nsubj	_	_
+11	работает	работать	VERB	_	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	4	ccomp	_	_
+12	–	–	PUNCT	_	_	11	punct	_	_
+13	создание	создание	NOUN	_	Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing	11	parataxis	_	_
+14	новых	новый	ADJ	_	Case=Gen|Degree=Pos|Number=Plur	15	amod	_	_
+15	сортов	сорт	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Plur	13	nmod	_	SpaceAfter=No
+16	,	,	PUNCT	_	_	15	punct	_	_
+17	обработка	обработка	NOUN	_	Animacy=Inan|Case=Nom|Gender=Fem|Number=Sing	13	conj	_	_
+18	полей	поле	NOUN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Plur	17	nmod	_	SpaceAfter=No
+19	,	,	PUNCT	_	_	18	punct	_	_
+20	производство	производство	NOUN	_	Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing	13	conj	_	_
+21	и	и	CCONJ	_	_	22	cc	_	_
+22	переработка	переработка	NOUN	_	Animacy=Inan|Case=Nom|Gender=Fem|Number=Sing	13	conj	_	_
+23	бобов	боб	NOUN	_	Animacy=Anim|Case=Gen|Gender=Masc|Number=Plur	22	nmod	_	_
+24	на	на	ADP	_	_	25	case	_	_
+25	масло	масло	NOUN	_	Animacy=Inan|Case=Acc|Gender=Neut|Number=Sing	22	nmod	_	SpaceAfter=No
+26	,	,	PUNCT	_	_	25	punct	_	_
+27	жмых	жмых	NOUN	_	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	13	conj	_	SpaceAfter=No
+28	,	,	PUNCT	_	_	27	punct	_	_
+29	шрот	шрот	NOUN	_	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	13	conj	_	SpaceAfter=No
+30	,	,	PUNCT	_	_	29	punct	_	_
+31	изолят	изолеть	VERB	_	Aspect=Perf|Mood=Ind|Number=Plur|Person=3|Tense=Fut|VerbForm=Fin|Voice=Act	13	conj	_	SpaceAfter=No
+32	.	.	PUNCT	_	_	31	punct	_	_
+
+# sent_id = 84
+# text = Животноводство и кормопроизводство – основные потребители соевых продуктов.
+1	Животноводство	животноводство	NOUN	_	Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing	0	ROOT	_	_
+2	и	и	CCONJ	_	_	3	cc	_	_
+3	кормопроизводство	кормопроизводство	NOUN	_	Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing	1	conj	_	_
+4	–	–	PUNCT	_	_	3	punct	_	_
+5	основные	основной	ADJ	_	Case=Nom|Degree=Pos|Number=Plur	6	amod	_	_
+6	потребители	потребитель	NOUN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Plur	1	conj	_	_
+7	соевых	соевой	ADJ	_	Case=Gen|Degree=Pos|Number=Plur	8	amod	_	_
+8	продуктов	продукт	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Plur	6	nmod	_	SpaceAfter=No
+9	.	.	PUNCT	_	_	8	punct	_	_
+
+# sent_id = 85
+# text = Алла МОРОЗОВА, глава местного самоуправления
+1	Алла	алла	NOUN	_	Animacy=Anim|Case=Nom|Gender=Fem|Number=Sing	0	ROOT	_	_
+2	МОРОЗОВА	МОРОЗОВа	PROPN	_	Animacy=Anim|Case=Nom|Gender=Fem|Number=Sing	1	appos	_	SpaceAfter=No
+3	,	,	PUNCT	_	_	2	punct	_	_
+4	глава	глава	NOUN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	1	conj	_	_
+5	местного	местный	ADJ	_	Case=Gen|Degree=Pos|Gender=Neut|Number=Sing	6	amod	_	_
+6	самоуправления	самоуправление	NOUN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	4	nmod	_	SpaceAfter=No
+

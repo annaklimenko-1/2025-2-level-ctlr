@@ -16,6 +16,13 @@
             "stubs": [
                 "pipeline.py"
             ]
+        },
+        {
+            "name": "final_project",
+            "coverage": 0,
+            "stubs": [
+                "main.py"
+            ]
         }
     ],
     "addons": [
@@ -40,8 +47,8 @@
             "Evgraff2005",
             "EIzharikov"
         ],
-        "pr_name_regex": "(?:\\[PROJECT\\]\\s*)?(Scraper|Pipeline|Final Project), [\\w\\s\\d]+ \\w+ - 2\\dFPL\\d",
-        "pr_name_example": "Scraper, Andrei Kashchikhin - 21FPL2 \nPipeline, Andrei Kashchikhin - 21FPL2 \n[PROJECT] Final Project, Andrei Kashchikhin - 21FPL2"
+        "pr_name_regex": "(?:\\[PROJECT\\]\\s*)?(Scraper|Pipeline|Final Project), [\\w\\s\\d]+ - 2\\dFPL\\d",
+        "pr_name_example": "Scraper, Andrei Kashchikhin - 21FPL2 \nPipeline, Andrei Kashchikhin - 21FPL2 \n[PROJECT] Final Project, Team 7 - 21FPL2"
     },
     "stubs_config": {
         "accepted_modules": {
@@ -74,9 +81,6 @@
                 "PipelineProtocol",
                 "LibraryWrapper",
                 "TreeNode"
-            ],
-            "quality_control.console_logging": [
-                "get_child_logger"
             ]
         }
     },
@@ -102,6 +106,64 @@
         "\\.pkl$",
         "\\.udpipe$",
         "\\.zip$"
+    ],
+    "doc_sync_config": [
+        {
+            "source": "docs/public/article.rst",
+            "target": "source/docs/useful_docs/ctlr_docs/article.rst"
+        },
+        {
+            "source": "docs/public/core_utils.rst",
+            "target": "source/docs/useful_docs/ctlr_docs/core_utils.rst"
+        },
+        {
+            "source": "docs/public/dataset.rst",
+            "target": "source/docs/useful_docs/ctlr_docs/dataset.rst"
+        },
+        {
+            "source": "docs/public/dynamic_scraping.rst",
+            "target": "source/docs/useful_docs/ctlr_docs/dynamic_scraping.rst"
+        },
+        {
+            "source": "docs/public/faq.rst",
+            "target": "source/docs/useful_docs/ctlr_docs/faq.rst"
+        },
+        {
+            "source": "docs/public/graphs_intro.rst",
+            "target": "source/docs/useful_docs/ctlr_docs/graphs_intro.rst"
+        },
+        {
+            "source": "docs/public/lectures_content.rst",
+            "target": "source/docs/ctlr_2025/lectures_content.rst"
+        },
+        {
+            "source": "docs/public/ud_format.rst",
+            "target": "source/docs/useful_docs/ctlr_docs/ud_format.rst"
+        },
+        {
+            "source": "docs/public/UD_intro.rst",
+            "target": "source/docs/useful_docs/ctlr_docs/UD_intro.rst"
+        },
+        {
+            "source": "lab_5_scraper/__init__.py",
+            "target": "lab_5_scraper/__init__.py"
+        },
+        {
+            "source": "lab_5_scraper/lab_5_scraper.api.rst",
+            "target": "source/docs/ctlr_2025/labs/lab_5_scraper/lab_5.api.rst"
+        },
+        {
+            "source": "lab_5_scraper/README.rst",
+            "target": "source/docs/ctlr_2025/labs/lab_5_scraper/lab_5.rst"
+        },
+        {
+            "source": "lab_5_scraper/scraper_stub.py",
+            "target": "lab_5_scraper/scraper.py"
+        },
+        {
+            "source": "README.rst",
+            "target": "source/docs/ctlr_2025/general_info.rst"
+        }
     ],
     "prohibited_modules": [
         "collections",

@@ -1,0 +1,97 @@
+name: Final project validation
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+concurrency:
+  group: ${{ github.repository }}-${{ github.ref }}-project
+  cancel-in-progress: true
+
+env:
+  REPOSITORY_TYPE: public
+  FINAL_PROJECT_TAG: "[PROJECT]"
+  MODEL_URL: "https://github.com/fipl-hse/2025-2-level-ctlr/releases/download/v1.0.0/russian-syntagrus-ud-2.0-170801.udpipe"
+  MODEL_PATH: "lab_6_pipeline/assets/model"
+  CONLLU_PATH: "final_project/dist/auto_annotated.conllu"
+
+jobs:
+  check-conditions:
+    runs-on: ubuntu-latest
+    outputs:
+      should_run: ${{ steps.check.outputs.should_run }}
+
+    steps:
+      - uses: actions/checkout@v6
+      - name: Setup FIPL environment
+        uses: fipl-hse/setup-env-action@v0.13.2
+      - name: Check if workflow should run
+        id: check
+        run: |
+          set +e
+          source venv/bin/activate
+          export PYTHONPATH=$(pwd)
+          python admin_utils/skip_stage.py --lab-path final_project
+          retVal=$?
+          echo "Return value is " $retVal
+          if [[ "$REPOSITORY_TYPE" == "admin" ]]; then
+            echo "Running because it is admin"
+            echo "should_run=true" >> $GITHUB_OUTPUT
+          elif [[ -n "${{ github.event.pull_request.title }}" ]] && \
+               [[ "${{ github.event.pull_request.title }}" == *"$FINAL_PROJECT_TAG"* ]] && \
+               [ $retVal -eq 1 ]; then
+            echo "Running because it is public, has relevant label and not 0 mark"
+            echo "should_run=true" >> $GITHUB_OUTPUT
+          else
+            echo "Not running because is public but not relevant to the final project"
+            echo "should_run=false" >> $GITHUB_OUTPUT
+          fi
+
+  validate-student-data:
+    runs-on: ubuntu-latest
+    needs: check-conditions
+    if: needs.check-conditions.outputs.should_run == 'true'
+
+    steps:
+      - uses: actions/checkout@v6
+      - name: Setup FIPL environment
+        uses: fipl-hse/setup-env-action@v0.13.2
+      - name: Download UDPipe model
+        run: |
+          mkdir -p "$MODEL_PATH"
+          wget -O $MODEL_PATH/russian-syntagrus-ud-2.0-170801.udpipe $MODEL_URL
+      - name: Student data processing
+        run: |
+          source venv/bin/activate
+          export PYTHONPATH=$(pwd)
+          python final_project/main.py
+          python admin_utils/final_project/checker.py "$CONLLU_PATH"
+      - name: Archive annotated data
+        continue-on-error: true
+        uses: actions/upload-artifact@v6
+        with:
+          name: auto-annotated-dataset
+          path: |
+            final_project/dist
+          retention-days: 5
+
+  validate-admin-data:
+    runs-on: ubuntu-latest
+    needs: check-conditions
+    if: needs.check-conditions.outputs.should_run == 'true'
+
+    steps:
+      - uses: actions/checkout@v6
+      - name: Setup FIPL environment
+        uses: fipl-hse/setup-env-action@v0.13.2
+      - name: Download UDPipe model
+        run: |
+          mkdir -p "$MODEL_PATH"
+          wget -O $MODEL_PATH/russian-syntagrus-ud-2.0-170801.udpipe $MODEL_URL
+      - name: Run final project tests
+        run: |
+          source venv/bin/activate
+          export PYTHONPATH=$(pwd)
+          python -m pytest final_project/tests/ -v -m "final_project"
